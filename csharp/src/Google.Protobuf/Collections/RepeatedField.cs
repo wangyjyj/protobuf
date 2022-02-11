@@ -46,10 +46,7 @@ namespace Google.Protobuf.Collections
     /// supported by Protocol Buffers but nor does it guarantee that all operations will work in such cases.
     /// </remarks>
     /// <typeparam name="T">The element type of the repeated field.</typeparam>
-    public sealed class RepeatedField<T> : IList<T>, IList, IDeepCloneable<RepeatedField<T>>, IEquatable<RepeatedField<T>>
-#if !NET35
-        , IReadOnlyList<T>
-#endif
+    public sealed class RepeatedField<T> : IList<T>, IList, IDeepCloneable, IEquatable<RepeatedField<T>>
     {
         private static readonly EqualityComparer<T> EqualityComparer = ProtobufEqualityComparers.GetEqualityComparer<T>();
         private static readonly T[] EmptyArray = new T[0];
@@ -69,18 +66,18 @@ namespace Google.Protobuf.Collections
         /// equivalent to a deep clone.
         /// </remarks>
         /// <returns>A deep clone of this repeated field.</returns>
-        public RepeatedField<T> Clone()
+        public object Clone()
         {
             RepeatedField<T> clone = new RepeatedField<T>();
             if (array != EmptyArray)
             {
                 clone.array = (T[])array.Clone();
-                IDeepCloneable<T>[] cloneableArray = clone.array as IDeepCloneable<T>[];
+                IDeepCloneable[] cloneableArray = clone.array as IDeepCloneable[];
                 if (cloneableArray != null)
                 {
                     for (int i = 0; i < count; i++)
                     {
-                        clone.array[i] = cloneableArray[i].Clone();
+                        clone.array[i] = (T)cloneableArray[i].Clone();
                     }
                 }
             }
@@ -501,17 +498,6 @@ namespace Google.Protobuf.Collections
             Array.Copy(array, index + 1, array, index, count - index - 1);
             count--;
             array[count] = default(T);
-        }
-
-        /// <summary>
-        /// Returns a string representation of this repeated field, in the same
-        /// way as it would be represented by the default JSON formatter.
-        /// </summary>
-        public override string ToString()
-        {
-            var writer = new StringWriter();
-            JsonFormatter.Default.WriteList(writer, this);
-            return writer.ToString();
         }
 
         /// <summary>

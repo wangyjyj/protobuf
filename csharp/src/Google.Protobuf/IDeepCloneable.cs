@@ -43,12 +43,12 @@ namespace Google.Protobuf
     /// </para>
     /// </remarks>
     /// <typeparam name="T">The type itself, returned by the <see cref="Clone"/> method.</typeparam>
-    public interface IDeepCloneable<T>
+    public interface IDeepCloneable
     {
         /// <summary>
         /// Creates a deep clone of this object.
         /// </summary>
         /// <returns>A deep clone of this object.</returns>
-        T Clone();
+        object Clone();
     }
 }

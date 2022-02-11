@@ -128,8 +128,14 @@ void MapFieldGenerator::WriteToString(io::Printer* printer) {
 }
 
 void MapFieldGenerator::GenerateCloningCode(io::Printer* printer) {
+    const FieldDescriptor* key_descriptor =
+        descriptor_->message_type()->FindFieldByName("key");
+    const FieldDescriptor* value_descriptor =
+        descriptor_->message_type()->FindFieldByName("value");
+    variables_["key_type_name"] = type_name(key_descriptor);
+    variables_["value_type_name"] = type_name(value_descriptor);
   printer->Print(variables_,
-    "$name$_ = other.$name$_.Clone();\n");
+    "$name$_ = (pbc::MapField<$key_type_name$, $value_type_name$>) other.$name$_.Clone();\n");
 }
 
 void MapFieldGenerator::GenerateFreezingCode(io::Printer* printer) {

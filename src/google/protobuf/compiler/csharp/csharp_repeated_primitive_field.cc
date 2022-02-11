@@ -113,7 +113,7 @@ void RepeatedPrimitiveFieldGenerator::WriteToString(io::Printer* printer) {
 
 void RepeatedPrimitiveFieldGenerator::GenerateCloningCode(io::Printer* printer) {
   printer->Print(variables_,
-    "$name$_ = other.$name$_.Clone();\n");
+    "$name$_ = (pbc::RepeatedField<$type_name$>) other.$name$_.Clone();\n");
 }
 
 void RepeatedPrimitiveFieldGenerator::GenerateFreezingCode(io::Printer* printer) {

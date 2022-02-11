@@ -50,7 +50,7 @@ namespace Google.Protobuf.Collections
         {
             var message = new ForeignMessage { C = 20 };
             var map = new MapField<string, ForeignMessage> { { "x", message } };
-            var clone = map.Clone();
+            var clone = (MapField<string, ForeignMessage>)map.Clone();
             map["x"].C = 30;
             Assert.AreEqual(20, clone["x"].C);
         }
@@ -98,59 +98,6 @@ namespace Google.Protobuf.Collections
             map.Add("d", "v4");
             CollectionAssert.AreEqual(new[] { "a", "c", "d" }, map.Keys);
             CollectionAssert.AreEqual(new[] { "v1", "v3", "v4" }, map.Values);
-        }
-
-        [Test]
-        public void EqualityIsOrderInsensitive()
-        {
-            var map1 = new MapField<string, string>();
-            map1.Add("a", "v1");
-            map1.Add("b", "v2");
-
-            var map2 = new MapField<string, string>();
-            map2.Add("b", "v2");
-            map2.Add("a", "v1");
-
-            EqualityTester.AssertEquality(map1, map2);
-        }
-
-        [Test]
-        public void EqualityIsKeySensitive()
-        {
-            var map1 = new MapField<string, string>();
-            map1.Add("first key", "v1");
-            map1.Add("second key", "v2");
-
-            var map2 = new MapField<string, string>();
-            map2.Add("third key", "v1");
-            map2.Add("fourth key", "v2");
-
-            EqualityTester.AssertInequality(map1, map2);
-        }
-
-        [Test]
-        public void Equality_Simple()
-        {
-            var map = new MapField<string, string>();
-            EqualityTester.AssertEquality(map, map);
-            EqualityTester.AssertInequality(map, null);
-            Assert.IsFalse(map.Equals(new object()));
-        }
-
-        [Test]
-        public void EqualityIsValueSensitive()
-        {
-            // Note: Without some care, it's a little easier than one might
-            // hope to see hash collisions, but only in some environments...
-            var map1 = new MapField<string, string>();
-            map1.Add("a", "first value");
-            map1.Add("b", "second value");
-
-            var map2 = new MapField<string, string>();
-            map2.Add("a", "third value");
-            map2.Add("b", "fourth value");
-
-            EqualityTester.AssertInequality(map1, map2);
         }
 
         [Test]
@@ -561,8 +508,6 @@ namespace Google.Protobuf.Collections
                 { "y", SampleNaNs.SignallingFlipped }
             };
 
-            EqualityTester.AssertInequality(map1, map2);
-            EqualityTester.AssertEquality(map1, map3);
             Assert.True(map1.Values.Contains(SampleNaNs.SignallingFlipped));
             Assert.False(map2.Values.Contains(SampleNaNs.SignallingFlipped));
         }
@@ -582,22 +527,6 @@ namespace Google.Protobuf.Collections
             string ignored;
             Assert.False(map.TryGetValue(SampleNaNs.PayloadFlipped, out ignored));
         }
-
-#if !NET35
-        [Test]
-        public void IDictionaryKeys_Equals_IReadOnlyDictionaryKeys()
-        {
-            var map = new MapField<string, string> { { "foo", "bar" }, { "x", "y" } };
-            CollectionAssert.AreEquivalent(((IDictionary<string, string>)map).Keys, ((IReadOnlyDictionary<string, string>)map).Keys);
-        }
-
-        [Test]
-        public void IDictionaryValues_Equals_IReadOnlyDictionaryValues()
-        {
-            var map = new MapField<string, string> { { "foo", "bar" }, { "x", "y" } };
-            CollectionAssert.AreEquivalent(((IDictionary<string, string>)map).Values, ((IReadOnlyDictionary<string, string>)map).Values);
-        }
-#endif
 
         private static KeyValuePair<TKey, TValue> NewKeyValuePair<TKey, TValue>(TKey key, TValue value)
         {

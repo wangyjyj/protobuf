@@ -37,7 +37,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Google.Protobuf.TestProtos;
-using Google.Protobuf.WellKnownTypes;
 using NUnit.Framework;
 
 namespace Google.Protobuf.Collections
@@ -284,7 +283,7 @@ namespace Google.Protobuf.Collections
         public void Clone_ReturnsMutable()
         {
             var list = new RepeatedField<int> { 0 };
-            var clone = list.Clone();
+            var clone = (RepeatedField<int>)list.Clone();
             clone[0] = 1;
         }
 
@@ -727,31 +726,12 @@ namespace Google.Protobuf.Collections
         }
 
         [Test]
-        public void ToString_Timestamp()
-        {
-            var list = new RepeatedField<Timestamp> { Timestamp.FromDateTime(new DateTime(2015, 10, 1, 12, 34, 56, DateTimeKind.Utc)) };
-            var text = list.ToString();
-            Assert.AreEqual("[ \"2015-10-01T12:34:56Z\" ]", text);
-        }
-
-        [Test]
-        public void ToString_Struct()
-        {
-            var message = new Struct { Fields = { { "foo", new Value { NumberValue = 20 } } } };
-            var list = new RepeatedField<Struct> { message };
-            var text = list.ToString();
-            Assert.AreEqual(text, "[ { \"foo\": 20 } ]", message.ToString());
-        }
-
-        [Test]
         public void NaNValuesComparedBitwise()
         {
             var list1 = new RepeatedField<double> { SampleNaNs.Regular, SampleNaNs.SignallingFlipped };
             var list2 = new RepeatedField<double> { SampleNaNs.Regular, SampleNaNs.PayloadFlipped };
             var list3 = new RepeatedField<double> { SampleNaNs.Regular, SampleNaNs.SignallingFlipped };
 
-            EqualityTester.AssertInequality(list1, list2);
-            EqualityTester.AssertEquality(list1, list3);
             Assert.True(list1.Contains(SampleNaNs.SignallingFlipped));
             Assert.False(list2.Contains(SampleNaNs.SignallingFlipped));
         }

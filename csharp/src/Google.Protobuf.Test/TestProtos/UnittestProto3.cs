@@ -12,7 +12,7 @@ using scg = global::System.Collections.Generic;
 namespace Google.Protobuf.TestProtos {
 
   /// <summary>Holder for reflection information generated from unittest_proto3.proto</summary>
-  public static partial class UnittestProto3Reflection {
+  public static class UnittestProto3Reflection {
 
     #region Descriptor
     /// <summary>File descriptor for unittest_proto3.proto</summary>
@@ -25,7 +25,7 @@ namespace Google.Protobuf.TestProtos {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChV1bml0dGVzdF9wcm90bzMucHJvdG8SEnByb3RvYnVmX3VuaXR0ZXN0Mxoc",
-            "dW5pdHRlc3RfaW1wb3J0X3Byb3RvMy5wcm90byL5DwoMVGVzdEFsbFR5cGVz",
+            "dW5pdHRlc3RfaW1wb3J0X3Byb3RvMy5wcm90byLTDgoMVGVzdEFsbFR5cGVz",
             "EhQKDHNpbmdsZV9pbnQzMhgBIAEoBRIUCgxzaW5nbGVfaW50NjQYAiABKAMS",
             "FQoNc2luZ2xlX3VpbnQzMhgDIAEoDRIVCg1zaW5nbGVfdWludDY0GAQgASgE",
             "EhUKDXNpbmdsZV9zaW50MzIYBSABKBESFQoNc2luZ2xlX3NpbnQ2NBgGIAEo",
@@ -64,102 +64,96 @@ namespace Google.Protobuf.TestProtos {
             "dDMuRm9yZWlnbkVudW0SQgoUcmVwZWF0ZWRfaW1wb3J0X2VudW0YNSADKA4y",
             "JC5wcm90b2J1Zl91bml0dGVzdF9pbXBvcnQuSW1wb3J0RW51bRJVCh5yZXBl",
             "YXRlZF9wdWJsaWNfaW1wb3J0X21lc3NhZ2UYNiADKAsyLS5wcm90b2J1Zl91",
-            "bml0dGVzdF9pbXBvcnQuUHVibGljSW1wb3J0TWVzc2FnZRIWCgxvbmVvZl91",
-            "aW50MzIYbyABKA1IABJOChRvbmVvZl9uZXN0ZWRfbWVzc2FnZRhwIAEoCzIu",
-            "LnByb3RvYnVmX3VuaXR0ZXN0My5UZXN0QWxsVHlwZXMuTmVzdGVkTWVzc2Fn",
-            "ZUgAEhYKDG9uZW9mX3N0cmluZxhxIAEoCUgAEhUKC29uZW9mX2J5dGVzGHIg",
-            "ASgMSAAaGwoNTmVzdGVkTWVzc2FnZRIKCgJiYhgBIAEoBSJWCgpOZXN0ZWRF",
-            "bnVtEhsKF05FU1RFRF9FTlVNX1VOU1BFQ0lGSUVEEAASBwoDRk9PEAESBwoD",
-            "QkFSEAISBwoDQkFaEAMSEAoDTkVHEP///////////wFCDQoLb25lb2ZfZmll",
-            "bGQivgEKEk5lc3RlZFRlc3RBbGxUeXBlcxI1CgVjaGlsZBgBIAEoCzImLnBy",
-            "b3RvYnVmX3VuaXR0ZXN0My5OZXN0ZWRUZXN0QWxsVHlwZXMSMQoHcGF5bG9h",
-            "ZBgCIAEoCzIgLnByb3RvYnVmX3VuaXR0ZXN0My5UZXN0QWxsVHlwZXMSPgoO",
-            "cmVwZWF0ZWRfY2hpbGQYAyADKAsyJi5wcm90b2J1Zl91bml0dGVzdDMuTmVz",
-            "dGVkVGVzdEFsbFR5cGVzIjQKFFRlc3REZXByZWNhdGVkRmllbGRzEhwKEGRl",
-            "cHJlY2F0ZWRfaW50MzIYASABKAVCAhgBIhsKDkZvcmVpZ25NZXNzYWdlEgkK",
-            "AWMYASABKAUiMAoSVGVzdFJlc2VydmVkRmllbGRzSgQIAhADSgQIDxAQSgQI",
-            "CRAMUgNiYXJSA2JheiJbChFUZXN0Rm9yZWlnbk5lc3RlZBJGCg5mb3JlaWdu",
-            "X25lc3RlZBgBIAEoCzIuLnByb3RvYnVmX3VuaXR0ZXN0My5UZXN0QWxsVHlw",
-            "ZXMuTmVzdGVkTWVzc2FnZSI0ChhUZXN0UmVhbGx5TGFyZ2VUYWdOdW1iZXIS",
-            "CQoBYRgBIAEoBRINCgJiYhj///9/IAEoBSJWChRUZXN0UmVjdXJzaXZlTWVz",
-            "c2FnZRIzCgFhGAEgASgLMigucHJvdG9idWZfdW5pdHRlc3QzLlRlc3RSZWN1",
-            "cnNpdmVNZXNzYWdlEgkKAWkYAiABKAUiTAoUVGVzdE11dHVhbFJlY3Vyc2lv",
-            "bkESNAoCYmIYASABKAsyKC5wcm90b2J1Zl91bml0dGVzdDMuVGVzdE11dHVh",
-            "bFJlY3Vyc2lvbkIiYwoUVGVzdE11dHVhbFJlY3Vyc2lvbkISMwoBYRgBIAEo",
-            "CzIoLnByb3RvYnVmX3VuaXR0ZXN0My5UZXN0TXV0dWFsUmVjdXJzaW9uQRIW",
-            "Cg5vcHRpb25hbF9pbnQzMhgCIAEoBSJNChJUZXN0RW51bUFsbG93QWxpYXMS",
-            "NwoFdmFsdWUYASABKA4yKC5wcm90b2J1Zl91bml0dGVzdDMuVGVzdEVudW1X",
-            "aXRoRHVwVmFsdWUi7wIKF1Rlc3RDYW1lbENhc2VGaWVsZE5hbWVzEhYKDlBy",
-            "aW1pdGl2ZUZpZWxkGAEgASgFEhMKC1N0cmluZ0ZpZWxkGAIgASgJEjIKCUVu",
-            "dW1GaWVsZBgDIAEoDjIfLnByb3RvYnVmX3VuaXR0ZXN0My5Gb3JlaWduRW51",
-            "bRI4CgxNZXNzYWdlRmllbGQYBCABKAsyIi5wcm90b2J1Zl91bml0dGVzdDMu",
-            "Rm9yZWlnbk1lc3NhZ2USHgoWUmVwZWF0ZWRQcmltaXRpdmVGaWVsZBgHIAMo",
-            "BRIbChNSZXBlYXRlZFN0cmluZ0ZpZWxkGAggAygJEjoKEVJlcGVhdGVkRW51",
-            "bUZpZWxkGAkgAygOMh8ucHJvdG9idWZfdW5pdHRlc3QzLkZvcmVpZ25FbnVt",
-            "EkAKFFJlcGVhdGVkTWVzc2FnZUZpZWxkGAogAygLMiIucHJvdG9idWZfdW5p",
-            "dHRlc3QzLkZvcmVpZ25NZXNzYWdlIsgBChJUZXN0RmllbGRPcmRlcmluZ3MS",
-            "EQoJbXlfc3RyaW5nGAsgASgJEg4KBm15X2ludBgBIAEoAxIQCghteV9mbG9h",
-            "dBhlIAEoAhJUChVzaW5nbGVfbmVzdGVkX21lc3NhZ2UYyAEgASgLMjQucHJv",
-            "dG9idWZfdW5pdHRlc3QzLlRlc3RGaWVsZE9yZGVyaW5ncy5OZXN0ZWRNZXNz",
-            "YWdlGicKDU5lc3RlZE1lc3NhZ2USCgoCb28YAiABKAMSCgoCYmIYASABKAUi",
-            "TAoRU3BhcnNlRW51bU1lc3NhZ2USNwoLc3BhcnNlX2VudW0YASABKA4yIi5w",
-            "cm90b2J1Zl91bml0dGVzdDMuVGVzdFNwYXJzZUVudW0iGQoJT25lU3RyaW5n",
-            "EgwKBGRhdGEYASABKAkiGgoKTW9yZVN0cmluZxIMCgRkYXRhGAEgAygJIhgK",
-            "CE9uZUJ5dGVzEgwKBGRhdGEYASABKAwiGQoJTW9yZUJ5dGVzEgwKBGRhdGEY",
-            "ASABKAwiHAoMSW50MzJNZXNzYWdlEgwKBGRhdGEYASABKAUiHQoNVWludDMy",
-            "TWVzc2FnZRIMCgRkYXRhGAEgASgNIhwKDEludDY0TWVzc2FnZRIMCgRkYXRh",
-            "GAEgASgDIh0KDVVpbnQ2NE1lc3NhZ2USDAoEZGF0YRgBIAEoBCIbCgtCb29s",
-            "TWVzc2FnZRIMCgRkYXRhGAEgASgIInQKCVRlc3RPbmVvZhIRCgdmb29faW50",
-            "GAEgASgFSAASFAoKZm9vX3N0cmluZxgCIAEoCUgAEjcKC2Zvb19tZXNzYWdl",
-            "GAMgASgLMiAucHJvdG9idWZfdW5pdHRlc3QzLlRlc3RBbGxUeXBlc0gAQgUK",
-            "A2ZvbyKrAwoPVGVzdFBhY2tlZFR5cGVzEhgKDHBhY2tlZF9pbnQzMhhaIAMo",
-            "BUICEAESGAoMcGFja2VkX2ludDY0GFsgAygDQgIQARIZCg1wYWNrZWRfdWlu",
-            "dDMyGFwgAygNQgIQARIZCg1wYWNrZWRfdWludDY0GF0gAygEQgIQARIZCg1w",
-            "YWNrZWRfc2ludDMyGF4gAygRQgIQARIZCg1wYWNrZWRfc2ludDY0GF8gAygS",
-            "QgIQARIaCg5wYWNrZWRfZml4ZWQzMhhgIAMoB0ICEAESGgoOcGFja2VkX2Zp",
-            "eGVkNjQYYSADKAZCAhABEhsKD3BhY2tlZF9zZml4ZWQzMhhiIAMoD0ICEAES",
-            "GwoPcGFja2VkX3NmaXhlZDY0GGMgAygQQgIQARIYCgxwYWNrZWRfZmxvYXQY",
-            "ZCADKAJCAhABEhkKDXBhY2tlZF9kb3VibGUYZSADKAFCAhABEhcKC3BhY2tl",
-            "ZF9ib29sGGYgAygIQgIQARI4CgtwYWNrZWRfZW51bRhnIAMoDjIfLnByb3Rv",
-            "YnVmX3VuaXR0ZXN0My5Gb3JlaWduRW51bUICEAEiyQMKEVRlc3RVbnBhY2tl",
-            "ZFR5cGVzEhoKDnVucGFja2VkX2ludDMyGFogAygFQgIQABIaCg51bnBhY2tl",
-            "ZF9pbnQ2NBhbIAMoA0ICEAASGwoPdW5wYWNrZWRfdWludDMyGFwgAygNQgIQ",
-            "ABIbCg91bnBhY2tlZF91aW50NjQYXSADKARCAhAAEhsKD3VucGFja2VkX3Np",
-            "bnQzMhheIAMoEUICEAASGwoPdW5wYWNrZWRfc2ludDY0GF8gAygSQgIQABIc",
-            "ChB1bnBhY2tlZF9maXhlZDMyGGAgAygHQgIQABIcChB1bnBhY2tlZF9maXhl",
-            "ZDY0GGEgAygGQgIQABIdChF1bnBhY2tlZF9zZml4ZWQzMhhiIAMoD0ICEAAS",
-            "HQoRdW5wYWNrZWRfc2ZpeGVkNjQYYyADKBBCAhAAEhoKDnVucGFja2VkX2Zs",
-            "b2F0GGQgAygCQgIQABIbCg91bnBhY2tlZF9kb3VibGUYZSADKAFCAhAAEhkK",
-            "DXVucGFja2VkX2Jvb2wYZiADKAhCAhAAEjoKDXVucGFja2VkX2VudW0YZyAD",
-            "KA4yHy5wcm90b2J1Zl91bml0dGVzdDMuRm9yZWlnbkVudW1CAhAAIsABCiNU",
-            "ZXN0UmVwZWF0ZWRTY2FsYXJEaWZmZXJlbnRUYWdTaXplcxIYChByZXBlYXRl",
-            "ZF9maXhlZDMyGAwgAygHEhYKDnJlcGVhdGVkX2ludDMyGA0gAygFEhkKEHJl",
-            "cGVhdGVkX2ZpeGVkNjQY/g8gAygGEhcKDnJlcGVhdGVkX2ludDY0GP8PIAMo",
-            "AxIYCg5yZXBlYXRlZF9mbG9hdBj+/w8gAygCEhkKD3JlcGVhdGVkX3VpbnQ2",
-            "NBj//w8gAygEIigKG1Rlc3RDb21tZW50SW5qZWN0aW9uTWVzc2FnZRIJCgFh",
-            "GAEgASgJIgwKCkZvb1JlcXVlc3QiDQoLRm9vUmVzcG9uc2UiEgoQRm9vQ2xp",
-            "ZW50TWVzc2FnZSISChBGb29TZXJ2ZXJNZXNzYWdlIgwKCkJhclJlcXVlc3Qi",
-            "DQoLQmFyUmVzcG9uc2UiEgoQVGVzdEVtcHR5TWVzc2FnZSJwCg5Db21tZW50",
-            "TWVzc2FnZRIMCgR0ZXh0GAEgASgJGisKFE5lc3RlZENvbW1lbnRNZXNzYWdl",
-            "EhMKC25lc3RlZF90ZXh0GAEgASgJIiMKEU5lc3RlZENvbW1lbnRFbnVtEg4K",
-            "ClpFUk9fVkFMVUUQACpZCgtGb3JlaWduRW51bRIXChNGT1JFSUdOX1VOU1BF",
-            "Q0lGSUVEEAASDwoLRk9SRUlHTl9GT08QBBIPCgtGT1JFSUdOX0JBUhAFEg8K",
-            "C0ZPUkVJR05fQkFaEAYqdQoUVGVzdEVudW1XaXRoRHVwVmFsdWUSKAokVEVT",
-            "VF9FTlVNX1dJVEhfRFVQX1ZBTFVFX1VOU1BFQ0lGSUVEEAASCAoERk9PMRAB",
-            "EggKBEJBUjEQAhIHCgNCQVoQAxIICgRGT08yEAESCAoEQkFSMhACGgIQASqd",
-            "AQoOVGVzdFNwYXJzZUVudW0SIAocVEVTVF9TUEFSU0VfRU5VTV9VTlNQRUNJ",
-            "RklFRBAAEgwKCFNQQVJTRV9BEHsSDgoIU1BBUlNFX0IQpucDEg8KCFNQQVJT",
-            "RV9DELKxgAYSFQoIU1BBUlNFX0QQ8f//////////ARIVCghTUEFSU0VfRRC0",
-            "3vz///////8BEgwKCFNQQVJTRV9HEAIqHQoLQ29tbWVudEVudW0SDgoKWkVS",
-            "T19WQUxVRRAAMp0BCgtUZXN0U2VydmljZRJGCgNGb28SHi5wcm90b2J1Zl91",
-            "bml0dGVzdDMuRm9vUmVxdWVzdBofLnByb3RvYnVmX3VuaXR0ZXN0My5Gb29S",
-            "ZXNwb25zZRJGCgNCYXISHi5wcm90b2J1Zl91bml0dGVzdDMuQmFyUmVxdWVz",
-            "dBofLnByb3RvYnVmX3VuaXR0ZXN0My5CYXJSZXNwb25zZUIsQg1Vbml0dGVz",
-            "dFByb3RvqgIaR29vZ2xlLlByb3RvYnVmLlRlc3RQcm90b3NiBnByb3RvMw=="));
+            "bml0dGVzdF9pbXBvcnQuUHVibGljSW1wb3J0TWVzc2FnZRobCg1OZXN0ZWRN",
+            "ZXNzYWdlEgoKAmJiGAEgASgFIlYKCk5lc3RlZEVudW0SGwoXTkVTVEVEX0VO",
+            "VU1fVU5TUEVDSUZJRUQQABIHCgNGT08QARIHCgNCQVIQAhIHCgNCQVoQAxIQ",
+            "CgNORUcQ////////////ASK+AQoSTmVzdGVkVGVzdEFsbFR5cGVzEjUKBWNo",
+            "aWxkGAEgASgLMiYucHJvdG9idWZfdW5pdHRlc3QzLk5lc3RlZFRlc3RBbGxU",
+            "eXBlcxIxCgdwYXlsb2FkGAIgASgLMiAucHJvdG9idWZfdW5pdHRlc3QzLlRl",
+            "c3RBbGxUeXBlcxI+Cg5yZXBlYXRlZF9jaGlsZBgDIAMoCzImLnByb3RvYnVm",
+            "X3VuaXR0ZXN0My5OZXN0ZWRUZXN0QWxsVHlwZXMiNAoUVGVzdERlcHJlY2F0",
+            "ZWRGaWVsZHMSHAoQZGVwcmVjYXRlZF9pbnQzMhgBIAEoBUICGAEiGwoORm9y",
+            "ZWlnbk1lc3NhZ2USCQoBYxgBIAEoBSIwChJUZXN0UmVzZXJ2ZWRGaWVsZHNK",
+            "BAgCEANKBAgPEBBKBAgJEAxSA2JhclIDYmF6IlsKEVRlc3RGb3JlaWduTmVz",
+            "dGVkEkYKDmZvcmVpZ25fbmVzdGVkGAEgASgLMi4ucHJvdG9idWZfdW5pdHRl",
+            "c3QzLlRlc3RBbGxUeXBlcy5OZXN0ZWRNZXNzYWdlIjQKGFRlc3RSZWFsbHlM",
+            "YXJnZVRhZ051bWJlchIJCgFhGAEgASgFEg0KAmJiGP///38gASgFIlYKFFRl",
+            "c3RSZWN1cnNpdmVNZXNzYWdlEjMKAWEYASABKAsyKC5wcm90b2J1Zl91bml0",
+            "dGVzdDMuVGVzdFJlY3Vyc2l2ZU1lc3NhZ2USCQoBaRgCIAEoBSJMChRUZXN0",
+            "TXV0dWFsUmVjdXJzaW9uQRI0CgJiYhgBIAEoCzIoLnByb3RvYnVmX3VuaXR0",
+            "ZXN0My5UZXN0TXV0dWFsUmVjdXJzaW9uQiJjChRUZXN0TXV0dWFsUmVjdXJz",
+            "aW9uQhIzCgFhGAEgASgLMigucHJvdG9idWZfdW5pdHRlc3QzLlRlc3RNdXR1",
+            "YWxSZWN1cnNpb25BEhYKDm9wdGlvbmFsX2ludDMyGAIgASgFIk0KElRlc3RF",
+            "bnVtQWxsb3dBbGlhcxI3CgV2YWx1ZRgBIAEoDjIoLnByb3RvYnVmX3VuaXR0",
+            "ZXN0My5UZXN0RW51bVdpdGhEdXBWYWx1ZSLvAgoXVGVzdENhbWVsQ2FzZUZp",
+            "ZWxkTmFtZXMSFgoOUHJpbWl0aXZlRmllbGQYASABKAUSEwoLU3RyaW5nRmll",
+            "bGQYAiABKAkSMgoJRW51bUZpZWxkGAMgASgOMh8ucHJvdG9idWZfdW5pdHRl",
+            "c3QzLkZvcmVpZ25FbnVtEjgKDE1lc3NhZ2VGaWVsZBgEIAEoCzIiLnByb3Rv",
+            "YnVmX3VuaXR0ZXN0My5Gb3JlaWduTWVzc2FnZRIeChZSZXBlYXRlZFByaW1p",
+            "dGl2ZUZpZWxkGAcgAygFEhsKE1JlcGVhdGVkU3RyaW5nRmllbGQYCCADKAkS",
+            "OgoRUmVwZWF0ZWRFbnVtRmllbGQYCSADKA4yHy5wcm90b2J1Zl91bml0dGVz",
+            "dDMuRm9yZWlnbkVudW0SQAoUUmVwZWF0ZWRNZXNzYWdlRmllbGQYCiADKAsy",
+            "Ii5wcm90b2J1Zl91bml0dGVzdDMuRm9yZWlnbk1lc3NhZ2UiyAEKElRlc3RG",
+            "aWVsZE9yZGVyaW5ncxIRCglteV9zdHJpbmcYCyABKAkSDgoGbXlfaW50GAEg",
+            "ASgDEhAKCG15X2Zsb2F0GGUgASgCElQKFXNpbmdsZV9uZXN0ZWRfbWVzc2Fn",
+            "ZRjIASABKAsyNC5wcm90b2J1Zl91bml0dGVzdDMuVGVzdEZpZWxkT3JkZXJp",
+            "bmdzLk5lc3RlZE1lc3NhZ2UaJwoNTmVzdGVkTWVzc2FnZRIKCgJvbxgCIAEo",
+            "AxIKCgJiYhgBIAEoBSJMChFTcGFyc2VFbnVtTWVzc2FnZRI3CgtzcGFyc2Vf",
+            "ZW51bRgBIAEoDjIiLnByb3RvYnVmX3VuaXR0ZXN0My5UZXN0U3BhcnNlRW51",
+            "bSIZCglPbmVTdHJpbmcSDAoEZGF0YRgBIAEoCSIaCgpNb3JlU3RyaW5nEgwK",
+            "BGRhdGEYASADKAkiGAoIT25lQnl0ZXMSDAoEZGF0YRgBIAEoDCIZCglNb3Jl",
+            "Qnl0ZXMSDAoEZGF0YRgBIAEoDCIcCgxJbnQzMk1lc3NhZ2USDAoEZGF0YRgB",
+            "IAEoBSIdCg1VaW50MzJNZXNzYWdlEgwKBGRhdGEYASABKA0iHAoMSW50NjRN",
+            "ZXNzYWdlEgwKBGRhdGEYASABKAMiHQoNVWludDY0TWVzc2FnZRIMCgRkYXRh",
+            "GAEgASgEIhsKC0Jvb2xNZXNzYWdlEgwKBGRhdGEYASABKAgiqwMKD1Rlc3RQ",
+            "YWNrZWRUeXBlcxIYCgxwYWNrZWRfaW50MzIYWiADKAVCAhABEhgKDHBhY2tl",
+            "ZF9pbnQ2NBhbIAMoA0ICEAESGQoNcGFja2VkX3VpbnQzMhhcIAMoDUICEAES",
+            "GQoNcGFja2VkX3VpbnQ2NBhdIAMoBEICEAESGQoNcGFja2VkX3NpbnQzMhhe",
+            "IAMoEUICEAESGQoNcGFja2VkX3NpbnQ2NBhfIAMoEkICEAESGgoOcGFja2Vk",
+            "X2ZpeGVkMzIYYCADKAdCAhABEhoKDnBhY2tlZF9maXhlZDY0GGEgAygGQgIQ",
+            "ARIbCg9wYWNrZWRfc2ZpeGVkMzIYYiADKA9CAhABEhsKD3BhY2tlZF9zZml4",
+            "ZWQ2NBhjIAMoEEICEAESGAoMcGFja2VkX2Zsb2F0GGQgAygCQgIQARIZCg1w",
+            "YWNrZWRfZG91YmxlGGUgAygBQgIQARIXCgtwYWNrZWRfYm9vbBhmIAMoCEIC",
+            "EAESOAoLcGFja2VkX2VudW0YZyADKA4yHy5wcm90b2J1Zl91bml0dGVzdDMu",
+            "Rm9yZWlnbkVudW1CAhABIskDChFUZXN0VW5wYWNrZWRUeXBlcxIaCg51bnBh",
+            "Y2tlZF9pbnQzMhhaIAMoBUICEAASGgoOdW5wYWNrZWRfaW50NjQYWyADKANC",
+            "AhAAEhsKD3VucGFja2VkX3VpbnQzMhhcIAMoDUICEAASGwoPdW5wYWNrZWRf",
+            "dWludDY0GF0gAygEQgIQABIbCg91bnBhY2tlZF9zaW50MzIYXiADKBFCAhAA",
+            "EhsKD3VucGFja2VkX3NpbnQ2NBhfIAMoEkICEAASHAoQdW5wYWNrZWRfZml4",
+            "ZWQzMhhgIAMoB0ICEAASHAoQdW5wYWNrZWRfZml4ZWQ2NBhhIAMoBkICEAAS",
+            "HQoRdW5wYWNrZWRfc2ZpeGVkMzIYYiADKA9CAhAAEh0KEXVucGFja2VkX3Nm",
+            "aXhlZDY0GGMgAygQQgIQABIaCg51bnBhY2tlZF9mbG9hdBhkIAMoAkICEAAS",
+            "GwoPdW5wYWNrZWRfZG91YmxlGGUgAygBQgIQABIZCg11bnBhY2tlZF9ib29s",
+            "GGYgAygIQgIQABI6Cg11bnBhY2tlZF9lbnVtGGcgAygOMh8ucHJvdG9idWZf",
+            "dW5pdHRlc3QzLkZvcmVpZ25FbnVtQgIQACLAAQojVGVzdFJlcGVhdGVkU2Nh",
+            "bGFyRGlmZmVyZW50VGFnU2l6ZXMSGAoQcmVwZWF0ZWRfZml4ZWQzMhgMIAMo",
+            "BxIWCg5yZXBlYXRlZF9pbnQzMhgNIAMoBRIZChByZXBlYXRlZF9maXhlZDY0",
+            "GP4PIAMoBhIXCg5yZXBlYXRlZF9pbnQ2NBj/DyADKAMSGAoOcmVwZWF0ZWRf",
+            "ZmxvYXQY/v8PIAMoAhIZCg9yZXBlYXRlZF91aW50NjQY//8PIAMoBCIoChtU",
+            "ZXN0Q29tbWVudEluamVjdGlvbk1lc3NhZ2USCQoBYRgBIAEoCSIMCgpGb29S",
+            "ZXF1ZXN0Ig0KC0Zvb1Jlc3BvbnNlIhIKEEZvb0NsaWVudE1lc3NhZ2UiEgoQ",
+            "Rm9vU2VydmVyTWVzc2FnZSIMCgpCYXJSZXF1ZXN0Ig0KC0JhclJlc3BvbnNl",
+            "IhIKEFRlc3RFbXB0eU1lc3NhZ2UicAoOQ29tbWVudE1lc3NhZ2USDAoEdGV4",
+            "dBgBIAEoCRorChROZXN0ZWRDb21tZW50TWVzc2FnZRITCgtuZXN0ZWRfdGV4",
+            "dBgBIAEoCSIjChFOZXN0ZWRDb21tZW50RW51bRIOCgpaRVJPX1ZBTFVFEAAq",
+            "WQoLRm9yZWlnbkVudW0SFwoTRk9SRUlHTl9VTlNQRUNJRklFRBAAEg8KC0ZP",
+            "UkVJR05fRk9PEAQSDwoLRk9SRUlHTl9CQVIQBRIPCgtGT1JFSUdOX0JBWhAG",
+            "KnUKFFRlc3RFbnVtV2l0aER1cFZhbHVlEigKJFRFU1RfRU5VTV9XSVRIX0RV",
+            "UF9WQUxVRV9VTlNQRUNJRklFRBAAEggKBEZPTzEQARIICgRCQVIxEAISBwoD",
+            "QkFaEAMSCAoERk9PMhABEggKBEJBUjIQAhoCEAEqnQEKDlRlc3RTcGFyc2VF",
+            "bnVtEiAKHFRFU1RfU1BBUlNFX0VOVU1fVU5TUEVDSUZJRUQQABIMCghTUEFS",
+            "U0VfQRB7Eg4KCFNQQVJTRV9CEKbnAxIPCghTUEFSU0VfQxCysYAGEhUKCFNQ",
+            "QVJTRV9EEPH//////////wESFQoIU1BBUlNFX0UQtN78////////ARIMCghT",
+            "UEFSU0VfRxACKh0KC0NvbW1lbnRFbnVtEg4KClpFUk9fVkFMVUUQADKdAQoL",
+            "VGVzdFNlcnZpY2USRgoDRm9vEh4ucHJvdG9idWZfdW5pdHRlc3QzLkZvb1Jl",
+            "cXVlc3QaHy5wcm90b2J1Zl91bml0dGVzdDMuRm9vUmVzcG9uc2USRgoDQmFy",
+            "Eh4ucHJvdG9idWZfdW5pdHRlc3QzLkJhclJlcXVlc3QaHy5wcm90b2J1Zl91",
+            "bml0dGVzdDMuQmFyUmVzcG9uc2VCLEINVW5pdHRlc3RQcm90b6oCGkdvb2ds",
+            "ZS5Qcm90b2J1Zi5UZXN0UHJvdG9zYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.TestProtos.UnittestImportProto3Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.TestProtos.ForeignEnum), typeof(global::Google.Protobuf.TestProtos.TestEnumWithDupValue), typeof(global::Google.Protobuf.TestProtos.TestSparseEnum), typeof(global::Google.Protobuf.TestProtos.CommentEnum), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestAllTypes), global::Google.Protobuf.TestProtos.TestAllTypes.Parser, new[]{ "SingleInt32", "SingleInt64", "SingleUint32", "SingleUint64", "SingleSint32", "SingleSint64", "SingleFixed32", "SingleFixed64", "SingleSfixed32", "SingleSfixed64", "SingleFloat", "SingleDouble", "SingleBool", "SingleString", "SingleBytes", "SingleNestedMessage", "SingleForeignMessage", "SingleImportMessage", "SingleNestedEnum", "SingleForeignEnum", "SingleImportEnum", "SinglePublicImportMessage", "RepeatedInt32", "RepeatedInt64", "RepeatedUint32", "RepeatedUint64", "RepeatedSint32", "RepeatedSint64", "RepeatedFixed32", "RepeatedFixed64", "RepeatedSfixed32", "RepeatedSfixed64", "RepeatedFloat", "RepeatedDouble", "RepeatedBool", "RepeatedString", "RepeatedBytes", "RepeatedNestedMessage", "RepeatedForeignMessage", "RepeatedImportMessage", "RepeatedNestedEnum", "RepeatedForeignEnum", "RepeatedImportEnum", "RepeatedPublicImportMessage", "OneofUint32", "OneofNestedMessage", "OneofString", "OneofBytes" }, new[]{ "OneofField" }, new[]{ typeof(global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage), global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage.Parser, new[]{ "Bb" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestAllTypes), global::Google.Protobuf.TestProtos.TestAllTypes.Parser, new[]{ "SingleInt32", "SingleInt64", "SingleUint32", "SingleUint64", "SingleSint32", "SingleSint64", "SingleFixed32", "SingleFixed64", "SingleSfixed32", "SingleSfixed64", "SingleFloat", "SingleDouble", "SingleBool", "SingleString", "SingleBytes", "SingleNestedMessage", "SingleForeignMessage", "SingleImportMessage", "SingleNestedEnum", "SingleForeignEnum", "SingleImportEnum", "SinglePublicImportMessage", "RepeatedInt32", "RepeatedInt64", "RepeatedUint32", "RepeatedUint64", "RepeatedSint32", "RepeatedSint64", "RepeatedFixed32", "RepeatedFixed64", "RepeatedSfixed32", "RepeatedSfixed64", "RepeatedFloat", "RepeatedDouble", "RepeatedBool", "RepeatedString", "RepeatedBytes", "RepeatedNestedMessage", "RepeatedForeignMessage", "RepeatedImportMessage", "RepeatedNestedEnum", "RepeatedForeignEnum", "RepeatedImportEnum", "RepeatedPublicImportMessage" }, null, new[]{ typeof(global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage), global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage.Parser, new[]{ "Bb" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.NestedTestAllTypes), global::Google.Protobuf.TestProtos.NestedTestAllTypes.Parser, new[]{ "Child", "Payload", "RepeatedChild" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestDeprecatedFields), global::Google.Protobuf.TestProtos.TestDeprecatedFields.Parser, new[]{ "DeprecatedInt32" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.ForeignMessage), global::Google.Protobuf.TestProtos.ForeignMessage.Parser, new[]{ "C" }, null, null, null),
@@ -182,7 +176,6 @@ namespace Google.Protobuf.TestProtos {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.Int64Message), global::Google.Protobuf.TestProtos.Int64Message.Parser, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.Uint64Message), global::Google.Protobuf.TestProtos.Uint64Message.Parser, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.BoolMessage), global::Google.Protobuf.TestProtos.BoolMessage.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestOneof), global::Google.Protobuf.TestProtos.TestOneof.Parser, new[]{ "FooInt", "FooString", "FooMessage" }, new[]{ "Foo" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestPackedTypes), global::Google.Protobuf.TestProtos.TestPackedTypes.Parser, new[]{ "PackedInt32", "PackedInt64", "PackedUint32", "PackedUint64", "PackedSint32", "PackedSint64", "PackedFixed32", "PackedFixed64", "PackedSfixed32", "PackedSfixed64", "PackedFloat", "PackedDouble", "PackedBool", "PackedEnum" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestUnpackedTypes), global::Google.Protobuf.TestProtos.TestUnpackedTypes.Parser, new[]{ "UnpackedInt32", "UnpackedInt64", "UnpackedUint32", "UnpackedUint64", "UnpackedSint32", "UnpackedSint64", "UnpackedFixed32", "UnpackedFixed64", "UnpackedSfixed32", "UnpackedSfixed64", "UnpackedFloat", "UnpackedDouble", "UnpackedBool", "UnpackedEnum" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestRepeatedScalarDifferentTagSizes), global::Google.Protobuf.TestProtos.TestRepeatedScalarDifferentTagSizes.Parser, new[]{ "RepeatedFixed32", "RepeatedInt32", "RepeatedFixed64", "RepeatedInt64", "RepeatedFloat", "RepeatedUint64" }, null, null, null),
@@ -202,39 +195,39 @@ namespace Google.Protobuf.TestProtos {
   }
   #region Enums
   public enum ForeignEnum {
-    [pbr::OriginalName("FOREIGN_UNSPECIFIED")] ForeignUnspecified = 0,
-    [pbr::OriginalName("FOREIGN_FOO")] ForeignFoo = 4,
-    [pbr::OriginalName("FOREIGN_BAR")] ForeignBar = 5,
-    [pbr::OriginalName("FOREIGN_BAZ")] ForeignBaz = 6,
+    ForeignUnspecified = 0,
+    ForeignFoo = 4,
+    ForeignBar = 5,
+    ForeignBaz = 6,
   }
 
   /// <summary>
   /// Test an enum that has multiple values with the same number.
   /// </summary>
   public enum TestEnumWithDupValue {
-    [pbr::OriginalName("TEST_ENUM_WITH_DUP_VALUE_UNSPECIFIED")] Unspecified = 0,
-    [pbr::OriginalName("FOO1")] Foo1 = 1,
-    [pbr::OriginalName("BAR1")] Bar1 = 2,
-    [pbr::OriginalName("BAZ")] Baz = 3,
-    [pbr::OriginalName("FOO2", PreferredAlias = false)] Foo2 = 1,
-    [pbr::OriginalName("BAR2", PreferredAlias = false)] Bar2 = 2,
+    Unspecified = 0,
+    Foo1 = 1,
+    Bar1 = 2,
+    Baz = 3,
+    Foo2 = 1,
+    Bar2 = 2,
   }
 
   /// <summary>
   /// Test an enum with large, unordered values.
   /// </summary>
   public enum TestSparseEnum {
-    [pbr::OriginalName("TEST_SPARSE_ENUM_UNSPECIFIED")] Unspecified = 0,
-    [pbr::OriginalName("SPARSE_A")] SparseA = 123,
-    [pbr::OriginalName("SPARSE_B")] SparseB = 62374,
-    [pbr::OriginalName("SPARSE_C")] SparseC = 12589234,
-    [pbr::OriginalName("SPARSE_D")] SparseD = -15,
-    [pbr::OriginalName("SPARSE_E")] SparseE = -53452,
+    Unspecified = 0,
+    SparseA = 123,
+    SparseB = 62374,
+    SparseC = 12589234,
+    SparseD = -15,
+    SparseE = -53452,
     /// <summary>
     /// In proto3, value 0 must be the first one specified
     /// SPARSE_F = 0;
     /// </summary>
-    [pbr::OriginalName("SPARSE_G")] SparseG = 2,
+    SparseG = 2,
   }
 
   /// <summary>
@@ -244,7 +237,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>
     /// Zero value comment
     /// </summary>
-    [pbr::OriginalName("ZERO_VALUE")] ZeroValue = 0,
+    ZeroValue = 0,
   }
 
   #endregion
@@ -254,30 +247,21 @@ namespace Google.Protobuf.TestProtos {
   /// This proto includes every type of field in both singular and repeated
   /// forms.
   /// </summary>
-  public sealed partial class TestAllTypes : pb::IMessage<TestAllTypes> {
+  public sealed class TestAllTypes : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestAllTypes> _parser = new pb::MessageParser<TestAllTypes>(() => new TestAllTypes());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestAllTypes> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[0]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestAllTypes() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestAllTypes(TestAllTypes other) : this() {
       singleInt32_ = other.singleInt32_;
       singleInt64_ = other.singleInt64_;
@@ -294,55 +278,38 @@ namespace Google.Protobuf.TestProtos {
       singleBool_ = other.singleBool_;
       singleString_ = other.singleString_;
       singleBytes_ = other.singleBytes_;
-      singleNestedMessage_ = other.singleNestedMessage_ != null ? other.singleNestedMessage_.Clone() : null;
-      singleForeignMessage_ = other.singleForeignMessage_ != null ? other.singleForeignMessage_.Clone() : null;
-      singleImportMessage_ = other.singleImportMessage_ != null ? other.singleImportMessage_.Clone() : null;
+      singleNestedMessage_ = other.singleNestedMessage_ != null ? (global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage) other.singleNestedMessage_.Clone() : null;
+      singleForeignMessage_ = other.singleForeignMessage_ != null ? (global::Google.Protobuf.TestProtos.ForeignMessage) other.singleForeignMessage_.Clone() : null;
+      singleImportMessage_ = other.singleImportMessage_ != null ? (global::Google.Protobuf.TestProtos.ImportMessage) other.singleImportMessage_.Clone() : null;
       singleNestedEnum_ = other.singleNestedEnum_;
       singleForeignEnum_ = other.singleForeignEnum_;
       singleImportEnum_ = other.singleImportEnum_;
-      singlePublicImportMessage_ = other.singlePublicImportMessage_ != null ? other.singlePublicImportMessage_.Clone() : null;
-      repeatedInt32_ = other.repeatedInt32_.Clone();
-      repeatedInt64_ = other.repeatedInt64_.Clone();
-      repeatedUint32_ = other.repeatedUint32_.Clone();
-      repeatedUint64_ = other.repeatedUint64_.Clone();
-      repeatedSint32_ = other.repeatedSint32_.Clone();
-      repeatedSint64_ = other.repeatedSint64_.Clone();
-      repeatedFixed32_ = other.repeatedFixed32_.Clone();
-      repeatedFixed64_ = other.repeatedFixed64_.Clone();
-      repeatedSfixed32_ = other.repeatedSfixed32_.Clone();
-      repeatedSfixed64_ = other.repeatedSfixed64_.Clone();
-      repeatedFloat_ = other.repeatedFloat_.Clone();
-      repeatedDouble_ = other.repeatedDouble_.Clone();
-      repeatedBool_ = other.repeatedBool_.Clone();
-      repeatedString_ = other.repeatedString_.Clone();
-      repeatedBytes_ = other.repeatedBytes_.Clone();
-      repeatedNestedMessage_ = other.repeatedNestedMessage_.Clone();
-      repeatedForeignMessage_ = other.repeatedForeignMessage_.Clone();
-      repeatedImportMessage_ = other.repeatedImportMessage_.Clone();
-      repeatedNestedEnum_ = other.repeatedNestedEnum_.Clone();
-      repeatedForeignEnum_ = other.repeatedForeignEnum_.Clone();
-      repeatedImportEnum_ = other.repeatedImportEnum_.Clone();
-      repeatedPublicImportMessage_ = other.repeatedPublicImportMessage_.Clone();
-      switch (other.OneofFieldCase) {
-        case OneofFieldOneofCase.OneofUint32:
-          OneofUint32 = other.OneofUint32;
-          break;
-        case OneofFieldOneofCase.OneofNestedMessage:
-          OneofNestedMessage = other.OneofNestedMessage.Clone();
-          break;
-        case OneofFieldOneofCase.OneofString:
-          OneofString = other.OneofString;
-          break;
-        case OneofFieldOneofCase.OneofBytes:
-          OneofBytes = other.OneofBytes;
-          break;
-      }
-
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+      singlePublicImportMessage_ = other.singlePublicImportMessage_ != null ? (global::Google.Protobuf.TestProtos.PublicImportMessage) other.singlePublicImportMessage_.Clone() : null;
+      repeatedInt32_ = (pbc::RepeatedField<int>) other.repeatedInt32_.Clone();
+      repeatedInt64_ = (pbc::RepeatedField<long>) other.repeatedInt64_.Clone();
+      repeatedUint32_ = (pbc::RepeatedField<uint>) other.repeatedUint32_.Clone();
+      repeatedUint64_ = (pbc::RepeatedField<ulong>) other.repeatedUint64_.Clone();
+      repeatedSint32_ = (pbc::RepeatedField<int>) other.repeatedSint32_.Clone();
+      repeatedSint64_ = (pbc::RepeatedField<long>) other.repeatedSint64_.Clone();
+      repeatedFixed32_ = (pbc::RepeatedField<uint>) other.repeatedFixed32_.Clone();
+      repeatedFixed64_ = (pbc::RepeatedField<ulong>) other.repeatedFixed64_.Clone();
+      repeatedSfixed32_ = (pbc::RepeatedField<int>) other.repeatedSfixed32_.Clone();
+      repeatedSfixed64_ = (pbc::RepeatedField<long>) other.repeatedSfixed64_.Clone();
+      repeatedFloat_ = (pbc::RepeatedField<float>) other.repeatedFloat_.Clone();
+      repeatedDouble_ = (pbc::RepeatedField<double>) other.repeatedDouble_.Clone();
+      repeatedBool_ = (pbc::RepeatedField<bool>) other.repeatedBool_.Clone();
+      repeatedString_ = (pbc::RepeatedField<string>) other.repeatedString_.Clone();
+      repeatedBytes_ = (pbc::RepeatedField<pb::ByteString>) other.repeatedBytes_.Clone();
+      repeatedNestedMessage_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage>) other.repeatedNestedMessage_.Clone();
+      repeatedForeignMessage_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage>) other.repeatedForeignMessage_.Clone();
+      repeatedImportMessage_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportMessage>) other.repeatedImportMessage_.Clone();
+      repeatedNestedEnum_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum>) other.repeatedNestedEnum_.Clone();
+      repeatedForeignEnum_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>) other.repeatedForeignEnum_.Clone();
+      repeatedImportEnum_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportEnum>) other.repeatedImportEnum_.Clone();
+      repeatedPublicImportMessage_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.PublicImportMessage>) other.repeatedPublicImportMessage_.Clone();
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestAllTypes Clone() {
+    public object Clone() {
       return new TestAllTypes(this);
     }
 
@@ -352,7 +319,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>
     /// Singular
     /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SingleInt32 {
       get { return singleInt32_; }
       set {
@@ -363,7 +329,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_int64" field.</summary>
     public const int SingleInt64FieldNumber = 2;
     private long singleInt64_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long SingleInt64 {
       get { return singleInt64_; }
       set {
@@ -374,7 +339,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_uint32" field.</summary>
     public const int SingleUint32FieldNumber = 3;
     private uint singleUint32_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint SingleUint32 {
       get { return singleUint32_; }
       set {
@@ -385,7 +349,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_uint64" field.</summary>
     public const int SingleUint64FieldNumber = 4;
     private ulong singleUint64_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong SingleUint64 {
       get { return singleUint64_; }
       set {
@@ -396,7 +359,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_sint32" field.</summary>
     public const int SingleSint32FieldNumber = 5;
     private int singleSint32_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SingleSint32 {
       get { return singleSint32_; }
       set {
@@ -407,7 +369,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_sint64" field.</summary>
     public const int SingleSint64FieldNumber = 6;
     private long singleSint64_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long SingleSint64 {
       get { return singleSint64_; }
       set {
@@ -418,7 +379,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_fixed32" field.</summary>
     public const int SingleFixed32FieldNumber = 7;
     private uint singleFixed32_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint SingleFixed32 {
       get { return singleFixed32_; }
       set {
@@ -429,7 +389,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_fixed64" field.</summary>
     public const int SingleFixed64FieldNumber = 8;
     private ulong singleFixed64_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong SingleFixed64 {
       get { return singleFixed64_; }
       set {
@@ -440,7 +399,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_sfixed32" field.</summary>
     public const int SingleSfixed32FieldNumber = 9;
     private int singleSfixed32_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SingleSfixed32 {
       get { return singleSfixed32_; }
       set {
@@ -451,7 +409,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_sfixed64" field.</summary>
     public const int SingleSfixed64FieldNumber = 10;
     private long singleSfixed64_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long SingleSfixed64 {
       get { return singleSfixed64_; }
       set {
@@ -462,7 +419,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_float" field.</summary>
     public const int SingleFloatFieldNumber = 11;
     private float singleFloat_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float SingleFloat {
       get { return singleFloat_; }
       set {
@@ -473,7 +429,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_double" field.</summary>
     public const int SingleDoubleFieldNumber = 12;
     private double singleDouble_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double SingleDouble {
       get { return singleDouble_; }
       set {
@@ -484,7 +439,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_bool" field.</summary>
     public const int SingleBoolFieldNumber = 13;
     private bool singleBool_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool SingleBool {
       get { return singleBool_; }
       set {
@@ -495,7 +449,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_string" field.</summary>
     public const int SingleStringFieldNumber = 14;
     private string singleString_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SingleString {
       get { return singleString_; }
       set {
@@ -506,7 +459,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_bytes" field.</summary>
     public const int SingleBytesFieldNumber = 15;
     private pb::ByteString singleBytes_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString SingleBytes {
       get { return singleBytes_; }
       set {
@@ -517,7 +469,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_nested_message" field.</summary>
     public const int SingleNestedMessageFieldNumber = 18;
     private global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage singleNestedMessage_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage SingleNestedMessage {
       get { return singleNestedMessage_; }
       set {
@@ -528,7 +479,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_foreign_message" field.</summary>
     public const int SingleForeignMessageFieldNumber = 19;
     private global::Google.Protobuf.TestProtos.ForeignMessage singleForeignMessage_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.ForeignMessage SingleForeignMessage {
       get { return singleForeignMessage_; }
       set {
@@ -539,7 +489,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_import_message" field.</summary>
     public const int SingleImportMessageFieldNumber = 20;
     private global::Google.Protobuf.TestProtos.ImportMessage singleImportMessage_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.ImportMessage SingleImportMessage {
       get { return singleImportMessage_; }
       set {
@@ -550,7 +499,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_nested_enum" field.</summary>
     public const int SingleNestedEnumFieldNumber = 21;
     private global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum singleNestedEnum_ = 0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum SingleNestedEnum {
       get { return singleNestedEnum_; }
       set {
@@ -561,7 +509,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_foreign_enum" field.</summary>
     public const int SingleForeignEnumFieldNumber = 22;
     private global::Google.Protobuf.TestProtos.ForeignEnum singleForeignEnum_ = 0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.ForeignEnum SingleForeignEnum {
       get { return singleForeignEnum_; }
       set {
@@ -572,7 +519,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_import_enum" field.</summary>
     public const int SingleImportEnumFieldNumber = 23;
     private global::Google.Protobuf.TestProtos.ImportEnum singleImportEnum_ = 0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.ImportEnum SingleImportEnum {
       get { return singleImportEnum_; }
       set {
@@ -586,7 +532,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>
     /// Defined in unittest_import_public.proto
     /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.PublicImportMessage SinglePublicImportMessage {
       get { return singlePublicImportMessage_; }
       set {
@@ -602,7 +547,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>
     /// Repeated
     /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> RepeatedInt32 {
       get { return repeatedInt32_; }
     }
@@ -612,7 +556,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<long> _repeated_repeatedInt64_codec
         = pb::FieldCodec.ForInt64(258);
     private readonly pbc::RepeatedField<long> repeatedInt64_ = new pbc::RepeatedField<long>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> RepeatedInt64 {
       get { return repeatedInt64_; }
     }
@@ -622,7 +565,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<uint> _repeated_repeatedUint32_codec
         = pb::FieldCodec.ForUInt32(266);
     private readonly pbc::RepeatedField<uint> repeatedUint32_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<uint> RepeatedUint32 {
       get { return repeatedUint32_; }
     }
@@ -632,7 +574,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<ulong> _repeated_repeatedUint64_codec
         = pb::FieldCodec.ForUInt64(274);
     private readonly pbc::RepeatedField<ulong> repeatedUint64_ = new pbc::RepeatedField<ulong>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> RepeatedUint64 {
       get { return repeatedUint64_; }
     }
@@ -642,7 +583,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<int> _repeated_repeatedSint32_codec
         = pb::FieldCodec.ForSInt32(282);
     private readonly pbc::RepeatedField<int> repeatedSint32_ = new pbc::RepeatedField<int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> RepeatedSint32 {
       get { return repeatedSint32_; }
     }
@@ -652,7 +592,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<long> _repeated_repeatedSint64_codec
         = pb::FieldCodec.ForSInt64(290);
     private readonly pbc::RepeatedField<long> repeatedSint64_ = new pbc::RepeatedField<long>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> RepeatedSint64 {
       get { return repeatedSint64_; }
     }
@@ -662,7 +601,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<uint> _repeated_repeatedFixed32_codec
         = pb::FieldCodec.ForFixed32(298);
     private readonly pbc::RepeatedField<uint> repeatedFixed32_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<uint> RepeatedFixed32 {
       get { return repeatedFixed32_; }
     }
@@ -672,7 +610,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<ulong> _repeated_repeatedFixed64_codec
         = pb::FieldCodec.ForFixed64(306);
     private readonly pbc::RepeatedField<ulong> repeatedFixed64_ = new pbc::RepeatedField<ulong>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> RepeatedFixed64 {
       get { return repeatedFixed64_; }
     }
@@ -682,7 +619,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<int> _repeated_repeatedSfixed32_codec
         = pb::FieldCodec.ForSFixed32(314);
     private readonly pbc::RepeatedField<int> repeatedSfixed32_ = new pbc::RepeatedField<int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> RepeatedSfixed32 {
       get { return repeatedSfixed32_; }
     }
@@ -692,7 +628,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<long> _repeated_repeatedSfixed64_codec
         = pb::FieldCodec.ForSFixed64(322);
     private readonly pbc::RepeatedField<long> repeatedSfixed64_ = new pbc::RepeatedField<long>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> RepeatedSfixed64 {
       get { return repeatedSfixed64_; }
     }
@@ -702,7 +637,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<float> _repeated_repeatedFloat_codec
         = pb::FieldCodec.ForFloat(330);
     private readonly pbc::RepeatedField<float> repeatedFloat_ = new pbc::RepeatedField<float>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<float> RepeatedFloat {
       get { return repeatedFloat_; }
     }
@@ -712,7 +646,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<double> _repeated_repeatedDouble_codec
         = pb::FieldCodec.ForDouble(338);
     private readonly pbc::RepeatedField<double> repeatedDouble_ = new pbc::RepeatedField<double>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<double> RepeatedDouble {
       get { return repeatedDouble_; }
     }
@@ -722,7 +655,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<bool> _repeated_repeatedBool_codec
         = pb::FieldCodec.ForBool(346);
     private readonly pbc::RepeatedField<bool> repeatedBool_ = new pbc::RepeatedField<bool>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<bool> RepeatedBool {
       get { return repeatedBool_; }
     }
@@ -732,7 +664,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<string> _repeated_repeatedString_codec
         = pb::FieldCodec.ForString(354);
     private readonly pbc::RepeatedField<string> repeatedString_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> RepeatedString {
       get { return repeatedString_; }
     }
@@ -742,7 +673,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<pb::ByteString> _repeated_repeatedBytes_codec
         = pb::FieldCodec.ForBytes(362);
     private readonly pbc::RepeatedField<pb::ByteString> repeatedBytes_ = new pbc::RepeatedField<pb::ByteString>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<pb::ByteString> RepeatedBytes {
       get { return repeatedBytes_; }
     }
@@ -752,7 +682,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage> _repeated_repeatedNestedMessage_codec
         = pb::FieldCodec.ForMessage(386, global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage> repeatedNestedMessage_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage> RepeatedNestedMessage {
       get { return repeatedNestedMessage_; }
     }
@@ -762,7 +691,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<global::Google.Protobuf.TestProtos.ForeignMessage> _repeated_repeatedForeignMessage_codec
         = pb::FieldCodec.ForMessage(394, global::Google.Protobuf.TestProtos.ForeignMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage> repeatedForeignMessage_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage> RepeatedForeignMessage {
       get { return repeatedForeignMessage_; }
     }
@@ -772,7 +700,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<global::Google.Protobuf.TestProtos.ImportMessage> _repeated_repeatedImportMessage_codec
         = pb::FieldCodec.ForMessage(402, global::Google.Protobuf.TestProtos.ImportMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportMessage> repeatedImportMessage_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportMessage>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportMessage> RepeatedImportMessage {
       get { return repeatedImportMessage_; }
     }
@@ -782,7 +709,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum> _repeated_repeatedNestedEnum_codec
         = pb::FieldCodec.ForEnum(410, x => (int) x, x => (global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum> repeatedNestedEnum_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum> RepeatedNestedEnum {
       get { return repeatedNestedEnum_; }
     }
@@ -792,7 +718,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<global::Google.Protobuf.TestProtos.ForeignEnum> _repeated_repeatedForeignEnum_codec
         = pb::FieldCodec.ForEnum(418, x => (int) x, x => (global::Google.Protobuf.TestProtos.ForeignEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> repeatedForeignEnum_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> RepeatedForeignEnum {
       get { return repeatedForeignEnum_; }
     }
@@ -802,7 +727,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<global::Google.Protobuf.TestProtos.ImportEnum> _repeated_repeatedImportEnum_codec
         = pb::FieldCodec.ForEnum(426, x => (int) x, x => (global::Google.Protobuf.TestProtos.ImportEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportEnum> repeatedImportEnum_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportEnum>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportEnum> RepeatedImportEnum {
       get { return repeatedImportEnum_; }
     }
@@ -815,82 +739,14 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>
     /// Defined in unittest_import_public.proto
     /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.PublicImportMessage> RepeatedPublicImportMessage {
       get { return repeatedPublicImportMessage_; }
     }
 
-    /// <summary>Field number for the "oneof_uint32" field.</summary>
-    public const int OneofUint32FieldNumber = 111;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint OneofUint32 {
-      get { return oneofFieldCase_ == OneofFieldOneofCase.OneofUint32 ? (uint) oneofField_ : 0; }
-      set {
-        oneofField_ = value;
-        oneofFieldCase_ = OneofFieldOneofCase.OneofUint32;
-      }
-    }
-
-    /// <summary>Field number for the "oneof_nested_message" field.</summary>
-    public const int OneofNestedMessageFieldNumber = 112;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage OneofNestedMessage {
-      get { return oneofFieldCase_ == OneofFieldOneofCase.OneofNestedMessage ? (global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage) oneofField_ : null; }
-      set {
-        oneofField_ = value;
-        oneofFieldCase_ = value == null ? OneofFieldOneofCase.None : OneofFieldOneofCase.OneofNestedMessage;
-      }
-    }
-
-    /// <summary>Field number for the "oneof_string" field.</summary>
-    public const int OneofStringFieldNumber = 113;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string OneofString {
-      get { return oneofFieldCase_ == OneofFieldOneofCase.OneofString ? (string) oneofField_ : ""; }
-      set {
-        oneofField_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-        oneofFieldCase_ = OneofFieldOneofCase.OneofString;
-      }
-    }
-
-    /// <summary>Field number for the "oneof_bytes" field.</summary>
-    public const int OneofBytesFieldNumber = 114;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString OneofBytes {
-      get { return oneofFieldCase_ == OneofFieldOneofCase.OneofBytes ? (pb::ByteString) oneofField_ : pb::ByteString.Empty; }
-      set {
-        oneofField_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-        oneofFieldCase_ = OneofFieldOneofCase.OneofBytes;
-      }
-    }
-
-    private object oneofField_;
-    /// <summary>Enum of possible cases for the "oneof_field" oneof.</summary>
-    public enum OneofFieldOneofCase {
-      None = 0,
-      OneofUint32 = 111,
-      OneofNestedMessage = 112,
-      OneofString = 113,
-      OneofBytes = 114,
-    }
-    private OneofFieldOneofCase oneofFieldCase_ = OneofFieldOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public OneofFieldOneofCase OneofFieldCase {
-      get { return oneofFieldCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearOneofField() {
-      oneofFieldCase_ = OneofFieldOneofCase.None;
-      oneofField_ = null;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestAllTypes);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestAllTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -942,15 +798,9 @@ namespace Google.Protobuf.TestProtos {
       if(!repeatedForeignEnum_.Equals(other.repeatedForeignEnum_)) return false;
       if(!repeatedImportEnum_.Equals(other.repeatedImportEnum_)) return false;
       if(!repeatedPublicImportMessage_.Equals(other.repeatedPublicImportMessage_)) return false;
-      if (OneofUint32 != other.OneofUint32) return false;
-      if (!object.Equals(OneofNestedMessage, other.OneofNestedMessage)) return false;
-      if (OneofString != other.OneofString) return false;
-      if (OneofBytes != other.OneofBytes) return false;
-      if (OneofFieldCase != other.OneofFieldCase) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (SingleInt32 != 0) hash ^= SingleInt32.GetHashCode();
@@ -997,23 +847,9 @@ namespace Google.Protobuf.TestProtos {
       hash ^= repeatedForeignEnum_.GetHashCode();
       hash ^= repeatedImportEnum_.GetHashCode();
       hash ^= repeatedPublicImportMessage_.GetHashCode();
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofUint32) hash ^= OneofUint32.GetHashCode();
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofNestedMessage) hash ^= OneofNestedMessage.GetHashCode();
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofString) hash ^= OneofString.GetHashCode();
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofBytes) hash ^= OneofBytes.GetHashCode();
-      hash ^= (int) oneofFieldCase_;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (SingleInt32 != 0) {
         output.WriteRawTag(8);
@@ -1125,28 +961,8 @@ namespace Google.Protobuf.TestProtos {
       repeatedForeignEnum_.WriteTo(output, _repeated_repeatedForeignEnum_codec);
       repeatedImportEnum_.WriteTo(output, _repeated_repeatedImportEnum_codec);
       repeatedPublicImportMessage_.WriteTo(output, _repeated_repeatedPublicImportMessage_codec);
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofUint32) {
-        output.WriteRawTag(248, 6);
-        output.WriteUInt32(OneofUint32);
-      }
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofNestedMessage) {
-        output.WriteRawTag(130, 7);
-        output.WriteMessage(OneofNestedMessage);
-      }
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofString) {
-        output.WriteRawTag(138, 7);
-        output.WriteString(OneofString);
-      }
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofBytes) {
-        output.WriteRawTag(146, 7);
-        output.WriteBytes(OneofBytes);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (SingleInt32 != 0) {
@@ -1237,25 +1053,9 @@ namespace Google.Protobuf.TestProtos {
       size += repeatedForeignEnum_.CalculateSize(_repeated_repeatedForeignEnum_codec);
       size += repeatedImportEnum_.CalculateSize(_repeated_repeatedImportEnum_codec);
       size += repeatedPublicImportMessage_.CalculateSize(_repeated_repeatedPublicImportMessage_codec);
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofUint32) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(OneofUint32);
-      }
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofNestedMessage) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(OneofNestedMessage);
-      }
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofString) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(OneofString);
-      }
-      if (oneofFieldCase_ == OneofFieldOneofCase.OneofBytes) {
-        size += 2 + pb::CodedOutputStream.ComputeBytesSize(OneofBytes);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestAllTypes other) {
       if (other == null) {
         return;
@@ -1360,34 +1160,14 @@ namespace Google.Protobuf.TestProtos {
       repeatedForeignEnum_.Add(other.repeatedForeignEnum_);
       repeatedImportEnum_.Add(other.repeatedImportEnum_);
       repeatedPublicImportMessage_.Add(other.repeatedPublicImportMessage_);
-      switch (other.OneofFieldCase) {
-        case OneofFieldOneofCase.OneofUint32:
-          OneofUint32 = other.OneofUint32;
-          break;
-        case OneofFieldOneofCase.OneofNestedMessage:
-          if (OneofNestedMessage == null) {
-            OneofNestedMessage = new global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage();
-          }
-          OneofNestedMessage.MergeFrom(other.OneofNestedMessage);
-          break;
-        case OneofFieldOneofCase.OneofString:
-          OneofString = other.OneofString;
-          break;
-        case OneofFieldOneofCase.OneofBytes:
-          OneofBytes = other.OneofBytes;
-          break;
-      }
-
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             SingleInt32 = input.ReadInt32();
@@ -1593,77 +1373,44 @@ namespace Google.Protobuf.TestProtos {
             repeatedPublicImportMessage_.AddEntriesFrom(input, _repeated_repeatedPublicImportMessage_codec);
             break;
           }
-          case 888: {
-            OneofUint32 = input.ReadUInt32();
-            break;
-          }
-          case 898: {
-            global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage subBuilder = new global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage();
-            if (oneofFieldCase_ == OneofFieldOneofCase.OneofNestedMessage) {
-              subBuilder.MergeFrom(OneofNestedMessage);
-            }
-            input.ReadMessage(subBuilder);
-            OneofNestedMessage = subBuilder;
-            break;
-          }
-          case 906: {
-            OneofString = input.ReadString();
-            break;
-          }
-          case 914: {
-            OneofBytes = input.ReadBytes();
-            break;
-          }
         }
       }
     }
 
     #region Nested types
     /// <summary>Container for nested types declared in the TestAllTypes message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
+    public static class Types {
       public enum NestedEnum {
-        [pbr::OriginalName("NESTED_ENUM_UNSPECIFIED")] Unspecified = 0,
-        [pbr::OriginalName("FOO")] Foo = 1,
-        [pbr::OriginalName("BAR")] Bar = 2,
-        [pbr::OriginalName("BAZ")] Baz = 3,
+        Unspecified = 0,
+        Foo = 1,
+        Bar = 2,
+        Baz = 3,
         /// <summary>
         /// Intentionally negative.
         /// </summary>
-        [pbr::OriginalName("NEG")] Neg = -1,
+        Neg = -1,
       }
 
-      public sealed partial class NestedMessage : pb::IMessage<NestedMessage> {
+      public sealed class NestedMessage : pb::IMessage, pb::IDeepCloneable {
         private static readonly pb::MessageParser<NestedMessage> _parser = new pb::MessageParser<NestedMessage>(() => new NestedMessage());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pb::MessageParser<NestedMessage> Parser { get { return _parser; } }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Protobuf.TestProtos.TestAllTypes.Descriptor.NestedTypes[0]; }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public NestedMessage() {
-          OnConstruction();
         }
 
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public NestedMessage(NestedMessage other) : this() {
           bb_ = other.bb_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public NestedMessage Clone() {
+        public object Clone() {
           return new NestedMessage(this);
         }
 
@@ -1675,7 +1422,6 @@ namespace Google.Protobuf.TestProtos {
         /// a local variable named "b" in one of the generated methods.  Doh.
         /// This file needs to compile in proto1 to test backwards-compatibility.
         /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int Bb {
           get { return bb_; }
           set {
@@ -1683,12 +1429,10 @@ namespace Google.Protobuf.TestProtos {
           }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as NestedMessage);
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool Equals(NestedMessage other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1697,48 +1441,30 @@ namespace Google.Protobuf.TestProtos {
             return true;
           }
           if (Bb != other.Bb) return false;
-          return Equals(_unknownFields, other._unknownFields);
+          return true;
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
           if (Bb != 0) hash ^= Bb.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
           return hash;
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
           if (Bb != 0) {
             output.WriteRawTag(8);
             output.WriteInt32(Bb);
           }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
           if (Bb != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(Bb);
           }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
           return size;
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(NestedMessage other) {
           if (other == null) {
             return;
@@ -1746,16 +1472,14 @@ namespace Google.Protobuf.TestProtos {
           if (other.Bb != 0) {
             Bb = other.Bb;
           }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
               default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                input.SkipLastField();
                 break;
               case 8: {
                 Bb = input.ReadInt32();
@@ -1775,46 +1499,34 @@ namespace Google.Protobuf.TestProtos {
   /// <summary>
   /// This proto includes a recusively nested message.
   /// </summary>
-  public sealed partial class NestedTestAllTypes : pb::IMessage<NestedTestAllTypes> {
+  public sealed class NestedTestAllTypes : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<NestedTestAllTypes> _parser = new pb::MessageParser<NestedTestAllTypes>(() => new NestedTestAllTypes());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<NestedTestAllTypes> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[1]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public NestedTestAllTypes() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public NestedTestAllTypes(NestedTestAllTypes other) : this() {
-      child_ = other.child_ != null ? other.child_.Clone() : null;
-      payload_ = other.payload_ != null ? other.payload_.Clone() : null;
-      repeatedChild_ = other.repeatedChild_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+      child_ = other.child_ != null ? (global::Google.Protobuf.TestProtos.NestedTestAllTypes) other.child_.Clone() : null;
+      payload_ = other.payload_ != null ? (global::Google.Protobuf.TestProtos.TestAllTypes) other.payload_.Clone() : null;
+      repeatedChild_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.NestedTestAllTypes>) other.repeatedChild_.Clone();
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NestedTestAllTypes Clone() {
+    public object Clone() {
       return new NestedTestAllTypes(this);
     }
 
     /// <summary>Field number for the "child" field.</summary>
     public const int ChildFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.NestedTestAllTypes child_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.NestedTestAllTypes Child {
       get { return child_; }
       set {
@@ -1825,7 +1537,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 2;
     private global::Google.Protobuf.TestProtos.TestAllTypes payload_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.TestAllTypes Payload {
       get { return payload_; }
       set {
@@ -1838,17 +1549,14 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<global::Google.Protobuf.TestProtos.NestedTestAllTypes> _repeated_repeatedChild_codec
         = pb::FieldCodec.ForMessage(26, global::Google.Protobuf.TestProtos.NestedTestAllTypes.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.NestedTestAllTypes> repeatedChild_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.NestedTestAllTypes>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.NestedTestAllTypes> RepeatedChild {
       get { return repeatedChild_; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as NestedTestAllTypes);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(NestedTestAllTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1859,27 +1567,17 @@ namespace Google.Protobuf.TestProtos {
       if (!object.Equals(Child, other.Child)) return false;
       if (!object.Equals(Payload, other.Payload)) return false;
       if(!repeatedChild_.Equals(other.repeatedChild_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (child_ != null) hash ^= Child.GetHashCode();
       if (payload_ != null) hash ^= Payload.GetHashCode();
       hash ^= repeatedChild_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (child_ != null) {
         output.WriteRawTag(10);
@@ -1890,12 +1588,8 @@ namespace Google.Protobuf.TestProtos {
         output.WriteMessage(Payload);
       }
       repeatedChild_.WriteTo(output, _repeated_repeatedChild_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (child_ != null) {
@@ -1905,13 +1599,9 @@ namespace Google.Protobuf.TestProtos {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Payload);
       }
       size += repeatedChild_.CalculateSize(_repeated_repeatedChild_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(NestedTestAllTypes other) {
       if (other == null) {
         return;
@@ -1929,16 +1619,14 @@ namespace Google.Protobuf.TestProtos {
         Payload.MergeFrom(other.Payload);
       }
       repeatedChild_.Add(other.repeatedChild_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 10: {
             if (child_ == null) {
@@ -1964,37 +1652,26 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class TestDeprecatedFields : pb::IMessage<TestDeprecatedFields> {
+  public sealed class TestDeprecatedFields : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestDeprecatedFields> _parser = new pb::MessageParser<TestDeprecatedFields>(() => new TestDeprecatedFields());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestDeprecatedFields> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[2]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestDeprecatedFields() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestDeprecatedFields(TestDeprecatedFields other) : this() {
       deprecatedInt32_ = other.deprecatedInt32_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestDeprecatedFields Clone() {
+    public object Clone() {
       return new TestDeprecatedFields(this);
     }
 
@@ -2002,7 +1679,6 @@ namespace Google.Protobuf.TestProtos {
     public const int DeprecatedInt32FieldNumber = 1;
     private int deprecatedInt32_;
     [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int DeprecatedInt32 {
       get { return deprecatedInt32_; }
       set {
@@ -2010,12 +1686,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestDeprecatedFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestDeprecatedFields other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2024,48 +1698,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (DeprecatedInt32 != other.DeprecatedInt32) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (DeprecatedInt32 != 0) hash ^= DeprecatedInt32.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (DeprecatedInt32 != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(DeprecatedInt32);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (DeprecatedInt32 != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(DeprecatedInt32);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestDeprecatedFields other) {
       if (other == null) {
         return;
@@ -2073,16 +1729,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.DeprecatedInt32 != 0) {
         DeprecatedInt32 = other.DeprecatedInt32;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             DeprecatedInt32 = input.ReadInt32();
@@ -2098,44 +1752,32 @@ namespace Google.Protobuf.TestProtos {
   /// Define these after TestAllTypes to make sure the compiler can handle
   /// that.
   /// </summary>
-  public sealed partial class ForeignMessage : pb::IMessage<ForeignMessage> {
+  public sealed class ForeignMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<ForeignMessage> _parser = new pb::MessageParser<ForeignMessage>(() => new ForeignMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ForeignMessage> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[3]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ForeignMessage() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ForeignMessage(ForeignMessage other) : this() {
       c_ = other.c_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ForeignMessage Clone() {
+    public object Clone() {
       return new ForeignMessage(this);
     }
 
     /// <summary>Field number for the "c" field.</summary>
     public const int CFieldNumber = 1;
     private int c_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int C {
       get { return c_; }
       set {
@@ -2143,12 +1785,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ForeignMessage);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ForeignMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2157,48 +1797,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (C != other.C) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (C != 0) hash ^= C.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (C != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(C);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (C != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(C);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ForeignMessage other) {
       if (other == null) {
         return;
@@ -2206,16 +1828,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.C != 0) {
         C = other.C;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             C = input.ReadInt32();
@@ -2227,45 +1847,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class TestReservedFields : pb::IMessage<TestReservedFields> {
+  public sealed class TestReservedFields : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestReservedFields> _parser = new pb::MessageParser<TestReservedFields>(() => new TestReservedFields());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestReservedFields> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[4]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestReservedFields() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestReservedFields(TestReservedFields other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestReservedFields Clone() {
+    public object Clone() {
       return new TestReservedFields(this);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestReservedFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestReservedFields other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2273,54 +1880,34 @@ namespace Google.Protobuf.TestProtos {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestReservedFields other) {
       if (other == null) {
         return;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
         }
       }
@@ -2331,44 +1918,32 @@ namespace Google.Protobuf.TestProtos {
   /// <summary>
   /// Test that we can use NestedMessage from outside TestAllTypes.
   /// </summary>
-  public sealed partial class TestForeignNested : pb::IMessage<TestForeignNested> {
+  public sealed class TestForeignNested : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestForeignNested> _parser = new pb::MessageParser<TestForeignNested>(() => new TestForeignNested());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestForeignNested> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[5]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestForeignNested() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestForeignNested(TestForeignNested other) : this() {
-      foreignNested_ = other.foreignNested_ != null ? other.foreignNested_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+      foreignNested_ = other.foreignNested_ != null ? (global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage) other.foreignNested_.Clone() : null;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestForeignNested Clone() {
+    public object Clone() {
       return new TestForeignNested(this);
     }
 
     /// <summary>Field number for the "foreign_nested" field.</summary>
     public const int ForeignNestedFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage foreignNested_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage ForeignNested {
       get { return foreignNested_; }
       set {
@@ -2376,12 +1951,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestForeignNested);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestForeignNested other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2390,48 +1963,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (!object.Equals(ForeignNested, other.ForeignNested)) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (foreignNested_ != null) hash ^= ForeignNested.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (foreignNested_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(ForeignNested);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (foreignNested_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ForeignNested);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestForeignNested other) {
       if (other == null) {
         return;
@@ -2442,16 +1997,14 @@ namespace Google.Protobuf.TestProtos {
         }
         ForeignNested.MergeFrom(other.ForeignNested);
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 10: {
             if (foreignNested_ == null) {
@@ -2469,38 +2022,27 @@ namespace Google.Protobuf.TestProtos {
   /// <summary>
   /// Test that really large tag numbers don't break anything.
   /// </summary>
-  public sealed partial class TestReallyLargeTagNumber : pb::IMessage<TestReallyLargeTagNumber> {
+  public sealed class TestReallyLargeTagNumber : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestReallyLargeTagNumber> _parser = new pb::MessageParser<TestReallyLargeTagNumber>(() => new TestReallyLargeTagNumber());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestReallyLargeTagNumber> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[6]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestReallyLargeTagNumber() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestReallyLargeTagNumber(TestReallyLargeTagNumber other) : this() {
       a_ = other.a_;
       bb_ = other.bb_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestReallyLargeTagNumber Clone() {
+    public object Clone() {
       return new TestReallyLargeTagNumber(this);
     }
 
@@ -2511,7 +2053,6 @@ namespace Google.Protobuf.TestProtos {
     /// The largest possible tag number is 2^28 - 1, since the wire format uses
     /// three bits to communicate wire type.
     /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int A {
       get { return a_; }
       set {
@@ -2522,7 +2063,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "bb" field.</summary>
     public const int BbFieldNumber = 268435455;
     private int bb_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Bb {
       get { return bb_; }
       set {
@@ -2530,12 +2070,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestReallyLargeTagNumber);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestReallyLargeTagNumber other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2545,26 +2083,16 @@ namespace Google.Protobuf.TestProtos {
       }
       if (A != other.A) return false;
       if (Bb != other.Bb) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (A != 0) hash ^= A.GetHashCode();
       if (Bb != 0) hash ^= Bb.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (A != 0) {
         output.WriteRawTag(8);
@@ -2574,12 +2102,8 @@ namespace Google.Protobuf.TestProtos {
         output.WriteRawTag(248, 255, 255, 255, 7);
         output.WriteInt32(Bb);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (A != 0) {
@@ -2588,13 +2112,9 @@ namespace Google.Protobuf.TestProtos {
       if (Bb != 0) {
         size += 5 + pb::CodedOutputStream.ComputeInt32Size(Bb);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestReallyLargeTagNumber other) {
       if (other == null) {
         return;
@@ -2605,16 +2125,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.Bb != 0) {
         Bb = other.Bb;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             A = input.ReadInt32();
@@ -2630,45 +2148,33 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class TestRecursiveMessage : pb::IMessage<TestRecursiveMessage> {
+  public sealed class TestRecursiveMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestRecursiveMessage> _parser = new pb::MessageParser<TestRecursiveMessage>(() => new TestRecursiveMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestRecursiveMessage> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[7]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestRecursiveMessage() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestRecursiveMessage(TestRecursiveMessage other) : this() {
-      a_ = other.a_ != null ? other.a_.Clone() : null;
+      a_ = other.a_ != null ? (global::Google.Protobuf.TestProtos.TestRecursiveMessage) other.a_.Clone() : null;
       i_ = other.i_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestRecursiveMessage Clone() {
+    public object Clone() {
       return new TestRecursiveMessage(this);
     }
 
     /// <summary>Field number for the "a" field.</summary>
     public const int AFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestRecursiveMessage a_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.TestRecursiveMessage A {
       get { return a_; }
       set {
@@ -2679,7 +2185,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "i" field.</summary>
     public const int IFieldNumber = 2;
     private int i_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int I {
       get { return i_; }
       set {
@@ -2687,12 +2192,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestRecursiveMessage);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestRecursiveMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2702,26 +2205,16 @@ namespace Google.Protobuf.TestProtos {
       }
       if (!object.Equals(A, other.A)) return false;
       if (I != other.I) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (a_ != null) hash ^= A.GetHashCode();
       if (I != 0) hash ^= I.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (a_ != null) {
         output.WriteRawTag(10);
@@ -2731,12 +2224,8 @@ namespace Google.Protobuf.TestProtos {
         output.WriteRawTag(16);
         output.WriteInt32(I);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (a_ != null) {
@@ -2745,13 +2234,9 @@ namespace Google.Protobuf.TestProtos {
       if (I != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(I);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestRecursiveMessage other) {
       if (other == null) {
         return;
@@ -2765,16 +2250,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.I != 0) {
         I = other.I;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 10: {
             if (a_ == null) {
@@ -2796,44 +2279,32 @@ namespace Google.Protobuf.TestProtos {
   /// <summary>
   /// Test that mutual recursion works.
   /// </summary>
-  public sealed partial class TestMutualRecursionA : pb::IMessage<TestMutualRecursionA> {
+  public sealed class TestMutualRecursionA : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestMutualRecursionA> _parser = new pb::MessageParser<TestMutualRecursionA>(() => new TestMutualRecursionA());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestMutualRecursionA> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[8]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestMutualRecursionA() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestMutualRecursionA(TestMutualRecursionA other) : this() {
-      bb_ = other.bb_ != null ? other.bb_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+      bb_ = other.bb_ != null ? (global::Google.Protobuf.TestProtos.TestMutualRecursionB) other.bb_.Clone() : null;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestMutualRecursionA Clone() {
+    public object Clone() {
       return new TestMutualRecursionA(this);
     }
 
     /// <summary>Field number for the "bb" field.</summary>
     public const int BbFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestMutualRecursionB bb_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.TestMutualRecursionB Bb {
       get { return bb_; }
       set {
@@ -2841,12 +2312,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestMutualRecursionA);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestMutualRecursionA other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2855,48 +2324,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (!object.Equals(Bb, other.Bb)) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (bb_ != null) hash ^= Bb.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (bb_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Bb);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (bb_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Bb);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestMutualRecursionA other) {
       if (other == null) {
         return;
@@ -2907,16 +2358,14 @@ namespace Google.Protobuf.TestProtos {
         }
         Bb.MergeFrom(other.Bb);
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 10: {
             if (bb_ == null) {
@@ -2931,45 +2380,33 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class TestMutualRecursionB : pb::IMessage<TestMutualRecursionB> {
+  public sealed class TestMutualRecursionB : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestMutualRecursionB> _parser = new pb::MessageParser<TestMutualRecursionB>(() => new TestMutualRecursionB());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestMutualRecursionB> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[9]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestMutualRecursionB() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestMutualRecursionB(TestMutualRecursionB other) : this() {
-      a_ = other.a_ != null ? other.a_.Clone() : null;
+      a_ = other.a_ != null ? (global::Google.Protobuf.TestProtos.TestMutualRecursionA) other.a_.Clone() : null;
       optionalInt32_ = other.optionalInt32_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestMutualRecursionB Clone() {
+    public object Clone() {
       return new TestMutualRecursionB(this);
     }
 
     /// <summary>Field number for the "a" field.</summary>
     public const int AFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestMutualRecursionA a_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.TestMutualRecursionA A {
       get { return a_; }
       set {
@@ -2980,7 +2417,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "optional_int32" field.</summary>
     public const int OptionalInt32FieldNumber = 2;
     private int optionalInt32_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int OptionalInt32 {
       get { return optionalInt32_; }
       set {
@@ -2988,12 +2424,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestMutualRecursionB);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestMutualRecursionB other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3003,26 +2437,16 @@ namespace Google.Protobuf.TestProtos {
       }
       if (!object.Equals(A, other.A)) return false;
       if (OptionalInt32 != other.OptionalInt32) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (a_ != null) hash ^= A.GetHashCode();
       if (OptionalInt32 != 0) hash ^= OptionalInt32.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (a_ != null) {
         output.WriteRawTag(10);
@@ -3032,12 +2456,8 @@ namespace Google.Protobuf.TestProtos {
         output.WriteRawTag(16);
         output.WriteInt32(OptionalInt32);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (a_ != null) {
@@ -3046,13 +2466,9 @@ namespace Google.Protobuf.TestProtos {
       if (OptionalInt32 != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(OptionalInt32);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestMutualRecursionB other) {
       if (other == null) {
         return;
@@ -3066,16 +2482,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.OptionalInt32 != 0) {
         OptionalInt32 = other.OptionalInt32;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 10: {
             if (a_ == null) {
@@ -3094,44 +2508,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class TestEnumAllowAlias : pb::IMessage<TestEnumAllowAlias> {
+  public sealed class TestEnumAllowAlias : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestEnumAllowAlias> _parser = new pb::MessageParser<TestEnumAllowAlias>(() => new TestEnumAllowAlias());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestEnumAllowAlias> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[10]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestEnumAllowAlias() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestEnumAllowAlias(TestEnumAllowAlias other) : this() {
       value_ = other.value_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestEnumAllowAlias Clone() {
+    public object Clone() {
       return new TestEnumAllowAlias(this);
     }
 
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestEnumWithDupValue value_ = 0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.TestEnumWithDupValue Value {
       get { return value_; }
       set {
@@ -3139,12 +2541,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestEnumAllowAlias);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestEnumAllowAlias other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3153,48 +2553,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (Value != other.Value) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Value != 0) hash ^= Value.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Value != 0) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Value);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Value != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Value);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestEnumAllowAlias other) {
       if (other == null) {
         return;
@@ -3202,16 +2584,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.Value != 0) {
         Value = other.Value;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             Value = (global::Google.Protobuf.TestProtos.TestEnumWithDupValue) input.ReadEnum();
@@ -3227,51 +2607,39 @@ namespace Google.Protobuf.TestProtos {
   /// Test message with CamelCase field names.  This violates Protocol Buffer
   /// standard style.
   /// </summary>
-  public sealed partial class TestCamelCaseFieldNames : pb::IMessage<TestCamelCaseFieldNames> {
+  public sealed class TestCamelCaseFieldNames : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestCamelCaseFieldNames> _parser = new pb::MessageParser<TestCamelCaseFieldNames>(() => new TestCamelCaseFieldNames());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestCamelCaseFieldNames> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[11]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestCamelCaseFieldNames() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestCamelCaseFieldNames(TestCamelCaseFieldNames other) : this() {
       primitiveField_ = other.primitiveField_;
       stringField_ = other.stringField_;
       enumField_ = other.enumField_;
-      messageField_ = other.messageField_ != null ? other.messageField_.Clone() : null;
-      repeatedPrimitiveField_ = other.repeatedPrimitiveField_.Clone();
-      repeatedStringField_ = other.repeatedStringField_.Clone();
-      repeatedEnumField_ = other.repeatedEnumField_.Clone();
-      repeatedMessageField_ = other.repeatedMessageField_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+      messageField_ = other.messageField_ != null ? (global::Google.Protobuf.TestProtos.ForeignMessage) other.messageField_.Clone() : null;
+      repeatedPrimitiveField_ = (pbc::RepeatedField<int>) other.repeatedPrimitiveField_.Clone();
+      repeatedStringField_ = (pbc::RepeatedField<string>) other.repeatedStringField_.Clone();
+      repeatedEnumField_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>) other.repeatedEnumField_.Clone();
+      repeatedMessageField_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage>) other.repeatedMessageField_.Clone();
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestCamelCaseFieldNames Clone() {
+    public object Clone() {
       return new TestCamelCaseFieldNames(this);
     }
 
     /// <summary>Field number for the "PrimitiveField" field.</summary>
     public const int PrimitiveFieldFieldNumber = 1;
     private int primitiveField_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PrimitiveField {
       get { return primitiveField_; }
       set {
@@ -3282,7 +2650,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "StringField" field.</summary>
     public const int StringFieldFieldNumber = 2;
     private string stringField_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string StringField {
       get { return stringField_; }
       set {
@@ -3293,7 +2660,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "EnumField" field.</summary>
     public const int EnumFieldFieldNumber = 3;
     private global::Google.Protobuf.TestProtos.ForeignEnum enumField_ = 0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.ForeignEnum EnumField {
       get { return enumField_; }
       set {
@@ -3304,7 +2670,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "MessageField" field.</summary>
     public const int MessageFieldFieldNumber = 4;
     private global::Google.Protobuf.TestProtos.ForeignMessage messageField_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.ForeignMessage MessageField {
       get { return messageField_; }
       set {
@@ -3317,7 +2682,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<int> _repeated_repeatedPrimitiveField_codec
         = pb::FieldCodec.ForInt32(58);
     private readonly pbc::RepeatedField<int> repeatedPrimitiveField_ = new pbc::RepeatedField<int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> RepeatedPrimitiveField {
       get { return repeatedPrimitiveField_; }
     }
@@ -3327,7 +2691,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<string> _repeated_repeatedStringField_codec
         = pb::FieldCodec.ForString(66);
     private readonly pbc::RepeatedField<string> repeatedStringField_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> RepeatedStringField {
       get { return repeatedStringField_; }
     }
@@ -3337,7 +2700,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<global::Google.Protobuf.TestProtos.ForeignEnum> _repeated_repeatedEnumField_codec
         = pb::FieldCodec.ForEnum(74, x => (int) x, x => (global::Google.Protobuf.TestProtos.ForeignEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> repeatedEnumField_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> RepeatedEnumField {
       get { return repeatedEnumField_; }
     }
@@ -3347,17 +2709,14 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<global::Google.Protobuf.TestProtos.ForeignMessage> _repeated_repeatedMessageField_codec
         = pb::FieldCodec.ForMessage(82, global::Google.Protobuf.TestProtos.ForeignMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage> repeatedMessageField_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage> RepeatedMessageField {
       get { return repeatedMessageField_; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestCamelCaseFieldNames);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestCamelCaseFieldNames other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3373,10 +2732,9 @@ namespace Google.Protobuf.TestProtos {
       if(!repeatedStringField_.Equals(other.repeatedStringField_)) return false;
       if(!repeatedEnumField_.Equals(other.repeatedEnumField_)) return false;
       if(!repeatedMessageField_.Equals(other.repeatedMessageField_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (PrimitiveField != 0) hash ^= PrimitiveField.GetHashCode();
@@ -3387,18 +2745,9 @@ namespace Google.Protobuf.TestProtos {
       hash ^= repeatedStringField_.GetHashCode();
       hash ^= repeatedEnumField_.GetHashCode();
       hash ^= repeatedMessageField_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (PrimitiveField != 0) {
         output.WriteRawTag(8);
@@ -3420,12 +2769,8 @@ namespace Google.Protobuf.TestProtos {
       repeatedStringField_.WriteTo(output, _repeated_repeatedStringField_codec);
       repeatedEnumField_.WriteTo(output, _repeated_repeatedEnumField_codec);
       repeatedMessageField_.WriteTo(output, _repeated_repeatedMessageField_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (PrimitiveField != 0) {
@@ -3444,13 +2789,9 @@ namespace Google.Protobuf.TestProtos {
       size += repeatedStringField_.CalculateSize(_repeated_repeatedStringField_codec);
       size += repeatedEnumField_.CalculateSize(_repeated_repeatedEnumField_codec);
       size += repeatedMessageField_.CalculateSize(_repeated_repeatedMessageField_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestCamelCaseFieldNames other) {
       if (other == null) {
         return;
@@ -3474,16 +2815,14 @@ namespace Google.Protobuf.TestProtos {
       repeatedStringField_.Add(other.repeatedStringField_);
       repeatedEnumField_.Add(other.repeatedEnumField_);
       repeatedMessageField_.Add(other.repeatedMessageField_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             PrimitiveField = input.ReadInt32();
@@ -3532,47 +2871,35 @@ namespace Google.Protobuf.TestProtos {
   /// We list fields out of order, to ensure that we're using field number and not
   /// field index to determine serialization order.
   /// </summary>
-  public sealed partial class TestFieldOrderings : pb::IMessage<TestFieldOrderings> {
+  public sealed class TestFieldOrderings : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestFieldOrderings> _parser = new pb::MessageParser<TestFieldOrderings>(() => new TestFieldOrderings());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestFieldOrderings> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[12]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestFieldOrderings() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestFieldOrderings(TestFieldOrderings other) : this() {
       myString_ = other.myString_;
       myInt_ = other.myInt_;
       myFloat_ = other.myFloat_;
-      singleNestedMessage_ = other.singleNestedMessage_ != null ? other.singleNestedMessage_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+      singleNestedMessage_ = other.singleNestedMessage_ != null ? (global::Google.Protobuf.TestProtos.TestFieldOrderings.Types.NestedMessage) other.singleNestedMessage_.Clone() : null;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestFieldOrderings Clone() {
+    public object Clone() {
       return new TestFieldOrderings(this);
     }
 
     /// <summary>Field number for the "my_string" field.</summary>
     public const int MyStringFieldNumber = 11;
     private string myString_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MyString {
       get { return myString_; }
       set {
@@ -3583,7 +2910,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "my_int" field.</summary>
     public const int MyIntFieldNumber = 1;
     private long myInt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long MyInt {
       get { return myInt_; }
       set {
@@ -3594,7 +2920,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "my_float" field.</summary>
     public const int MyFloatFieldNumber = 101;
     private float myFloat_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float MyFloat {
       get { return myFloat_; }
       set {
@@ -3605,7 +2930,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "single_nested_message" field.</summary>
     public const int SingleNestedMessageFieldNumber = 200;
     private global::Google.Protobuf.TestProtos.TestFieldOrderings.Types.NestedMessage singleNestedMessage_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.TestFieldOrderings.Types.NestedMessage SingleNestedMessage {
       get { return singleNestedMessage_; }
       set {
@@ -3613,12 +2937,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestFieldOrderings);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestFieldOrderings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3630,28 +2952,18 @@ namespace Google.Protobuf.TestProtos {
       if (MyInt != other.MyInt) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MyFloat, other.MyFloat)) return false;
       if (!object.Equals(SingleNestedMessage, other.SingleNestedMessage)) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (MyString.Length != 0) hash ^= MyString.GetHashCode();
       if (MyInt != 0L) hash ^= MyInt.GetHashCode();
       if (MyFloat != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MyFloat);
       if (singleNestedMessage_ != null) hash ^= SingleNestedMessage.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (MyInt != 0L) {
         output.WriteRawTag(8);
@@ -3669,12 +2981,8 @@ namespace Google.Protobuf.TestProtos {
         output.WriteRawTag(194, 12);
         output.WriteMessage(SingleNestedMessage);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (MyString.Length != 0) {
@@ -3689,13 +2997,9 @@ namespace Google.Protobuf.TestProtos {
       if (singleNestedMessage_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SingleNestedMessage);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestFieldOrderings other) {
       if (other == null) {
         return;
@@ -3715,16 +3019,14 @@ namespace Google.Protobuf.TestProtos {
         }
         SingleNestedMessage.MergeFrom(other.SingleNestedMessage);
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             MyInt = input.ReadInt64();
@@ -3751,47 +3053,34 @@ namespace Google.Protobuf.TestProtos {
 
     #region Nested types
     /// <summary>Container for nested types declared in the TestFieldOrderings message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public sealed partial class NestedMessage : pb::IMessage<NestedMessage> {
+    public static class Types {
+      public sealed class NestedMessage : pb::IMessage, pb::IDeepCloneable {
         private static readonly pb::MessageParser<NestedMessage> _parser = new pb::MessageParser<NestedMessage>(() => new NestedMessage());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pb::MessageParser<NestedMessage> Parser { get { return _parser; } }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Protobuf.TestProtos.TestFieldOrderings.Descriptor.NestedTypes[0]; }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public NestedMessage() {
-          OnConstruction();
         }
 
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public NestedMessage(NestedMessage other) : this() {
           oo_ = other.oo_;
           bb_ = other.bb_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public NestedMessage Clone() {
+        public object Clone() {
           return new NestedMessage(this);
         }
 
         /// <summary>Field number for the "oo" field.</summary>
         public const int OoFieldNumber = 2;
         private long oo_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public long Oo {
           get { return oo_; }
           set {
@@ -3807,7 +3096,6 @@ namespace Google.Protobuf.TestProtos {
         /// a local variable named "b" in one of the generated methods.  Doh.
         /// This file needs to compile in proto1 to test backwards-compatibility.
         /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int Bb {
           get { return bb_; }
           set {
@@ -3815,12 +3103,10 @@ namespace Google.Protobuf.TestProtos {
           }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as NestedMessage);
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool Equals(NestedMessage other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3830,26 +3116,16 @@ namespace Google.Protobuf.TestProtos {
           }
           if (Oo != other.Oo) return false;
           if (Bb != other.Bb) return false;
-          return Equals(_unknownFields, other._unknownFields);
+          return true;
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
           if (Oo != 0L) hash ^= Oo.GetHashCode();
           if (Bb != 0) hash ^= Bb.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
           return hash;
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
           if (Bb != 0) {
             output.WriteRawTag(8);
@@ -3859,12 +3135,8 @@ namespace Google.Protobuf.TestProtos {
             output.WriteRawTag(16);
             output.WriteInt64(Oo);
           }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
           if (Oo != 0L) {
@@ -3873,13 +3145,9 @@ namespace Google.Protobuf.TestProtos {
           if (Bb != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(Bb);
           }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
           return size;
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(NestedMessage other) {
           if (other == null) {
             return;
@@ -3890,16 +3158,14 @@ namespace Google.Protobuf.TestProtos {
           if (other.Bb != 0) {
             Bb = other.Bb;
           }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
               default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                input.SkipLastField();
                 break;
               case 8: {
                 Bb = input.ReadInt32();
@@ -3920,44 +3186,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class SparseEnumMessage : pb::IMessage<SparseEnumMessage> {
+  public sealed class SparseEnumMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<SparseEnumMessage> _parser = new pb::MessageParser<SparseEnumMessage>(() => new SparseEnumMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<SparseEnumMessage> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[13]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SparseEnumMessage() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SparseEnumMessage(SparseEnumMessage other) : this() {
       sparseEnum_ = other.sparseEnum_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SparseEnumMessage Clone() {
+    public object Clone() {
       return new SparseEnumMessage(this);
     }
 
     /// <summary>Field number for the "sparse_enum" field.</summary>
     public const int SparseEnumFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestSparseEnum sparseEnum_ = 0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.TestProtos.TestSparseEnum SparseEnum {
       get { return sparseEnum_; }
       set {
@@ -3965,12 +3219,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SparseEnumMessage);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(SparseEnumMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3979,48 +3231,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (SparseEnum != other.SparseEnum) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (SparseEnum != 0) hash ^= SparseEnum.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (SparseEnum != 0) {
         output.WriteRawTag(8);
         output.WriteEnum((int) SparseEnum);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (SparseEnum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SparseEnum);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(SparseEnumMessage other) {
       if (other == null) {
         return;
@@ -4028,16 +3262,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.SparseEnum != 0) {
         SparseEnum = other.SparseEnum;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             SparseEnum = (global::Google.Protobuf.TestProtos.TestSparseEnum) input.ReadEnum();
@@ -4052,44 +3284,32 @@ namespace Google.Protobuf.TestProtos {
   /// <summary>
   /// Test String and Bytes: string is for valid UTF-8 strings
   /// </summary>
-  public sealed partial class OneString : pb::IMessage<OneString> {
+  public sealed class OneString : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<OneString> _parser = new pb::MessageParser<OneString>(() => new OneString());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<OneString> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[14]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public OneString() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public OneString(OneString other) : this() {
       data_ = other.data_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public OneString Clone() {
+    public object Clone() {
       return new OneString(this);
     }
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 1;
     private string data_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Data {
       get { return data_; }
       set {
@@ -4097,12 +3317,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as OneString);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(OneString other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4111,48 +3329,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (Data != other.Data) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Data);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Data.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Data);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(OneString other) {
       if (other == null) {
         return;
@@ -4160,16 +3360,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.Data.Length != 0) {
         Data = other.Data;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 10: {
             Data = input.ReadString();
@@ -4181,37 +3379,26 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class MoreString : pb::IMessage<MoreString> {
+  public sealed class MoreString : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<MoreString> _parser = new pb::MessageParser<MoreString>(() => new MoreString());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<MoreString> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[15]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MoreString() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MoreString(MoreString other) : this() {
-      data_ = other.data_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+      data_ = (pbc::RepeatedField<string>) other.data_.Clone();
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MoreString Clone() {
+    public object Clone() {
       return new MoreString(this);
     }
 
@@ -4220,17 +3407,14 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<string> _repeated_data_codec
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> data_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Data {
       get { return data_; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MoreString);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(MoreString other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4239,58 +3423,38 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if(!data_.Equals(other.data_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= data_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       data_.WriteTo(output, _repeated_data_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += data_.CalculateSize(_repeated_data_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(MoreString other) {
       if (other == null) {
         return;
       }
       data_.Add(other.data_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 10: {
             data_.AddEntriesFrom(input, _repeated_data_codec);
@@ -4302,44 +3466,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class OneBytes : pb::IMessage<OneBytes> {
+  public sealed class OneBytes : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<OneBytes> _parser = new pb::MessageParser<OneBytes>(() => new OneBytes());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<OneBytes> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[16]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public OneBytes() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public OneBytes(OneBytes other) : this() {
       data_ = other.data_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public OneBytes Clone() {
+    public object Clone() {
       return new OneBytes(this);
     }
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 1;
     private pb::ByteString data_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Data {
       get { return data_; }
       set {
@@ -4347,12 +3499,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as OneBytes);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(OneBytes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4361,48 +3511,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (Data != other.Data) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(Data);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Data.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(OneBytes other) {
       if (other == null) {
         return;
@@ -4410,16 +3542,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.Data.Length != 0) {
         Data = other.Data;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 10: {
             Data = input.ReadBytes();
@@ -4431,44 +3561,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class MoreBytes : pb::IMessage<MoreBytes> {
+  public sealed class MoreBytes : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<MoreBytes> _parser = new pb::MessageParser<MoreBytes>(() => new MoreBytes());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<MoreBytes> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[17]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MoreBytes() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MoreBytes(MoreBytes other) : this() {
       data_ = other.data_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MoreBytes Clone() {
+    public object Clone() {
       return new MoreBytes(this);
     }
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 1;
     private pb::ByteString data_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Data {
       get { return data_; }
       set {
@@ -4476,12 +3594,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MoreBytes);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(MoreBytes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4490,48 +3606,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (Data != other.Data) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(Data);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Data.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(MoreBytes other) {
       if (other == null) {
         return;
@@ -4539,16 +3637,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.Data.Length != 0) {
         Data = other.Data;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 10: {
             Data = input.ReadBytes();
@@ -4563,44 +3659,32 @@ namespace Google.Protobuf.TestProtos {
   /// <summary>
   /// Test int32, uint32, int64, uint64, and bool are all compatible
   /// </summary>
-  public sealed partial class Int32Message : pb::IMessage<Int32Message> {
+  public sealed class Int32Message : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<Int32Message> _parser = new pb::MessageParser<Int32Message>(() => new Int32Message());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Int32Message> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[18]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Int32Message() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Int32Message(Int32Message other) : this() {
       data_ = other.data_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Int32Message Clone() {
+    public object Clone() {
       return new Int32Message(this);
     }
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 1;
     private int data_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Data {
       get { return data_; }
       set {
@@ -4608,12 +3692,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Int32Message);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Int32Message other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4622,48 +3704,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (Data != other.Data) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Data != 0) hash ^= Data.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(Data);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Data != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Data);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Int32Message other) {
       if (other == null) {
         return;
@@ -4671,16 +3735,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.Data != 0) {
         Data = other.Data;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             Data = input.ReadInt32();
@@ -4692,44 +3754,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class Uint32Message : pb::IMessage<Uint32Message> {
+  public sealed class Uint32Message : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<Uint32Message> _parser = new pb::MessageParser<Uint32Message>(() => new Uint32Message());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Uint32Message> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[19]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Uint32Message() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Uint32Message(Uint32Message other) : this() {
       data_ = other.data_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Uint32Message Clone() {
+    public object Clone() {
       return new Uint32Message(this);
     }
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 1;
     private uint data_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint Data {
       get { return data_; }
       set {
@@ -4737,12 +3787,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Uint32Message);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Uint32Message other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4751,48 +3799,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (Data != other.Data) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Data != 0) hash ^= Data.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data != 0) {
         output.WriteRawTag(8);
         output.WriteUInt32(Data);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Data != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Data);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Uint32Message other) {
       if (other == null) {
         return;
@@ -4800,16 +3830,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.Data != 0) {
         Data = other.Data;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             Data = input.ReadUInt32();
@@ -4821,44 +3849,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class Int64Message : pb::IMessage<Int64Message> {
+  public sealed class Int64Message : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<Int64Message> _parser = new pb::MessageParser<Int64Message>(() => new Int64Message());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Int64Message> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[20]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Int64Message() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Int64Message(Int64Message other) : this() {
       data_ = other.data_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Int64Message Clone() {
+    public object Clone() {
       return new Int64Message(this);
     }
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 1;
     private long data_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Data {
       get { return data_; }
       set {
@@ -4866,12 +3882,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Int64Message);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Int64Message other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4880,48 +3894,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (Data != other.Data) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Data != 0L) hash ^= Data.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(Data);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Data != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Data);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Int64Message other) {
       if (other == null) {
         return;
@@ -4929,16 +3925,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.Data != 0L) {
         Data = other.Data;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             Data = input.ReadInt64();
@@ -4950,44 +3944,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class Uint64Message : pb::IMessage<Uint64Message> {
+  public sealed class Uint64Message : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<Uint64Message> _parser = new pb::MessageParser<Uint64Message>(() => new Uint64Message());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Uint64Message> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[21]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Uint64Message() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Uint64Message(Uint64Message other) : this() {
       data_ = other.data_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Uint64Message Clone() {
+    public object Clone() {
       return new Uint64Message(this);
     }
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 1;
     private ulong data_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong Data {
       get { return data_; }
       set {
@@ -4995,12 +3977,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Uint64Message);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Uint64Message other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5009,48 +3989,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (Data != other.Data) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Data != 0UL) hash ^= Data.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data != 0UL) {
         output.WriteRawTag(8);
         output.WriteUInt64(Data);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Data != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Data);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Uint64Message other) {
       if (other == null) {
         return;
@@ -5058,16 +4020,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.Data != 0UL) {
         Data = other.Data;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             Data = input.ReadUInt64();
@@ -5079,44 +4039,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class BoolMessage : pb::IMessage<BoolMessage> {
+  public sealed class BoolMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<BoolMessage> _parser = new pb::MessageParser<BoolMessage>(() => new BoolMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<BoolMessage> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[22]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BoolMessage() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BoolMessage(BoolMessage other) : this() {
       data_ = other.data_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public BoolMessage Clone() {
+    public object Clone() {
       return new BoolMessage(this);
     }
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 1;
     private bool data_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Data {
       get { return data_; }
       set {
@@ -5124,12 +4072,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BoolMessage);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(BoolMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5138,48 +4084,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (Data != other.Data) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Data != false) hash ^= Data.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data != false) {
         output.WriteRawTag(8);
         output.WriteBool(Data);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Data != false) {
         size += 1 + 1;
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(BoolMessage other) {
       if (other == null) {
         return;
@@ -5187,16 +4115,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.Data != false) {
         Data = other.Data;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             Data = input.ReadBool();
@@ -5208,280 +4134,39 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  /// <summary>
-  /// Test oneofs.
-  /// </summary>
-  public sealed partial class TestOneof : pb::IMessage<TestOneof> {
-    private static readonly pb::MessageParser<TestOneof> _parser = new pb::MessageParser<TestOneof>(() => new TestOneof());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<TestOneof> Parser { get { return _parser; } }
+  public sealed class TestPackedTypes : pb::IMessage, pb::IDeepCloneable {
+    private static readonly pb::MessageParser<TestPackedTypes> _parser = new pb::MessageParser<TestPackedTypes>(() => new TestPackedTypes());
+    public static pb::MessageParser<TestPackedTypes> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[23]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestOneof() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestOneof(TestOneof other) : this() {
-      switch (other.FooCase) {
-        case FooOneofCase.FooInt:
-          FooInt = other.FooInt;
-          break;
-        case FooOneofCase.FooString:
-          FooString = other.FooString;
-          break;
-        case FooOneofCase.FooMessage:
-          FooMessage = other.FooMessage.Clone();
-          break;
-      }
-
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestOneof Clone() {
-      return new TestOneof(this);
-    }
-
-    /// <summary>Field number for the "foo_int" field.</summary>
-    public const int FooIntFieldNumber = 1;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int FooInt {
-      get { return fooCase_ == FooOneofCase.FooInt ? (int) foo_ : 0; }
-      set {
-        foo_ = value;
-        fooCase_ = FooOneofCase.FooInt;
-      }
-    }
-
-    /// <summary>Field number for the "foo_string" field.</summary>
-    public const int FooStringFieldNumber = 2;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FooString {
-      get { return fooCase_ == FooOneofCase.FooString ? (string) foo_ : ""; }
-      set {
-        foo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-        fooCase_ = FooOneofCase.FooString;
-      }
-    }
-
-    /// <summary>Field number for the "foo_message" field.</summary>
-    public const int FooMessageFieldNumber = 3;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.TestProtos.TestAllTypes FooMessage {
-      get { return fooCase_ == FooOneofCase.FooMessage ? (global::Google.Protobuf.TestProtos.TestAllTypes) foo_ : null; }
-      set {
-        foo_ = value;
-        fooCase_ = value == null ? FooOneofCase.None : FooOneofCase.FooMessage;
-      }
-    }
-
-    private object foo_;
-    /// <summary>Enum of possible cases for the "foo" oneof.</summary>
-    public enum FooOneofCase {
-      None = 0,
-      FooInt = 1,
-      FooString = 2,
-      FooMessage = 3,
-    }
-    private FooOneofCase fooCase_ = FooOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public FooOneofCase FooCase {
-      get { return fooCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearFoo() {
-      fooCase_ = FooOneofCase.None;
-      foo_ = null;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as TestOneof);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(TestOneof other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (FooInt != other.FooInt) return false;
-      if (FooString != other.FooString) return false;
-      if (!object.Equals(FooMessage, other.FooMessage)) return false;
-      if (FooCase != other.FooCase) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (fooCase_ == FooOneofCase.FooInt) hash ^= FooInt.GetHashCode();
-      if (fooCase_ == FooOneofCase.FooString) hash ^= FooString.GetHashCode();
-      if (fooCase_ == FooOneofCase.FooMessage) hash ^= FooMessage.GetHashCode();
-      hash ^= (int) fooCase_;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (fooCase_ == FooOneofCase.FooInt) {
-        output.WriteRawTag(8);
-        output.WriteInt32(FooInt);
-      }
-      if (fooCase_ == FooOneofCase.FooString) {
-        output.WriteRawTag(18);
-        output.WriteString(FooString);
-      }
-      if (fooCase_ == FooOneofCase.FooMessage) {
-        output.WriteRawTag(26);
-        output.WriteMessage(FooMessage);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (fooCase_ == FooOneofCase.FooInt) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FooInt);
-      }
-      if (fooCase_ == FooOneofCase.FooString) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FooString);
-      }
-      if (fooCase_ == FooOneofCase.FooMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FooMessage);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(TestOneof other) {
-      if (other == null) {
-        return;
-      }
-      switch (other.FooCase) {
-        case FooOneofCase.FooInt:
-          FooInt = other.FooInt;
-          break;
-        case FooOneofCase.FooString:
-          FooString = other.FooString;
-          break;
-        case FooOneofCase.FooMessage:
-          if (FooMessage == null) {
-            FooMessage = new global::Google.Protobuf.TestProtos.TestAllTypes();
-          }
-          FooMessage.MergeFrom(other.FooMessage);
-          break;
-      }
-
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            FooInt = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            FooString = input.ReadString();
-            break;
-          }
-          case 26: {
-            global::Google.Protobuf.TestProtos.TestAllTypes subBuilder = new global::Google.Protobuf.TestProtos.TestAllTypes();
-            if (fooCase_ == FooOneofCase.FooMessage) {
-              subBuilder.MergeFrom(FooMessage);
-            }
-            input.ReadMessage(subBuilder);
-            FooMessage = subBuilder;
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class TestPackedTypes : pb::IMessage<TestPackedTypes> {
-    private static readonly pb::MessageParser<TestPackedTypes> _parser = new pb::MessageParser<TestPackedTypes>(() => new TestPackedTypes());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<TestPackedTypes> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[24]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestPackedTypes() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestPackedTypes(TestPackedTypes other) : this() {
-      packedInt32_ = other.packedInt32_.Clone();
-      packedInt64_ = other.packedInt64_.Clone();
-      packedUint32_ = other.packedUint32_.Clone();
-      packedUint64_ = other.packedUint64_.Clone();
-      packedSint32_ = other.packedSint32_.Clone();
-      packedSint64_ = other.packedSint64_.Clone();
-      packedFixed32_ = other.packedFixed32_.Clone();
-      packedFixed64_ = other.packedFixed64_.Clone();
-      packedSfixed32_ = other.packedSfixed32_.Clone();
-      packedSfixed64_ = other.packedSfixed64_.Clone();
-      packedFloat_ = other.packedFloat_.Clone();
-      packedDouble_ = other.packedDouble_.Clone();
-      packedBool_ = other.packedBool_.Clone();
-      packedEnum_ = other.packedEnum_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+      packedInt32_ = (pbc::RepeatedField<int>) other.packedInt32_.Clone();
+      packedInt64_ = (pbc::RepeatedField<long>) other.packedInt64_.Clone();
+      packedUint32_ = (pbc::RepeatedField<uint>) other.packedUint32_.Clone();
+      packedUint64_ = (pbc::RepeatedField<ulong>) other.packedUint64_.Clone();
+      packedSint32_ = (pbc::RepeatedField<int>) other.packedSint32_.Clone();
+      packedSint64_ = (pbc::RepeatedField<long>) other.packedSint64_.Clone();
+      packedFixed32_ = (pbc::RepeatedField<uint>) other.packedFixed32_.Clone();
+      packedFixed64_ = (pbc::RepeatedField<ulong>) other.packedFixed64_.Clone();
+      packedSfixed32_ = (pbc::RepeatedField<int>) other.packedSfixed32_.Clone();
+      packedSfixed64_ = (pbc::RepeatedField<long>) other.packedSfixed64_.Clone();
+      packedFloat_ = (pbc::RepeatedField<float>) other.packedFloat_.Clone();
+      packedDouble_ = (pbc::RepeatedField<double>) other.packedDouble_.Clone();
+      packedBool_ = (pbc::RepeatedField<bool>) other.packedBool_.Clone();
+      packedEnum_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>) other.packedEnum_.Clone();
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestPackedTypes Clone() {
+    public object Clone() {
       return new TestPackedTypes(this);
     }
 
@@ -5490,7 +4175,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<int> _repeated_packedInt32_codec
         = pb::FieldCodec.ForInt32(722);
     private readonly pbc::RepeatedField<int> packedInt32_ = new pbc::RepeatedField<int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> PackedInt32 {
       get { return packedInt32_; }
     }
@@ -5500,7 +4184,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<long> _repeated_packedInt64_codec
         = pb::FieldCodec.ForInt64(730);
     private readonly pbc::RepeatedField<long> packedInt64_ = new pbc::RepeatedField<long>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> PackedInt64 {
       get { return packedInt64_; }
     }
@@ -5510,7 +4193,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<uint> _repeated_packedUint32_codec
         = pb::FieldCodec.ForUInt32(738);
     private readonly pbc::RepeatedField<uint> packedUint32_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<uint> PackedUint32 {
       get { return packedUint32_; }
     }
@@ -5520,7 +4202,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<ulong> _repeated_packedUint64_codec
         = pb::FieldCodec.ForUInt64(746);
     private readonly pbc::RepeatedField<ulong> packedUint64_ = new pbc::RepeatedField<ulong>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> PackedUint64 {
       get { return packedUint64_; }
     }
@@ -5530,7 +4211,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<int> _repeated_packedSint32_codec
         = pb::FieldCodec.ForSInt32(754);
     private readonly pbc::RepeatedField<int> packedSint32_ = new pbc::RepeatedField<int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> PackedSint32 {
       get { return packedSint32_; }
     }
@@ -5540,7 +4220,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<long> _repeated_packedSint64_codec
         = pb::FieldCodec.ForSInt64(762);
     private readonly pbc::RepeatedField<long> packedSint64_ = new pbc::RepeatedField<long>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> PackedSint64 {
       get { return packedSint64_; }
     }
@@ -5550,7 +4229,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<uint> _repeated_packedFixed32_codec
         = pb::FieldCodec.ForFixed32(770);
     private readonly pbc::RepeatedField<uint> packedFixed32_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<uint> PackedFixed32 {
       get { return packedFixed32_; }
     }
@@ -5560,7 +4238,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<ulong> _repeated_packedFixed64_codec
         = pb::FieldCodec.ForFixed64(778);
     private readonly pbc::RepeatedField<ulong> packedFixed64_ = new pbc::RepeatedField<ulong>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> PackedFixed64 {
       get { return packedFixed64_; }
     }
@@ -5570,7 +4247,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<int> _repeated_packedSfixed32_codec
         = pb::FieldCodec.ForSFixed32(786);
     private readonly pbc::RepeatedField<int> packedSfixed32_ = new pbc::RepeatedField<int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> PackedSfixed32 {
       get { return packedSfixed32_; }
     }
@@ -5580,7 +4256,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<long> _repeated_packedSfixed64_codec
         = pb::FieldCodec.ForSFixed64(794);
     private readonly pbc::RepeatedField<long> packedSfixed64_ = new pbc::RepeatedField<long>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> PackedSfixed64 {
       get { return packedSfixed64_; }
     }
@@ -5590,7 +4265,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<float> _repeated_packedFloat_codec
         = pb::FieldCodec.ForFloat(802);
     private readonly pbc::RepeatedField<float> packedFloat_ = new pbc::RepeatedField<float>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<float> PackedFloat {
       get { return packedFloat_; }
     }
@@ -5600,7 +4274,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<double> _repeated_packedDouble_codec
         = pb::FieldCodec.ForDouble(810);
     private readonly pbc::RepeatedField<double> packedDouble_ = new pbc::RepeatedField<double>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<double> PackedDouble {
       get { return packedDouble_; }
     }
@@ -5610,7 +4283,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<bool> _repeated_packedBool_codec
         = pb::FieldCodec.ForBool(818);
     private readonly pbc::RepeatedField<bool> packedBool_ = new pbc::RepeatedField<bool>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<bool> PackedBool {
       get { return packedBool_; }
     }
@@ -5620,17 +4292,14 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<global::Google.Protobuf.TestProtos.ForeignEnum> _repeated_packedEnum_codec
         = pb::FieldCodec.ForEnum(826, x => (int) x, x => (global::Google.Protobuf.TestProtos.ForeignEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> packedEnum_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> PackedEnum {
       get { return packedEnum_; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestPackedTypes);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestPackedTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5652,10 +4321,9 @@ namespace Google.Protobuf.TestProtos {
       if(!packedDouble_.Equals(other.packedDouble_)) return false;
       if(!packedBool_.Equals(other.packedBool_)) return false;
       if(!packedEnum_.Equals(other.packedEnum_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= packedInt32_.GetHashCode();
@@ -5672,18 +4340,9 @@ namespace Google.Protobuf.TestProtos {
       hash ^= packedDouble_.GetHashCode();
       hash ^= packedBool_.GetHashCode();
       hash ^= packedEnum_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       packedInt32_.WriteTo(output, _repeated_packedInt32_codec);
       packedInt64_.WriteTo(output, _repeated_packedInt64_codec);
@@ -5699,12 +4358,8 @@ namespace Google.Protobuf.TestProtos {
       packedDouble_.WriteTo(output, _repeated_packedDouble_codec);
       packedBool_.WriteTo(output, _repeated_packedBool_codec);
       packedEnum_.WriteTo(output, _repeated_packedEnum_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += packedInt32_.CalculateSize(_repeated_packedInt32_codec);
@@ -5721,13 +4376,9 @@ namespace Google.Protobuf.TestProtos {
       size += packedDouble_.CalculateSize(_repeated_packedDouble_codec);
       size += packedBool_.CalculateSize(_repeated_packedBool_codec);
       size += packedEnum_.CalculateSize(_repeated_packedEnum_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestPackedTypes other) {
       if (other == null) {
         return;
@@ -5746,16 +4397,14 @@ namespace Google.Protobuf.TestProtos {
       packedDouble_.Add(other.packedDouble_);
       packedBool_.Add(other.packedBool_);
       packedEnum_.Add(other.packedEnum_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 722:
           case 720: {
@@ -5837,50 +4486,39 @@ namespace Google.Protobuf.TestProtos {
   /// A message with the same fields as TestPackedTypes, but without packing. Used
   /// to test packed &lt;-> unpacked wire compatibility.
   /// </summary>
-  public sealed partial class TestUnpackedTypes : pb::IMessage<TestUnpackedTypes> {
+  public sealed class TestUnpackedTypes : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestUnpackedTypes> _parser = new pb::MessageParser<TestUnpackedTypes>(() => new TestUnpackedTypes());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestUnpackedTypes> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[24]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestUnpackedTypes() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestUnpackedTypes(TestUnpackedTypes other) : this() {
-      unpackedInt32_ = other.unpackedInt32_.Clone();
-      unpackedInt64_ = other.unpackedInt64_.Clone();
-      unpackedUint32_ = other.unpackedUint32_.Clone();
-      unpackedUint64_ = other.unpackedUint64_.Clone();
-      unpackedSint32_ = other.unpackedSint32_.Clone();
-      unpackedSint64_ = other.unpackedSint64_.Clone();
-      unpackedFixed32_ = other.unpackedFixed32_.Clone();
-      unpackedFixed64_ = other.unpackedFixed64_.Clone();
-      unpackedSfixed32_ = other.unpackedSfixed32_.Clone();
-      unpackedSfixed64_ = other.unpackedSfixed64_.Clone();
-      unpackedFloat_ = other.unpackedFloat_.Clone();
-      unpackedDouble_ = other.unpackedDouble_.Clone();
-      unpackedBool_ = other.unpackedBool_.Clone();
-      unpackedEnum_ = other.unpackedEnum_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+      unpackedInt32_ = (pbc::RepeatedField<int>) other.unpackedInt32_.Clone();
+      unpackedInt64_ = (pbc::RepeatedField<long>) other.unpackedInt64_.Clone();
+      unpackedUint32_ = (pbc::RepeatedField<uint>) other.unpackedUint32_.Clone();
+      unpackedUint64_ = (pbc::RepeatedField<ulong>) other.unpackedUint64_.Clone();
+      unpackedSint32_ = (pbc::RepeatedField<int>) other.unpackedSint32_.Clone();
+      unpackedSint64_ = (pbc::RepeatedField<long>) other.unpackedSint64_.Clone();
+      unpackedFixed32_ = (pbc::RepeatedField<uint>) other.unpackedFixed32_.Clone();
+      unpackedFixed64_ = (pbc::RepeatedField<ulong>) other.unpackedFixed64_.Clone();
+      unpackedSfixed32_ = (pbc::RepeatedField<int>) other.unpackedSfixed32_.Clone();
+      unpackedSfixed64_ = (pbc::RepeatedField<long>) other.unpackedSfixed64_.Clone();
+      unpackedFloat_ = (pbc::RepeatedField<float>) other.unpackedFloat_.Clone();
+      unpackedDouble_ = (pbc::RepeatedField<double>) other.unpackedDouble_.Clone();
+      unpackedBool_ = (pbc::RepeatedField<bool>) other.unpackedBool_.Clone();
+      unpackedEnum_ = (pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>) other.unpackedEnum_.Clone();
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestUnpackedTypes Clone() {
+    public object Clone() {
       return new TestUnpackedTypes(this);
     }
 
@@ -5889,7 +4527,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<int> _repeated_unpackedInt32_codec
         = pb::FieldCodec.ForInt32(720);
     private readonly pbc::RepeatedField<int> unpackedInt32_ = new pbc::RepeatedField<int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> UnpackedInt32 {
       get { return unpackedInt32_; }
     }
@@ -5899,7 +4536,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<long> _repeated_unpackedInt64_codec
         = pb::FieldCodec.ForInt64(728);
     private readonly pbc::RepeatedField<long> unpackedInt64_ = new pbc::RepeatedField<long>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> UnpackedInt64 {
       get { return unpackedInt64_; }
     }
@@ -5909,7 +4545,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<uint> _repeated_unpackedUint32_codec
         = pb::FieldCodec.ForUInt32(736);
     private readonly pbc::RepeatedField<uint> unpackedUint32_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<uint> UnpackedUint32 {
       get { return unpackedUint32_; }
     }
@@ -5919,7 +4554,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<ulong> _repeated_unpackedUint64_codec
         = pb::FieldCodec.ForUInt64(744);
     private readonly pbc::RepeatedField<ulong> unpackedUint64_ = new pbc::RepeatedField<ulong>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> UnpackedUint64 {
       get { return unpackedUint64_; }
     }
@@ -5929,7 +4563,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<int> _repeated_unpackedSint32_codec
         = pb::FieldCodec.ForSInt32(752);
     private readonly pbc::RepeatedField<int> unpackedSint32_ = new pbc::RepeatedField<int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> UnpackedSint32 {
       get { return unpackedSint32_; }
     }
@@ -5939,7 +4572,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<long> _repeated_unpackedSint64_codec
         = pb::FieldCodec.ForSInt64(760);
     private readonly pbc::RepeatedField<long> unpackedSint64_ = new pbc::RepeatedField<long>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> UnpackedSint64 {
       get { return unpackedSint64_; }
     }
@@ -5949,7 +4581,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<uint> _repeated_unpackedFixed32_codec
         = pb::FieldCodec.ForFixed32(773);
     private readonly pbc::RepeatedField<uint> unpackedFixed32_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<uint> UnpackedFixed32 {
       get { return unpackedFixed32_; }
     }
@@ -5959,7 +4590,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<ulong> _repeated_unpackedFixed64_codec
         = pb::FieldCodec.ForFixed64(777);
     private readonly pbc::RepeatedField<ulong> unpackedFixed64_ = new pbc::RepeatedField<ulong>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> UnpackedFixed64 {
       get { return unpackedFixed64_; }
     }
@@ -5969,7 +4599,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<int> _repeated_unpackedSfixed32_codec
         = pb::FieldCodec.ForSFixed32(789);
     private readonly pbc::RepeatedField<int> unpackedSfixed32_ = new pbc::RepeatedField<int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> UnpackedSfixed32 {
       get { return unpackedSfixed32_; }
     }
@@ -5979,7 +4608,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<long> _repeated_unpackedSfixed64_codec
         = pb::FieldCodec.ForSFixed64(793);
     private readonly pbc::RepeatedField<long> unpackedSfixed64_ = new pbc::RepeatedField<long>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> UnpackedSfixed64 {
       get { return unpackedSfixed64_; }
     }
@@ -5989,7 +4617,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<float> _repeated_unpackedFloat_codec
         = pb::FieldCodec.ForFloat(805);
     private readonly pbc::RepeatedField<float> unpackedFloat_ = new pbc::RepeatedField<float>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<float> UnpackedFloat {
       get { return unpackedFloat_; }
     }
@@ -5999,7 +4626,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<double> _repeated_unpackedDouble_codec
         = pb::FieldCodec.ForDouble(809);
     private readonly pbc::RepeatedField<double> unpackedDouble_ = new pbc::RepeatedField<double>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<double> UnpackedDouble {
       get { return unpackedDouble_; }
     }
@@ -6009,7 +4635,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<bool> _repeated_unpackedBool_codec
         = pb::FieldCodec.ForBool(816);
     private readonly pbc::RepeatedField<bool> unpackedBool_ = new pbc::RepeatedField<bool>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<bool> UnpackedBool {
       get { return unpackedBool_; }
     }
@@ -6019,17 +4644,14 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<global::Google.Protobuf.TestProtos.ForeignEnum> _repeated_unpackedEnum_codec
         = pb::FieldCodec.ForEnum(824, x => (int) x, x => (global::Google.Protobuf.TestProtos.ForeignEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> unpackedEnum_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> UnpackedEnum {
       get { return unpackedEnum_; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestUnpackedTypes);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestUnpackedTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6051,10 +4673,9 @@ namespace Google.Protobuf.TestProtos {
       if(!unpackedDouble_.Equals(other.unpackedDouble_)) return false;
       if(!unpackedBool_.Equals(other.unpackedBool_)) return false;
       if(!unpackedEnum_.Equals(other.unpackedEnum_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= unpackedInt32_.GetHashCode();
@@ -6071,18 +4692,9 @@ namespace Google.Protobuf.TestProtos {
       hash ^= unpackedDouble_.GetHashCode();
       hash ^= unpackedBool_.GetHashCode();
       hash ^= unpackedEnum_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       unpackedInt32_.WriteTo(output, _repeated_unpackedInt32_codec);
       unpackedInt64_.WriteTo(output, _repeated_unpackedInt64_codec);
@@ -6098,12 +4710,8 @@ namespace Google.Protobuf.TestProtos {
       unpackedDouble_.WriteTo(output, _repeated_unpackedDouble_codec);
       unpackedBool_.WriteTo(output, _repeated_unpackedBool_codec);
       unpackedEnum_.WriteTo(output, _repeated_unpackedEnum_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += unpackedInt32_.CalculateSize(_repeated_unpackedInt32_codec);
@@ -6120,13 +4728,9 @@ namespace Google.Protobuf.TestProtos {
       size += unpackedDouble_.CalculateSize(_repeated_unpackedDouble_codec);
       size += unpackedBool_.CalculateSize(_repeated_unpackedBool_codec);
       size += unpackedEnum_.CalculateSize(_repeated_unpackedEnum_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestUnpackedTypes other) {
       if (other == null) {
         return;
@@ -6145,16 +4749,14 @@ namespace Google.Protobuf.TestProtos {
       unpackedDouble_.Add(other.unpackedDouble_);
       unpackedBool_.Add(other.unpackedBool_);
       unpackedEnum_.Add(other.unpackedEnum_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 722:
           case 720: {
@@ -6232,42 +4834,31 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class TestRepeatedScalarDifferentTagSizes : pb::IMessage<TestRepeatedScalarDifferentTagSizes> {
+  public sealed class TestRepeatedScalarDifferentTagSizes : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestRepeatedScalarDifferentTagSizes> _parser = new pb::MessageParser<TestRepeatedScalarDifferentTagSizes>(() => new TestRepeatedScalarDifferentTagSizes());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestRepeatedScalarDifferentTagSizes> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[25]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestRepeatedScalarDifferentTagSizes() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestRepeatedScalarDifferentTagSizes(TestRepeatedScalarDifferentTagSizes other) : this() {
-      repeatedFixed32_ = other.repeatedFixed32_.Clone();
-      repeatedInt32_ = other.repeatedInt32_.Clone();
-      repeatedFixed64_ = other.repeatedFixed64_.Clone();
-      repeatedInt64_ = other.repeatedInt64_.Clone();
-      repeatedFloat_ = other.repeatedFloat_.Clone();
-      repeatedUint64_ = other.repeatedUint64_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+      repeatedFixed32_ = (pbc::RepeatedField<uint>) other.repeatedFixed32_.Clone();
+      repeatedInt32_ = (pbc::RepeatedField<int>) other.repeatedInt32_.Clone();
+      repeatedFixed64_ = (pbc::RepeatedField<ulong>) other.repeatedFixed64_.Clone();
+      repeatedInt64_ = (pbc::RepeatedField<long>) other.repeatedInt64_.Clone();
+      repeatedFloat_ = (pbc::RepeatedField<float>) other.repeatedFloat_.Clone();
+      repeatedUint64_ = (pbc::RepeatedField<ulong>) other.repeatedUint64_.Clone();
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestRepeatedScalarDifferentTagSizes Clone() {
+    public object Clone() {
       return new TestRepeatedScalarDifferentTagSizes(this);
     }
 
@@ -6281,7 +4872,6 @@ namespace Google.Protobuf.TestProtos {
     /// used in order to get a tag of the right size; all of the repeated fields
     /// in TestAllTypes didn't trigger the check.
     /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<uint> RepeatedFixed32 {
       get { return repeatedFixed32_; }
     }
@@ -6294,7 +4884,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>
     /// Check for a varint type, just for good measure.
     /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> RepeatedInt32 {
       get { return repeatedInt32_; }
     }
@@ -6307,7 +4896,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>
     /// These have two-byte tags.
     /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> RepeatedFixed64 {
       get { return repeatedFixed64_; }
     }
@@ -6317,7 +4905,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<long> _repeated_repeatedInt64_codec
         = pb::FieldCodec.ForInt64(16378);
     private readonly pbc::RepeatedField<long> repeatedInt64_ = new pbc::RepeatedField<long>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> RepeatedInt64 {
       get { return repeatedInt64_; }
     }
@@ -6330,7 +4917,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>
     /// Three byte tags.
     /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<float> RepeatedFloat {
       get { return repeatedFloat_; }
     }
@@ -6340,17 +4926,14 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<ulong> _repeated_repeatedUint64_codec
         = pb::FieldCodec.ForUInt64(2097146);
     private readonly pbc::RepeatedField<ulong> repeatedUint64_ = new pbc::RepeatedField<ulong>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> RepeatedUint64 {
       get { return repeatedUint64_; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestRepeatedScalarDifferentTagSizes);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestRepeatedScalarDifferentTagSizes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6364,10 +4947,9 @@ namespace Google.Protobuf.TestProtos {
       if(!repeatedInt64_.Equals(other.repeatedInt64_)) return false;
       if(!repeatedFloat_.Equals(other.repeatedFloat_)) return false;
       if(!repeatedUint64_.Equals(other.repeatedUint64_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= repeatedFixed32_.GetHashCode();
@@ -6376,18 +4958,9 @@ namespace Google.Protobuf.TestProtos {
       hash ^= repeatedInt64_.GetHashCode();
       hash ^= repeatedFloat_.GetHashCode();
       hash ^= repeatedUint64_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       repeatedFixed32_.WriteTo(output, _repeated_repeatedFixed32_codec);
       repeatedInt32_.WriteTo(output, _repeated_repeatedInt32_codec);
@@ -6395,12 +4968,8 @@ namespace Google.Protobuf.TestProtos {
       repeatedInt64_.WriteTo(output, _repeated_repeatedInt64_codec);
       repeatedFloat_.WriteTo(output, _repeated_repeatedFloat_codec);
       repeatedUint64_.WriteTo(output, _repeated_repeatedUint64_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += repeatedFixed32_.CalculateSize(_repeated_repeatedFixed32_codec);
@@ -6409,13 +4978,9 @@ namespace Google.Protobuf.TestProtos {
       size += repeatedInt64_.CalculateSize(_repeated_repeatedInt64_codec);
       size += repeatedFloat_.CalculateSize(_repeated_repeatedFloat_codec);
       size += repeatedUint64_.CalculateSize(_repeated_repeatedUint64_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestRepeatedScalarDifferentTagSizes other) {
       if (other == null) {
         return;
@@ -6426,16 +4991,14 @@ namespace Google.Protobuf.TestProtos {
       repeatedInt64_.Add(other.repeatedInt64_);
       repeatedFloat_.Add(other.repeatedFloat_);
       repeatedUint64_.Add(other.repeatedUint64_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 98:
           case 101: {
@@ -6473,37 +5036,26 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class TestCommentInjectionMessage : pb::IMessage<TestCommentInjectionMessage> {
+  public sealed class TestCommentInjectionMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestCommentInjectionMessage> _parser = new pb::MessageParser<TestCommentInjectionMessage>(() => new TestCommentInjectionMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestCommentInjectionMessage> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[26]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestCommentInjectionMessage() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestCommentInjectionMessage(TestCommentInjectionMessage other) : this() {
       a_ = other.a_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestCommentInjectionMessage Clone() {
+    public object Clone() {
       return new TestCommentInjectionMessage(this);
     }
 
@@ -6513,7 +5065,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>
     /// */ &lt;- This should not close the generated doc comment
     /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string A {
       get { return a_; }
       set {
@@ -6521,12 +5072,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestCommentInjectionMessage);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestCommentInjectionMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6535,48 +5084,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (A != other.A) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (A.Length != 0) hash ^= A.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (A.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(A);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (A.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(A);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestCommentInjectionMessage other) {
       if (other == null) {
         return;
@@ -6584,16 +5115,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.A.Length != 0) {
         A = other.A;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 10: {
             A = input.ReadString();
@@ -6608,45 +5137,32 @@ namespace Google.Protobuf.TestProtos {
   /// <summary>
   /// Test that RPC services work.
   /// </summary>
-  public sealed partial class FooRequest : pb::IMessage<FooRequest> {
+  public sealed class FooRequest : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<FooRequest> _parser = new pb::MessageParser<FooRequest>(() => new FooRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<FooRequest> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[27]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FooRequest() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FooRequest(FooRequest other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public FooRequest Clone() {
+    public object Clone() {
       return new FooRequest(this);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as FooRequest);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(FooRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6654,54 +5170,34 @@ namespace Google.Protobuf.TestProtos {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(FooRequest other) {
       if (other == null) {
         return;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
         }
       }
@@ -6709,45 +5205,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class FooResponse : pb::IMessage<FooResponse> {
+  public sealed class FooResponse : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<FooResponse> _parser = new pb::MessageParser<FooResponse>(() => new FooResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<FooResponse> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[28]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FooResponse() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FooResponse(FooResponse other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public FooResponse Clone() {
+    public object Clone() {
       return new FooResponse(this);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as FooResponse);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(FooResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6755,54 +5238,34 @@ namespace Google.Protobuf.TestProtos {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(FooResponse other) {
       if (other == null) {
         return;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
         }
       }
@@ -6810,45 +5273,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class FooClientMessage : pb::IMessage<FooClientMessage> {
+  public sealed class FooClientMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<FooClientMessage> _parser = new pb::MessageParser<FooClientMessage>(() => new FooClientMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<FooClientMessage> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[29]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FooClientMessage() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FooClientMessage(FooClientMessage other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public FooClientMessage Clone() {
+    public object Clone() {
       return new FooClientMessage(this);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as FooClientMessage);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(FooClientMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6856,54 +5306,34 @@ namespace Google.Protobuf.TestProtos {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(FooClientMessage other) {
       if (other == null) {
         return;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
         }
       }
@@ -6911,45 +5341,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class FooServerMessage : pb::IMessage<FooServerMessage> {
+  public sealed class FooServerMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<FooServerMessage> _parser = new pb::MessageParser<FooServerMessage>(() => new FooServerMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<FooServerMessage> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[30]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FooServerMessage() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FooServerMessage(FooServerMessage other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public FooServerMessage Clone() {
+    public object Clone() {
       return new FooServerMessage(this);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as FooServerMessage);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(FooServerMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6957,54 +5374,34 @@ namespace Google.Protobuf.TestProtos {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(FooServerMessage other) {
       if (other == null) {
         return;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
         }
       }
@@ -7012,45 +5409,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class BarRequest : pb::IMessage<BarRequest> {
+  public sealed class BarRequest : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<BarRequest> _parser = new pb::MessageParser<BarRequest>(() => new BarRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<BarRequest> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[31]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BarRequest() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BarRequest(BarRequest other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public BarRequest Clone() {
+    public object Clone() {
       return new BarRequest(this);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BarRequest);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(BarRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7058,54 +5442,34 @@ namespace Google.Protobuf.TestProtos {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(BarRequest other) {
       if (other == null) {
         return;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
         }
       }
@@ -7113,45 +5477,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class BarResponse : pb::IMessage<BarResponse> {
+  public sealed class BarResponse : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<BarResponse> _parser = new pb::MessageParser<BarResponse>(() => new BarResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<BarResponse> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[33]; }
+      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[32]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BarResponse() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BarResponse(BarResponse other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public BarResponse Clone() {
+    public object Clone() {
       return new BarResponse(this);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BarResponse);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(BarResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7159,54 +5510,34 @@ namespace Google.Protobuf.TestProtos {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(BarResponse other) {
       if (other == null) {
         return;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
         }
       }
@@ -7214,45 +5545,32 @@ namespace Google.Protobuf.TestProtos {
 
   }
 
-  public sealed partial class TestEmptyMessage : pb::IMessage<TestEmptyMessage> {
+  public sealed class TestEmptyMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestEmptyMessage> _parser = new pb::MessageParser<TestEmptyMessage>(() => new TestEmptyMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TestEmptyMessage> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[34]; }
+      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[33]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestEmptyMessage() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestEmptyMessage(TestEmptyMessage other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestEmptyMessage Clone() {
+    public object Clone() {
       return new TestEmptyMessage(this);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestEmptyMessage);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TestEmptyMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7260,54 +5578,34 @@ namespace Google.Protobuf.TestProtos {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TestEmptyMessage other) {
       if (other == null) {
         return;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
         }
       }
@@ -7318,37 +5616,26 @@ namespace Google.Protobuf.TestProtos {
   /// <summary>
   /// This is a leading comment
   /// </summary>
-  public sealed partial class CommentMessage : pb::IMessage<CommentMessage> {
+  public sealed class CommentMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<CommentMessage> _parser = new pb::MessageParser<CommentMessage>(() => new CommentMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<CommentMessage> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[35]; }
+      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[34]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CommentMessage() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CommentMessage(CommentMessage other) : this() {
       text_ = other.text_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CommentMessage Clone() {
+    public object Clone() {
       return new CommentMessage(this);
     }
 
@@ -7358,7 +5645,6 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>
     /// Leading field comment
     /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
       get { return text_; }
       set {
@@ -7366,12 +5652,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CommentMessage);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(CommentMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7380,48 +5664,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (Text != other.Text) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Text.Length != 0) hash ^= Text.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Text.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Text.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(CommentMessage other) {
       if (other == null) {
         return;
@@ -7429,16 +5695,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.Text.Length != 0) {
         Text = other.Text;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 10: {
             Text = input.ReadString();
@@ -7450,8 +5714,7 @@ namespace Google.Protobuf.TestProtos {
 
     #region Nested types
     /// <summary>Container for nested types declared in the CommentMessage message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
+    public static class Types {
       /// <summary>
       /// Leading nested enum comment
       /// </summary>
@@ -7459,43 +5722,32 @@ namespace Google.Protobuf.TestProtos {
         /// <summary>
         /// Zero value comment
         /// </summary>
-        [pbr::OriginalName("ZERO_VALUE")] ZeroValue = 0,
+        ZeroValue = 0,
       }
 
       /// <summary>
       /// Leading nested message comment
       /// </summary>
-      public sealed partial class NestedCommentMessage : pb::IMessage<NestedCommentMessage> {
+      public sealed class NestedCommentMessage : pb::IMessage, pb::IDeepCloneable {
         private static readonly pb::MessageParser<NestedCommentMessage> _parser = new pb::MessageParser<NestedCommentMessage>(() => new NestedCommentMessage());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pb::MessageParser<NestedCommentMessage> Parser { get { return _parser; } }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Protobuf.TestProtos.CommentMessage.Descriptor.NestedTypes[0]; }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public NestedCommentMessage() {
-          OnConstruction();
         }
 
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public NestedCommentMessage(NestedCommentMessage other) : this() {
           nestedText_ = other.nestedText_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public NestedCommentMessage Clone() {
+        public object Clone() {
           return new NestedCommentMessage(this);
         }
 
@@ -7505,7 +5757,6 @@ namespace Google.Protobuf.TestProtos {
         /// <summary>
         /// Leading nested message field comment
         /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string NestedText {
           get { return nestedText_; }
           set {
@@ -7513,12 +5764,10 @@ namespace Google.Protobuf.TestProtos {
           }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as NestedCommentMessage);
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool Equals(NestedCommentMessage other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -7527,48 +5776,30 @@ namespace Google.Protobuf.TestProtos {
             return true;
           }
           if (NestedText != other.NestedText) return false;
-          return Equals(_unknownFields, other._unknownFields);
+          return true;
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
           if (NestedText.Length != 0) hash ^= NestedText.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
           return hash;
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
           if (NestedText.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(NestedText);
           }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
           if (NestedText.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(NestedText);
           }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
           return size;
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(NestedCommentMessage other) {
           if (other == null) {
             return;
@@ -7576,16 +5807,14 @@ namespace Google.Protobuf.TestProtos {
           if (other.NestedText.Length != 0) {
             NestedText = other.NestedText;
           }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
               default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                input.SkipLastField();
                 break;
               case 10: {
                 NestedText = input.ReadString();

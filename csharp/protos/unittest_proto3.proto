@@ -120,14 +120,6 @@ message TestAllTypes {
   // Defined in unittest_import_public.proto
   repeated protobuf_unittest_import.PublicImportMessage
       repeated_public_import_message = 54;
-
-  // For oneof test
-  oneof oneof_field {
-    uint32 oneof_uint32 = 111;
-    NestedMessage oneof_nested_message = 112;
-    string oneof_string = 113;
-    bytes oneof_bytes = 114;
-  }
 }
 
 // This proto includes a recusively nested message.
@@ -289,15 +281,6 @@ message Uint64Message {
 
 message BoolMessage {
   bool data = 1;
-}
-
-// Test oneofs.
-message TestOneof {
-  oneof foo {
-    int32 foo_int = 1;
-    string foo_string = 2;
-    TestAllTypes foo_message = 3;
-  }
 }
 
 // Test messages for packed fields

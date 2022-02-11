@@ -12,7 +12,7 @@ using scg = global::System.Collections.Generic;
 namespace Google.Protobuf.TestProtos {
 
   /// <summary>Holder for reflection information generated from unittest_import_proto3.proto</summary>
-  public static partial class UnittestImportProto3Reflection {
+  public static class UnittestImportProto3Reflection {
 
     #region Descriptor
     /// <summary>File descriptor for unittest_import_proto3.proto</summary>
@@ -41,53 +41,41 @@ namespace Google.Protobuf.TestProtos {
   }
   #region Enums
   public enum ImportEnum {
-    [pbr::OriginalName("IMPORT_ENUM_UNSPECIFIED")] Unspecified = 0,
-    [pbr::OriginalName("IMPORT_FOO")] ImportFoo = 7,
-    [pbr::OriginalName("IMPORT_BAR")] ImportBar = 8,
-    [pbr::OriginalName("IMPORT_BAZ")] ImportBaz = 9,
+    Unspecified = 0,
+    ImportFoo = 7,
+    ImportBar = 8,
+    ImportBaz = 9,
   }
 
   #endregion
 
   #region Messages
-  public sealed partial class ImportMessage : pb::IMessage<ImportMessage> {
+  public sealed class ImportMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<ImportMessage> _parser = new pb::MessageParser<ImportMessage>(() => new ImportMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ImportMessage> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestImportProto3Reflection.Descriptor.MessageTypes[0]; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImportMessage() {
-      OnConstruction();
     }
 
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImportMessage(ImportMessage other) : this() {
       d_ = other.d_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ImportMessage Clone() {
+    public object Clone() {
       return new ImportMessage(this);
     }
 
     /// <summary>Field number for the "d" field.</summary>
     public const int DFieldNumber = 1;
     private int d_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int D {
       get { return d_; }
       set {
@@ -95,12 +83,10 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ImportMessage);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ImportMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -109,48 +95,30 @@ namespace Google.Protobuf.TestProtos {
         return true;
       }
       if (D != other.D) return false;
-      return Equals(_unknownFields, other._unknownFields);
+      return true;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (D != 0) hash ^= D.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (D != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(D);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (D != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(D);
       }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
       return size;
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ImportMessage other) {
       if (other == null) {
         return;
@@ -158,16 +126,14 @@ namespace Google.Protobuf.TestProtos {
       if (other.D != 0) {
         D = other.D;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             D = input.ReadInt32();

@@ -69,7 +69,6 @@ namespace Google.Protobuf
         {
             IMessage message = factory();
             message.MergeFrom(data, DiscardUnknownFields);
-            CheckMergedRequiredFields(message);
             return message;
         }
 
@@ -84,7 +83,6 @@ namespace Google.Protobuf
         {
             IMessage message = factory();
             message.MergeFrom(data, offset, length, DiscardUnknownFields);
-            CheckMergedRequiredFields(message);
             return message;
         }
 
@@ -97,7 +95,6 @@ namespace Google.Protobuf
         {
             IMessage message = factory();
             message.MergeFrom(data, DiscardUnknownFields);
-            CheckMergedRequiredFields(message);
             return message;
         }
 
@@ -110,7 +107,6 @@ namespace Google.Protobuf
         {
             IMessage message = factory();
             message.MergeFrom(input, DiscardUnknownFields);
-            CheckMergedRequiredFields(message);
             return message;
         }
 
@@ -127,7 +123,6 @@ namespace Google.Protobuf
         {
             IMessage message = factory();
             message.MergeDelimitedFrom(input, DiscardUnknownFields);
-            CheckMergedRequiredFields(message);
             return message;
         }
 
@@ -140,21 +135,6 @@ namespace Google.Protobuf
         {
             IMessage message = factory();
             MergeFrom(message, input);
-            CheckMergedRequiredFields(message);
-            return message;
-        }
-
-        /// <summary>
-        /// Parses a message from the given JSON.
-        /// </summary>
-        /// <param name="json">The JSON to parse.</param>
-        /// <returns>The parsed message.</returns>
-        /// <exception cref="InvalidJsonException">The JSON does not comply with RFC 7159</exception>
-        /// <exception cref="InvalidProtocolBufferException">The JSON does not represent a Protocol Buffers message correctly</exception>
-        public IMessage ParseJson(string json)
-        {
-            IMessage message = factory();
-            JsonParser.Default.Merge(message, json);
             return message;
         }
 
@@ -171,12 +151,6 @@ namespace Google.Protobuf
             {
                 codedInput.DiscardUnknownFields = originalDiscard;
             }
-        }
-
-        internal static void CheckMergedRequiredFields(IMessage message)
-        {
-            if (!message.IsInitialized())
-                throw new InvalidOperationException("Parsed message does not contain all required fields");
         }
 
         /// <summary>
@@ -204,7 +178,7 @@ namespace Google.Protobuf
     /// </p>
     /// </remarks>
     /// <typeparam name="T">The type of message to be parsed.</typeparam>
-    public sealed class MessageParser<T> : MessageParser where T : IMessage<T>
+    public sealed class MessageParser<T> : MessageParser where T : IMessage
     {
         // Implementation note: all the methods here *could* just delegate up to the base class and cast the result.
         // The current implementation avoids a virtual method call and a cast, which *may* be significant in some cases.
@@ -313,20 +287,6 @@ namespace Google.Protobuf
         {
             T message = factory();
             MergeFrom(message, input);
-            return message;
-        }
-
-        /// <summary>
-        /// Parses a message from the given JSON.
-        /// </summary>
-        /// <param name="json">The JSON to parse.</param>
-        /// <returns>The parsed message.</returns>
-        /// <exception cref="InvalidJsonException">The JSON does not comply with RFC 7159</exception>
-        /// <exception cref="InvalidProtocolBufferException">The JSON does not represent a Protocol Buffers message correctly</exception>
-        public new T ParseJson(string json)
-        {
-            T message = factory();
-            JsonParser.Default.Merge(message, json);
             return message;
         }
 

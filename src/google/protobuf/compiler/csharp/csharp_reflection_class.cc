@@ -125,7 +125,7 @@ void ReflectionClassGenerator::WriteIntroduction(io::Printer* printer) {
 
   printer->Print(
     "/// <summary>Holder for reflection information generated from $file_name$</summary>\n"
-    "$access_level$ static partial class $reflection_class_name$ {\n"
+    "$access_level$ static class $reflection_class_name$ {\n"
     "\n",
     "file_name", file_->name(),
     "access_level", class_access_level(),
@@ -133,7 +133,7 @@ void ReflectionClassGenerator::WriteIntroduction(io::Printer* printer) {
   printer->Indent();
 }
 
-void ReflectionClassGenerator::WriteDescriptor(io::Printer* printer) {
+  void ReflectionClassGenerator::WriteDescriptor(io::Printer* printer) {
   printer->Print(
     "#region Descriptor\n"
     "/// <summary>File descriptor for $file_name$</summary>\n"

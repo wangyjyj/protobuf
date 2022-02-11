@@ -68,20 +68,4 @@ namespace Google.Protobuf
         /// </summary>
         MessageDescriptor Descriptor { get; }
     }
-
-    /// <summary>
-    /// Generic interface for a Protocol Buffers message,
-    /// where the type parameter is expected to be the same type as
-    /// the implementation class.
-    /// </summary>
-    /// <typeparam name="T">The message type.</typeparam>
-    public interface IMessage<T> : IMessage, IEquatable<T>, IDeepCloneable<T> where T : IMessage<T>
-    {
-        /// <summary>
-        /// Merges the given message into this one.
-        /// </summary>
-        /// <remarks>See the user guide for precise merge semantics.</remarks>
-        /// <param name="message">The message to merge with this one. Must not be null.</param>
-        void MergeFrom(T message);
-    }
 }

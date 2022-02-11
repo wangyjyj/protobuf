@@ -121,9 +121,8 @@ namespace Google.Protobuf.WellKnownTypes {
   /// http://www.joda.org/joda-time/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime%2D%2D
   /// ) to obtain a formatter capable of generating timestamps in this format.
   /// </summary>
-  public sealed partial class Timestamp : pb::IMessage<Timestamp> {
+  public sealed partial class Timestamp : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<Timestamp> _parser = new pb::MessageParser<Timestamp>(() => new Timestamp());
-    private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Timestamp> Parser { get { return _parser; } }
 
@@ -139,20 +138,16 @@ namespace Google.Protobuf.WellKnownTypes {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Timestamp() {
-      OnConstruction();
     }
-
-    partial void OnConstruction();
-
+    
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Timestamp(Timestamp other) : this() {
+    public Timestamp(Timestamp other) {
       seconds_ = other.seconds_;
       nanos_ = other.nanos_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Timestamp Clone() {
+    public object Clone() {
       return new Timestamp(this);
     }
 
@@ -195,26 +190,10 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Timestamp other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Seconds != other.Seconds) return false;
-      if (Nanos != other.Nanos) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Seconds != 0L) hash ^= Seconds.GetHashCode();
       if (Nanos != 0) hash ^= Nanos.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
       return hash;
     }
 
@@ -233,9 +212,6 @@ namespace Google.Protobuf.WellKnownTypes {
         output.WriteRawTag(16);
         output.WriteInt32(Nanos);
       }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -246,9 +222,6 @@ namespace Google.Protobuf.WellKnownTypes {
       }
       if (Nanos != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Nanos);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
       }
       return size;
     }
@@ -264,7 +237,6 @@ namespace Google.Protobuf.WellKnownTypes {
       if (other.Nanos != 0) {
         Nanos = other.Nanos;
       }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -273,7 +245,7 @@ namespace Google.Protobuf.WellKnownTypes {
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
           default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            input.SkipLastField();
             break;
           case 8: {
             Seconds = input.ReadInt64();

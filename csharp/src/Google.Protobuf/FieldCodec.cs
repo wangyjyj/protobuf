@@ -31,8 +31,6 @@
 #endregion
 
 using Google.Protobuf.Collections;
-using Google.Protobuf.Compatibility;
-using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 
@@ -219,7 +217,7 @@ namespace Google.Protobuf
         /// <param name="tag">The tag.</param>
         /// <param name="parser">A parser to use for the message type.</param>
         /// <returns>A codec for the given tag.</returns>
-        public static FieldCodec<T> ForMessage<T>(uint tag, MessageParser<T> parser) where T : IMessage<T>
+        public static FieldCodec<T> ForMessage<T>(uint tag, MessageParser<T> parser) where T : IMessage
         {
             return new FieldCodec<T>(input => { T message = parser.CreateTemplate(); input.ReadMessage(message); return message; },
                 (output, value) => output.WriteMessage(value), message => CodedOutputStream.ComputeMessageSize(message), tag);
@@ -232,114 +230,10 @@ namespace Google.Protobuf
         /// <param name="endTag">The end group tag.</param>
         /// <param name="parser">A parser to use for the group message type.</param>
         /// <returns>A codec for given tag</returns>
-        public static FieldCodec<T> ForGroup<T>(uint startTag, uint endTag, MessageParser<T> parser) where T : IMessage<T>
+        public static FieldCodec<T> ForGroup<T>(uint startTag, uint endTag, MessageParser<T> parser) where T : IMessage
         {
             return new FieldCodec<T>(input => { T message = parser.CreateTemplate(); input.ReadGroup(message); return message; },
                 (output, value) => output.WriteGroup(value), message => CodedOutputStream.ComputeGroupSize(message), startTag, endTag);
-        }
-
-        /// <summary>
-        /// Creates a codec for a wrapper type of a class - which must be string or ByteString.
-        /// </summary>
-        public static FieldCodec<T> ForClassWrapper<T>(uint tag) where T : class
-        {
-            var nestedCodec = WrapperCodecs.GetCodec<T>();
-            return new FieldCodec<T>(
-                input => WrapperCodecs.Read<T>(input, nestedCodec),
-                (output, value) => WrapperCodecs.Write<T>(output, value, nestedCodec),
-                value => WrapperCodecs.CalculateSize<T>(value, nestedCodec),
-                tag, 0,
-                null); // Default value for the wrapper
-        }
-
-        /// <summary>
-        /// Creates a codec for a wrapper type of a struct - which must be Int32, Int64, UInt32, UInt64,
-        /// Bool, Single or Double.
-        /// </summary>
-        public static FieldCodec<T?> ForStructWrapper<T>(uint tag) where T : struct
-        {
-            var nestedCodec = WrapperCodecs.GetCodec<T>();
-            return new FieldCodec<T?>(
-                input => WrapperCodecs.Read<T>(input, nestedCodec),
-                (output, value) => WrapperCodecs.Write<T>(output, value.Value, nestedCodec),
-                value => value == null ? 0 : WrapperCodecs.CalculateSize<T>(value.Value, nestedCodec),
-                tag, 0,
-                null); // Default value for the wrapper
-        }
-
-        /// <summary>
-        /// Helper code to create codecs for wrapper types.
-        /// </summary>
-        /// <remarks>
-        /// Somewhat ugly with all the static methods, but the conversions involved to/from nullable types make it
-        /// slightly tricky to improve. So long as we keep the public API (ForClassWrapper, ForStructWrapper) in place,
-        /// we can refactor later if we come up with something cleaner.
-        /// </remarks>
-        private static class WrapperCodecs
-        {
-            private static readonly Dictionary<System.Type, object> Codecs = new Dictionary<System.Type, object>
-            {
-                { typeof(bool), ForBool(WireFormat.MakeTag(WrappersReflection.WrapperValueFieldNumber, WireFormat.WireType.Varint)) },
-                { typeof(int), ForInt32(WireFormat.MakeTag(WrappersReflection.WrapperValueFieldNumber, WireFormat.WireType.Varint)) },
-                { typeof(long), ForInt64(WireFormat.MakeTag(WrappersReflection.WrapperValueFieldNumber, WireFormat.WireType.Varint)) },
-                { typeof(uint), ForUInt32(WireFormat.MakeTag(WrappersReflection.WrapperValueFieldNumber, WireFormat.WireType.Varint)) },
-                { typeof(ulong), ForUInt64(WireFormat.MakeTag(WrappersReflection.WrapperValueFieldNumber, WireFormat.WireType.Varint)) },
-                { typeof(float), ForFloat(WireFormat.MakeTag(WrappersReflection.WrapperValueFieldNumber, WireFormat.WireType.Fixed32)) },
-                { typeof(double), ForDouble(WireFormat.MakeTag(WrappersReflection.WrapperValueFieldNumber, WireFormat.WireType.Fixed64)) },
-                { typeof(string), ForString(WireFormat.MakeTag(WrappersReflection.WrapperValueFieldNumber, WireFormat.WireType.LengthDelimited)) },
-                { typeof(ByteString), ForBytes(WireFormat.MakeTag(WrappersReflection.WrapperValueFieldNumber, WireFormat.WireType.LengthDelimited)) }
-            };
-
-            /// <summary>
-            /// Returns a field codec which effectively wraps a value of type T in a message.
-            /// 
-            /// </summary>
-            internal static FieldCodec<T> GetCodec<T>()
-            {
-                object value;
-                if (!Codecs.TryGetValue(typeof(T), out value))
-                {
-                    throw new InvalidOperationException("Invalid type argument requested for wrapper codec: " + typeof(T));
-                }
-                return (FieldCodec<T>) value;
-            }
-
-            internal static T Read<T>(CodedInputStream input, FieldCodec<T> codec)
-            {
-                int length = input.ReadLength();
-                int oldLimit = input.PushLimit(length);
-
-                uint tag;
-                T value = codec.DefaultValue;
-                while ((tag = input.ReadTag()) != 0)
-                {
-                    if (tag == codec.Tag)
-                    {
-                        value = codec.Read(input);
-                    }
-                    else
-                    {
-                        input.SkipLastField();
-                    }
-
-                }
-                input.CheckReadEndOfStreamTag();
-                input.PopLimit(oldLimit);
-
-                return value;
-            }
-
-            internal static void Write<T>(CodedOutputStream output, T value, FieldCodec<T> codec)
-            {
-                output.WriteLength(codec.CalculateSizeWithTag(value));
-                codec.WriteTagAndValue(output, value);
-            }
-
-            internal  static int CalculateSize<T>(T value, FieldCodec<T> codec)
-            {
-                int fieldLength = codec.CalculateSizeWithTag(value);
-                return CodedOutputStream.ComputeLengthSize(fieldLength) + fieldLength;
-            }
         }
     }
 

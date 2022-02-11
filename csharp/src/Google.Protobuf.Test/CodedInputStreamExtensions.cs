@@ -43,7 +43,7 @@ namespace Google.Protobuf
         }
 
         public static T ReadMessage<T>(this CodedInputStream stream, MessageParser<T> parser)
-            where T : IMessage<T>
+            where T : IMessage
         {
             var message = parser.CreateTemplate();
             stream.ReadMessage(message);

@@ -124,7 +124,7 @@ namespace Google.Protobuf.WellKnownTypes
 
             Assert.IsTrue(b.CompareTo(a) > 0); // null is always first (according to default behavior of Array.Sort)
             Assert.IsTrue(b.CompareTo(b) == 0);
-            Assert.IsTrue(b.CompareTo(b.Clone()) == 0);
+            Assert.IsTrue(b.CompareTo((Timestamp)b.Clone()) == 0);
             Assert.IsTrue(b.CompareTo(c) < 0);
             Assert.IsTrue(b.CompareTo(d) < 0);
             Assert.IsTrue(b.CompareTo(e) < 0);
@@ -132,7 +132,7 @@ namespace Google.Protobuf.WellKnownTypes
             Assert.IsTrue(c.CompareTo(a) > 0);
             Assert.IsTrue(c.CompareTo(b) > 0);
             Assert.IsTrue(c.CompareTo(c) == 0);
-            Assert.IsTrue(c.CompareTo(c.Clone()) == 0);
+            Assert.IsTrue(c.CompareTo((Timestamp)c.Clone()) == 0);
             Assert.IsTrue(c.CompareTo(d) < 0);
             Assert.IsTrue(c.CompareTo(e) < 0);
 
@@ -140,7 +140,7 @@ namespace Google.Protobuf.WellKnownTypes
             Assert.IsTrue(d.CompareTo(b) > 0);
             Assert.IsTrue(d.CompareTo(c) > 0);
             Assert.IsTrue(d.CompareTo(d) == 0);
-            Assert.IsTrue(d.CompareTo(d.Clone()) == 0);
+            Assert.IsTrue(d.CompareTo((Timestamp)d.Clone()) == 0);
             Assert.IsTrue(d.CompareTo(e) < 0);
 
             Assert.IsTrue(e.CompareTo(a) > 0);
@@ -148,7 +148,7 @@ namespace Google.Protobuf.WellKnownTypes
             Assert.IsTrue(e.CompareTo(c) > 0);
             Assert.IsTrue(e.CompareTo(d) > 0);
             Assert.IsTrue(e.CompareTo(e) == 0);
-            Assert.IsTrue(e.CompareTo(e.Clone()) == 0);
+            Assert.IsTrue(e.CompareTo((Timestamp)e.Clone()) == 0);
         }
 
 

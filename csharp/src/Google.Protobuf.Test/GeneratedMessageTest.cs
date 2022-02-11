@@ -34,10 +34,6 @@ using System;
 using System.IO;
 using Google.Protobuf.TestProtos;
 using NUnit.Framework;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Google.Protobuf.WellKnownTypes;
 
 namespace Google.Protobuf
 {
@@ -46,15 +42,6 @@ namespace Google.Protobuf
     /// </summary>
     public class GeneratedMessageTest
     {
-        [Test]
-        public void EmptyMessageFieldDistinctFromMissingMessageField()
-        {
-            // This demonstrates what we're really interested in...
-            var message1 = new TestAllTypes { SingleForeignMessage = new ForeignMessage() };
-            var message2 = new TestAllTypes(); // SingleForeignMessage is null
-            EqualityTester.AssertInequality(message1, message2);
-        }
-
         [Test]
         public void DefaultValues()
         {
@@ -104,23 +91,6 @@ namespace Google.Protobuf
             Assert.AreEqual(0, message.RepeatedString.Count);
             Assert.AreEqual(0, message.RepeatedUint32.Count);
             Assert.AreEqual(0, message.RepeatedUint64.Count);
-
-            // Oneof fields
-            Assert.AreEqual(TestAllTypes.OneofFieldOneofCase.None, message.OneofFieldCase);
-            Assert.AreEqual(0, message.OneofUint32);
-            Assert.AreEqual("", message.OneofString);
-            Assert.AreEqual(ByteString.Empty, message.OneofBytes);
-            Assert.IsNull(message.OneofNestedMessage);
-        }
-
-        [Test]
-        public void NullStringAndBytesRejected()
-        {
-            var message = new TestAllTypes();
-            Assert.Throws<ArgumentNullException>(() => message.SingleString = null);
-            Assert.Throws<ArgumentNullException>(() => message.OneofString = null);
-            Assert.Throws<ArgumentNullException>(() => message.SingleBytes = null);
-            Assert.Throws<ArgumentNullException>(() => message.OneofBytes = null);
         }
 
         [Test]
@@ -458,7 +428,7 @@ namespace Google.Protobuf
                 SingleUint32 = uint.MaxValue,
                 SingleUint64 = ulong.MaxValue
             };
-            var clone = original.Clone();
+            var clone = (TestAllTypes) original.Clone();
             Assert.AreNotSame(original, clone);
             Assert.AreEqual(original, clone);
             // Just as a single example
@@ -489,7 +459,7 @@ namespace Google.Protobuf
                 RepeatedUint64 = { ulong.MaxValue, uint.MinValue }
             };
 
-            var clone = original.Clone();
+            var clone = (TestAllTypes) original.Clone();
             Assert.AreNotSame(original, clone);
             Assert.AreEqual(original, clone);
             // Just as a single example
@@ -505,7 +475,7 @@ namespace Google.Protobuf
                 SingleNestedMessage = new TestAllTypes.Types.NestedMessage { Bb = 20 }
             };
 
-            var clone = original.Clone();
+            var clone = (TestAllTypes) original.Clone();
             Assert.AreNotSame(original, clone);
             Assert.AreNotSame(original.SingleNestedMessage, clone.SingleNestedMessage);
             Assert.AreEqual(original, clone);
@@ -522,7 +492,7 @@ namespace Google.Protobuf
                 RepeatedNestedMessage = { new TestAllTypes.Types.NestedMessage { Bb = 20 } }
             };
 
-            var clone = original.Clone();
+            var clone = (TestAllTypes) original.Clone();
             Assert.AreNotSame(original, clone);
             Assert.AreNotSame(original.RepeatedNestedMessage, clone.RepeatedNestedMessage);
             Assert.AreNotSame(original.RepeatedNestedMessage[0], clone.RepeatedNestedMessage[0]);
@@ -531,112 +501,7 @@ namespace Google.Protobuf
             clone.RepeatedNestedMessage[0].Bb = 30;
             Assert.AreNotEqual(original, clone);
         }
-
-        [Test]
-        public void CloneOneofField()
-        {
-            var original = new TestAllTypes
-            {
-                OneofNestedMessage = new TestAllTypes.Types.NestedMessage { Bb = 20 }
-            };
-
-            var clone = original.Clone();
-            Assert.AreNotSame(original, clone);
-            Assert.AreEqual(original, clone);
-
-            // We should have cloned the message
-            original.OneofNestedMessage.Bb = 30;
-            Assert.AreNotEqual(original, clone);
-        }
-
-        [Test]
-        public void OneofProperties()
-        {
-            // Switch the oneof case between each of the different options, and check everything behaves
-            // as expected in each case.
-            var message = new TestAllTypes();
-            Assert.AreEqual("", message.OneofString);
-            Assert.AreEqual(0, message.OneofUint32);
-            Assert.AreEqual(ByteString.Empty, message.OneofBytes);
-            Assert.IsNull(message.OneofNestedMessage);
-            Assert.AreEqual(TestAllTypes.OneofFieldOneofCase.None, message.OneofFieldCase);
-
-            message.OneofString = "sample";
-            Assert.AreEqual("sample", message.OneofString);
-            Assert.AreEqual(0, message.OneofUint32);
-            Assert.AreEqual(ByteString.Empty, message.OneofBytes);
-            Assert.IsNull(message.OneofNestedMessage);
-            Assert.AreEqual(TestAllTypes.OneofFieldOneofCase.OneofString, message.OneofFieldCase);
-
-            var bytes = ByteString.CopyFrom(1, 2, 3);
-            message.OneofBytes = bytes;
-            Assert.AreEqual("", message.OneofString);
-            Assert.AreEqual(0, message.OneofUint32);
-            Assert.AreEqual(bytes, message.OneofBytes);
-            Assert.IsNull(message.OneofNestedMessage);
-            Assert.AreEqual(TestAllTypes.OneofFieldOneofCase.OneofBytes, message.OneofFieldCase);
-
-            message.OneofUint32 = 20;
-            Assert.AreEqual("", message.OneofString);
-            Assert.AreEqual(20, message.OneofUint32);
-            Assert.AreEqual(ByteString.Empty, message.OneofBytes);
-            Assert.IsNull(message.OneofNestedMessage);
-            Assert.AreEqual(TestAllTypes.OneofFieldOneofCase.OneofUint32, message.OneofFieldCase);
-
-            var nestedMessage = new TestAllTypes.Types.NestedMessage { Bb = 25 };
-            message.OneofNestedMessage = nestedMessage;
-            Assert.AreEqual("", message.OneofString);
-            Assert.AreEqual(0, message.OneofUint32);
-            Assert.AreEqual(ByteString.Empty, message.OneofBytes);
-            Assert.AreEqual(nestedMessage, message.OneofNestedMessage);
-            Assert.AreEqual(TestAllTypes.OneofFieldOneofCase.OneofNestedMessage, message.OneofFieldCase);
-
-            message.ClearOneofField();
-            Assert.AreEqual("", message.OneofString);
-            Assert.AreEqual(0, message.OneofUint32);
-            Assert.AreEqual(ByteString.Empty, message.OneofBytes);
-            Assert.IsNull(message.OneofNestedMessage);
-            Assert.AreEqual(TestAllTypes.OneofFieldOneofCase.None, message.OneofFieldCase);
-        }
-
-        [Test]
-        public void Oneof_DefaultValuesNotEqual()
-        {
-            var message1 = new TestAllTypes { OneofString = "" };
-            var message2 = new TestAllTypes { OneofUint32 = 0 };
-            Assert.AreEqual(TestAllTypes.OneofFieldOneofCase.OneofString, message1.OneofFieldCase);
-            Assert.AreEqual(TestAllTypes.OneofFieldOneofCase.OneofUint32, message2.OneofFieldCase);
-            Assert.AreNotEqual(message1, message2);
-        }
-
-        [Test]
-        public void OneofSerialization_NonDefaultValue()
-        {
-            var message = new TestAllTypes();
-            message.OneofString = "this would take a bit of space";
-            message.OneofUint32 = 10;
-            var bytes = message.ToByteArray();
-            Assert.AreEqual(3, bytes.Length); // 2 bytes for the tag + 1 for the value - no string!
-
-            var message2 = TestAllTypes.Parser.ParseFrom(bytes);
-            Assert.AreEqual(message, message2);
-            Assert.AreEqual(TestAllTypes.OneofFieldOneofCase.OneofUint32, message2.OneofFieldCase);
-        }
-
-        [Test]
-        public void OneofSerialization_DefaultValue()
-        {
-            var message = new TestAllTypes();
-            message.OneofString = "this would take a bit of space";
-            message.OneofUint32 = 0; // This is the default value for UInt32; normally wouldn't be serialized
-            var bytes = message.ToByteArray();
-            Assert.AreEqual(3, bytes.Length); // 2 bytes for the tag + 1 for the value - it's still serialized
-
-            var message2 = TestAllTypes.Parser.ParseFrom(bytes);
-            Assert.AreEqual(message, message2);
-            Assert.AreEqual(TestAllTypes.OneofFieldOneofCase.OneofUint32, message2.OneofFieldCase);
-        }
-
+        
         [Test]
         public void DiscardUnknownFields_RealDataStillRead()
         {
@@ -644,7 +509,6 @@ namespace Google.Protobuf
             var stream = new MemoryStream();
             var output = new CodedOutputStream(stream);
             var unusedFieldNumber = 23456;
-            Assert.IsFalse(TestAllTypes.Descriptor.Fields.InDeclarationOrder().Select(x => x.FieldNumber).Contains(unusedFieldNumber));
             output.WriteTag(unusedFieldNumber, WireFormat.WireType.LengthDelimited);
             output.WriteString("ignore me");
             message.WriteTo(output);
@@ -654,16 +518,6 @@ namespace Google.Protobuf
             var parsed = TestAllTypes.Parser.ParseFrom(stream);
             // TODO(jieluo): Add test back when DiscardUnknownFields API is supported.
             // Assert.AreEqual(message, parsed);
-        }
-
-        [Test]
-        public void DiscardUnknownFields_AllTypes()
-        {
-            // Simple way of ensuring we can skip all kinds of fields.
-            var data = SampleMessages.CreateFullTestAllTypes().ToByteArray();
-            var empty = Empty.Parser.ParseFrom(data);
-            // TODO(jieluo): Add test back when DiscardUnknownFields API is supported.
-            // Assert.AreNotEqual(new Empty(), empty);
         }
 
         // This was originally seen as a conformance test failure.
@@ -695,42 +549,6 @@ namespace Google.Protobuf
 
             stream.Position = 0;
             Assert.Throws<InvalidProtocolBufferException>(() => TestAllTypes.Parser.ParseFrom(stream));
-        }
-
-        [Test]
-        public void CustomDiagnosticMessage_DirectToStringCall()
-        {
-            var message = new ForeignMessage { C = 31 };
-            Assert.AreEqual("{ \"c\": 31, \"@cInHex\": \"1f\" }", message.ToString());
-            Assert.AreEqual("{ \"c\": 31 }", JsonFormatter.Default.Format(message));
-        }
-
-        [Test]
-        public void CustomDiagnosticMessage_Nested()
-        {
-            var message = new TestAllTypes { SingleForeignMessage = new ForeignMessage { C = 16 } };
-            Assert.AreEqual("{ \"singleForeignMessage\": { \"c\": 16, \"@cInHex\": \"10\" } }", message.ToString());
-            Assert.AreEqual("{ \"singleForeignMessage\": { \"c\": 16 } }", JsonFormatter.Default.Format(message));
-        }
-
-        [Test]
-        public void CustomDiagnosticMessage_DirectToTextWriterCall()
-        {
-            var message = new ForeignMessage { C = 31 };
-            var writer = new StringWriter();
-            JsonFormatter.Default.Format(message, writer);
-            Assert.AreEqual("{ \"c\": 31 }", writer.ToString());
-        }
-
-        [Test]
-        public void NaNComparisons()
-        {
-            var message1 = new TestAllTypes { SingleDouble = SampleNaNs.Regular };
-            var message2 = new TestAllTypes { SingleDouble = SampleNaNs.PayloadFlipped };
-            var message3 = new TestAllTypes { SingleDouble = SampleNaNs.Regular };
-
-            EqualityTester.AssertInequality(message1, message2);
-            EqualityTester.AssertEquality(message1, message3);
         }
     }
 }

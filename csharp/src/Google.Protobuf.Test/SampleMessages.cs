@@ -92,7 +92,6 @@ namespace Google.Protobuf
                 RepeatedString = { "foo", "bar" },
                 RepeatedUint32 = { UInt32.MaxValue, UInt32.MinValue },
                 RepeatedUint64 = { UInt64.MaxValue, UInt32.MinValue },
-                OneofString = "Oneof string"
             };
         }
     }

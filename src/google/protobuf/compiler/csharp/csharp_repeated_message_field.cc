@@ -132,7 +132,7 @@ void RepeatedMessageFieldGenerator::WriteToString(io::Printer* printer) {
 
 void RepeatedMessageFieldGenerator::GenerateCloningCode(io::Printer* printer) {
   printer->Print(variables_,
-    "$name$_ = other.$name$_.Clone();\n");
+    "$name$_ = (pbc::RepeatedField<$type_name$>) other.$name$_.Clone();\n");
 }
 
 void RepeatedMessageFieldGenerator::GenerateFreezingCode(io::Printer* printer) {

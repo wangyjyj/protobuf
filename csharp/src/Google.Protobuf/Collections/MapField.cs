@@ -30,13 +30,12 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #endregion
 
-using Google.Protobuf.Compatibility;
-using Google.Protobuf.Reflection;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using Google.Protobuf.Compatibility;
+using Google.Protobuf.Reflection;
 
 namespace Google.Protobuf.Collections
 {
@@ -66,10 +65,7 @@ namespace Google.Protobuf.Collections
     /// in future versions.
     /// </para>
     /// </remarks>
-    public sealed class MapField<TKey, TValue> : IDeepCloneable<MapField<TKey, TValue>>, IDictionary<TKey, TValue>, IEquatable<MapField<TKey, TValue>>, IDictionary
-#if !NET35
-        , IReadOnlyDictionary<TKey, TValue>
-#endif
+    public sealed class MapField<TKey, TValue> : IDictionary<TKey, TValue>, IDictionary, IDeepCloneable
     {
         private static readonly EqualityComparer<TValue> ValueEqualityComparer = ProtobufEqualityComparers.GetEqualityComparer<TValue>();
         private static readonly EqualityComparer<TKey> KeyEqualityComparer = ProtobufEqualityComparers.GetEqualityComparer<TKey>();
@@ -85,15 +81,15 @@ namespace Google.Protobuf.Collections
         /// <returns>
         /// A deep clone of this object.
         /// </returns>
-        public MapField<TKey, TValue> Clone()
+        public object Clone()
         {
             var clone = new MapField<TKey, TValue>();
             // Keys are never cloneable. Values might be.
-            if (typeof(IDeepCloneable<TValue>).IsAssignableFrom(typeof(TValue)))
+            if (typeof(IDeepCloneable).IsAssignableFrom(typeof(TValue)))
             {
                 foreach (var pair in list)
                 {
-                    clone.Add(pair.Key, ((IDeepCloneable<TValue>)pair.Value).Clone());
+                    clone.Add(pair.Key, (TValue)((IDeepCloneable)pair.Value).Clone());
                 }
             }
             else
@@ -472,17 +468,6 @@ namespace Google.Protobuf.Collections
             return size;
         }
 
-        /// <summary>
-        /// Returns a string representation of this repeated field, in the same
-        /// way as it would be represented by the default JSON formatter.
-        /// </summary>
-        public override string ToString()
-        {
-            var writer = new StringWriter();
-            JsonFormatter.Default.WriteDictionary(writer, this);
-            return writer.ToString();
-        }
-
         #region IDictionary explicit interface implementation
         void IDictionary.Add(object key, object value)
         {
@@ -549,14 +534,6 @@ namespace Google.Protobuf.Collections
                 this[(TKey)key] = (TValue)value;
             }
         }
-        #endregion
-
-        #region IReadOnlyDictionary explicit interface implementation
-#if !NET35
-        IEnumerable<TKey> IReadOnlyDictionary<TKey, TValue>.Keys => Keys;
-
-        IEnumerable<TValue> IReadOnlyDictionary<TKey, TValue>.Values => Values;
-#endif
         #endregion
 
         private class DictionaryEnumerator : IDictionaryEnumerator
