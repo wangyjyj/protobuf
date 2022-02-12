@@ -7,7 +7,7 @@
     <VersionPrefix>3.7.1</VersionPrefix>
     <LangVersion>6</LangVersion>
     <Authors>Google Inc.</Authors>
-    <TargetFrameworks>netstandard1.0;net45</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard2.1</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>../../keys/Google.Protobuf.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>

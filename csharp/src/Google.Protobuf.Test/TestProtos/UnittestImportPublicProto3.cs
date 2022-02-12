@@ -7,48 +7,13 @@
 
 using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
-using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace Google.Protobuf.TestProtos {
 
-  /// <summary>Holder for reflection information generated from unittest_import_public_proto3.proto</summary>
-  public static class UnittestImportPublicProto3Reflection {
-
-    #region Descriptor
-    /// <summary>File descriptor for unittest_import_public_proto3.proto</summary>
-    public static pbr::FileDescriptor Descriptor {
-      get { return descriptor; }
-    }
-    private static pbr::FileDescriptor descriptor;
-
-    static UnittestImportPublicProto3Reflection() {
-      byte[] descriptorData = global::System.Convert.FromBase64String(
-          string.Concat(
-            "CiN1bml0dGVzdF9pbXBvcnRfcHVibGljX3Byb3RvMy5wcm90bxIYcHJvdG9i",
-            "dWZfdW5pdHRlc3RfaW1wb3J0IiAKE1B1YmxpY0ltcG9ydE1lc3NhZ2USCQoB",
-            "ZRgBIAEoBUIdqgIaR29vZ2xlLlByb3RvYnVmLlRlc3RQcm90b3NiBnByb3Rv",
-            "Mw=="));
-      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.PublicImportMessage), global::Google.Protobuf.TestProtos.PublicImportMessage.Parser, new[]{ "E" }, null, null, null)
-          }));
-    }
-    #endregion
-
-  }
   #region Messages
   public sealed class PublicImportMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<PublicImportMessage> _parser = new pb::MessageParser<PublicImportMessage>(() => new PublicImportMessage());
     public static pb::MessageParser<PublicImportMessage> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestImportPublicProto3Reflection.Descriptor.MessageTypes[0]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public PublicImportMessage() {
     }

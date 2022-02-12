@@ -30,9 +30,6 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #endregion
 
-using System;
-using Google.Protobuf.Reflection;
-
 namespace Google.Protobuf
 {
     /// <summary>
@@ -60,12 +57,5 @@ namespace Google.Protobuf
         /// <returns>The number of bytes required to write this message
         /// to a coded output stream.</returns>
         int CalculateSize();
-
-        /// <summary>
-        /// Descriptor for this message. All instances are expected to return the same descriptor,
-        /// and for generated types this will be an explicitly-implemented member, returning the
-        /// same value as the static property declared on the type.
-        /// </summary>
-        MessageDescriptor Descriptor { get; }
     }
 }

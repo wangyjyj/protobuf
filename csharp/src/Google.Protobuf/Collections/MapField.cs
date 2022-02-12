@@ -35,7 +35,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Google.Protobuf.Compatibility;
-using Google.Protobuf.Reflection;
 
 namespace Google.Protobuf.Collections
 {
@@ -653,8 +652,6 @@ namespace Google.Protobuf.Collections
                 {
                     return codec.keyCodec.CalculateSizeWithTag(Key) + codec.valueCodec.CalculateSizeWithTag(Value);
                 }
-
-                MessageDescriptor IMessage.Descriptor { get { return null; } }
             }
         }
 

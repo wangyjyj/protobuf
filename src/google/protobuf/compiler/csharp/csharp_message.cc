@@ -144,35 +144,6 @@ void MessageGenerator::Generate(io::Printer* printer) {
       vars,
       "public static pb::MessageParser<$class_name$> Parser { get { return _parser; } }\n\n");
 
-  // Access the message descriptor via the relevant file descriptor or containing message descriptor.
-  if (!descriptor_->containing_type()) {
-      vars["descriptor_accessor"] = GetReflectionClassName(descriptor_->file())
-          + ".Descriptor.MessageTypes[" + SimpleItoa(descriptor_->index()) + "]";
-  } else {
-      vars["descriptor_accessor"] = GetClassName(descriptor_->containing_type())
-          + ".Descriptor.NestedTypes[" + SimpleItoa(descriptor_->index()) + "]";
-  }
-
-  WriteGeneratedCodeAttributes(printer);
-  printer->Print(
-      vars,
-      "public static pbr::MessageDescriptor Descriptor {\n"
-      "  get { return $descriptor_accessor$; }\n"
-      "}\n"
-      "\n");
-  WriteGeneratedCodeAttributes(printer);
-  printer->Print(
-      vars,
-      "pbr::MessageDescriptor pb::IMessage.Descriptor {\n"
-      "  get { return Descriptor; }\n"
-      "}\n"
-      "\n");
-  // CustomOptions property, only for options messages
-  if (IsDescriptorOptionMessage(descriptor_)) {
-    printer->Print(
-      "internal CustomOptions CustomOptions{ get; private set; } = CustomOptions.Empty;\n"
-       "\n");
-  }
 
   // Parameterless constructor and partial OnConstruction method.
   WriteGeneratedCodeAttributes(printer);

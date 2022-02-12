@@ -7,192 +7,9 @@
 
 using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
-using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace Google.Protobuf.TestProtos {
 
-  /// <summary>Holder for reflection information generated from unittest_proto3.proto</summary>
-  public static class UnittestProto3Reflection {
-
-    #region Descriptor
-    /// <summary>File descriptor for unittest_proto3.proto</summary>
-    public static pbr::FileDescriptor Descriptor {
-      get { return descriptor; }
-    }
-    private static pbr::FileDescriptor descriptor;
-
-    static UnittestProto3Reflection() {
-      byte[] descriptorData = global::System.Convert.FromBase64String(
-          string.Concat(
-            "ChV1bml0dGVzdF9wcm90bzMucHJvdG8SEnByb3RvYnVmX3VuaXR0ZXN0Mxoc",
-            "dW5pdHRlc3RfaW1wb3J0X3Byb3RvMy5wcm90byLTDgoMVGVzdEFsbFR5cGVz",
-            "EhQKDHNpbmdsZV9pbnQzMhgBIAEoBRIUCgxzaW5nbGVfaW50NjQYAiABKAMS",
-            "FQoNc2luZ2xlX3VpbnQzMhgDIAEoDRIVCg1zaW5nbGVfdWludDY0GAQgASgE",
-            "EhUKDXNpbmdsZV9zaW50MzIYBSABKBESFQoNc2luZ2xlX3NpbnQ2NBgGIAEo",
-            "EhIWCg5zaW5nbGVfZml4ZWQzMhgHIAEoBxIWCg5zaW5nbGVfZml4ZWQ2NBgI",
-            "IAEoBhIXCg9zaW5nbGVfc2ZpeGVkMzIYCSABKA8SFwoPc2luZ2xlX3NmaXhl",
-            "ZDY0GAogASgQEhQKDHNpbmdsZV9mbG9hdBgLIAEoAhIVCg1zaW5nbGVfZG91",
-            "YmxlGAwgASgBEhMKC3NpbmdsZV9ib29sGA0gASgIEhUKDXNpbmdsZV9zdHJp",
-            "bmcYDiABKAkSFAoMc2luZ2xlX2J5dGVzGA8gASgMEk0KFXNpbmdsZV9uZXN0",
-            "ZWRfbWVzc2FnZRgSIAEoCzIuLnByb3RvYnVmX3VuaXR0ZXN0My5UZXN0QWxs",
-            "VHlwZXMuTmVzdGVkTWVzc2FnZRJCChZzaW5nbGVfZm9yZWlnbl9tZXNzYWdl",
-            "GBMgASgLMiIucHJvdG9idWZfdW5pdHRlc3QzLkZvcmVpZ25NZXNzYWdlEkYK",
-            "FXNpbmdsZV9pbXBvcnRfbWVzc2FnZRgUIAEoCzInLnByb3RvYnVmX3VuaXR0",
-            "ZXN0X2ltcG9ydC5JbXBvcnRNZXNzYWdlEkcKEnNpbmdsZV9uZXN0ZWRfZW51",
-            "bRgVIAEoDjIrLnByb3RvYnVmX3VuaXR0ZXN0My5UZXN0QWxsVHlwZXMuTmVz",
-            "dGVkRW51bRI8ChNzaW5nbGVfZm9yZWlnbl9lbnVtGBYgASgOMh8ucHJvdG9i",
-            "dWZfdW5pdHRlc3QzLkZvcmVpZ25FbnVtEkAKEnNpbmdsZV9pbXBvcnRfZW51",
-            "bRgXIAEoDjIkLnByb3RvYnVmX3VuaXR0ZXN0X2ltcG9ydC5JbXBvcnRFbnVt",
-            "ElMKHHNpbmdsZV9wdWJsaWNfaW1wb3J0X21lc3NhZ2UYGiABKAsyLS5wcm90",
-            "b2J1Zl91bml0dGVzdF9pbXBvcnQuUHVibGljSW1wb3J0TWVzc2FnZRIWCg5y",
-            "ZXBlYXRlZF9pbnQzMhgfIAMoBRIWCg5yZXBlYXRlZF9pbnQ2NBggIAMoAxIX",
-            "Cg9yZXBlYXRlZF91aW50MzIYISADKA0SFwoPcmVwZWF0ZWRfdWludDY0GCIg",
-            "AygEEhcKD3JlcGVhdGVkX3NpbnQzMhgjIAMoERIXCg9yZXBlYXRlZF9zaW50",
-            "NjQYJCADKBISGAoQcmVwZWF0ZWRfZml4ZWQzMhglIAMoBxIYChByZXBlYXRl",
-            "ZF9maXhlZDY0GCYgAygGEhkKEXJlcGVhdGVkX3NmaXhlZDMyGCcgAygPEhkK",
-            "EXJlcGVhdGVkX3NmaXhlZDY0GCggAygQEhYKDnJlcGVhdGVkX2Zsb2F0GCkg",
-            "AygCEhcKD3JlcGVhdGVkX2RvdWJsZRgqIAMoARIVCg1yZXBlYXRlZF9ib29s",
-            "GCsgAygIEhcKD3JlcGVhdGVkX3N0cmluZxgsIAMoCRIWCg5yZXBlYXRlZF9i",
-            "eXRlcxgtIAMoDBJPChdyZXBlYXRlZF9uZXN0ZWRfbWVzc2FnZRgwIAMoCzIu",
-            "LnByb3RvYnVmX3VuaXR0ZXN0My5UZXN0QWxsVHlwZXMuTmVzdGVkTWVzc2Fn",
-            "ZRJEChhyZXBlYXRlZF9mb3JlaWduX21lc3NhZ2UYMSADKAsyIi5wcm90b2J1",
-            "Zl91bml0dGVzdDMuRm9yZWlnbk1lc3NhZ2USSAoXcmVwZWF0ZWRfaW1wb3J0",
-            "X21lc3NhZ2UYMiADKAsyJy5wcm90b2J1Zl91bml0dGVzdF9pbXBvcnQuSW1w",
-            "b3J0TWVzc2FnZRJJChRyZXBlYXRlZF9uZXN0ZWRfZW51bRgzIAMoDjIrLnBy",
-            "b3RvYnVmX3VuaXR0ZXN0My5UZXN0QWxsVHlwZXMuTmVzdGVkRW51bRI+ChVy",
-            "ZXBlYXRlZF9mb3JlaWduX2VudW0YNCADKA4yHy5wcm90b2J1Zl91bml0dGVz",
-            "dDMuRm9yZWlnbkVudW0SQgoUcmVwZWF0ZWRfaW1wb3J0X2VudW0YNSADKA4y",
-            "JC5wcm90b2J1Zl91bml0dGVzdF9pbXBvcnQuSW1wb3J0RW51bRJVCh5yZXBl",
-            "YXRlZF9wdWJsaWNfaW1wb3J0X21lc3NhZ2UYNiADKAsyLS5wcm90b2J1Zl91",
-            "bml0dGVzdF9pbXBvcnQuUHVibGljSW1wb3J0TWVzc2FnZRobCg1OZXN0ZWRN",
-            "ZXNzYWdlEgoKAmJiGAEgASgFIlYKCk5lc3RlZEVudW0SGwoXTkVTVEVEX0VO",
-            "VU1fVU5TUEVDSUZJRUQQABIHCgNGT08QARIHCgNCQVIQAhIHCgNCQVoQAxIQ",
-            "CgNORUcQ////////////ASK+AQoSTmVzdGVkVGVzdEFsbFR5cGVzEjUKBWNo",
-            "aWxkGAEgASgLMiYucHJvdG9idWZfdW5pdHRlc3QzLk5lc3RlZFRlc3RBbGxU",
-            "eXBlcxIxCgdwYXlsb2FkGAIgASgLMiAucHJvdG9idWZfdW5pdHRlc3QzLlRl",
-            "c3RBbGxUeXBlcxI+Cg5yZXBlYXRlZF9jaGlsZBgDIAMoCzImLnByb3RvYnVm",
-            "X3VuaXR0ZXN0My5OZXN0ZWRUZXN0QWxsVHlwZXMiNAoUVGVzdERlcHJlY2F0",
-            "ZWRGaWVsZHMSHAoQZGVwcmVjYXRlZF9pbnQzMhgBIAEoBUICGAEiGwoORm9y",
-            "ZWlnbk1lc3NhZ2USCQoBYxgBIAEoBSIwChJUZXN0UmVzZXJ2ZWRGaWVsZHNK",
-            "BAgCEANKBAgPEBBKBAgJEAxSA2JhclIDYmF6IlsKEVRlc3RGb3JlaWduTmVz",
-            "dGVkEkYKDmZvcmVpZ25fbmVzdGVkGAEgASgLMi4ucHJvdG9idWZfdW5pdHRl",
-            "c3QzLlRlc3RBbGxUeXBlcy5OZXN0ZWRNZXNzYWdlIjQKGFRlc3RSZWFsbHlM",
-            "YXJnZVRhZ051bWJlchIJCgFhGAEgASgFEg0KAmJiGP///38gASgFIlYKFFRl",
-            "c3RSZWN1cnNpdmVNZXNzYWdlEjMKAWEYASABKAsyKC5wcm90b2J1Zl91bml0",
-            "dGVzdDMuVGVzdFJlY3Vyc2l2ZU1lc3NhZ2USCQoBaRgCIAEoBSJMChRUZXN0",
-            "TXV0dWFsUmVjdXJzaW9uQRI0CgJiYhgBIAEoCzIoLnByb3RvYnVmX3VuaXR0",
-            "ZXN0My5UZXN0TXV0dWFsUmVjdXJzaW9uQiJjChRUZXN0TXV0dWFsUmVjdXJz",
-            "aW9uQhIzCgFhGAEgASgLMigucHJvdG9idWZfdW5pdHRlc3QzLlRlc3RNdXR1",
-            "YWxSZWN1cnNpb25BEhYKDm9wdGlvbmFsX2ludDMyGAIgASgFIk0KElRlc3RF",
-            "bnVtQWxsb3dBbGlhcxI3CgV2YWx1ZRgBIAEoDjIoLnByb3RvYnVmX3VuaXR0",
-            "ZXN0My5UZXN0RW51bVdpdGhEdXBWYWx1ZSLvAgoXVGVzdENhbWVsQ2FzZUZp",
-            "ZWxkTmFtZXMSFgoOUHJpbWl0aXZlRmllbGQYASABKAUSEwoLU3RyaW5nRmll",
-            "bGQYAiABKAkSMgoJRW51bUZpZWxkGAMgASgOMh8ucHJvdG9idWZfdW5pdHRl",
-            "c3QzLkZvcmVpZ25FbnVtEjgKDE1lc3NhZ2VGaWVsZBgEIAEoCzIiLnByb3Rv",
-            "YnVmX3VuaXR0ZXN0My5Gb3JlaWduTWVzc2FnZRIeChZSZXBlYXRlZFByaW1p",
-            "dGl2ZUZpZWxkGAcgAygFEhsKE1JlcGVhdGVkU3RyaW5nRmllbGQYCCADKAkS",
-            "OgoRUmVwZWF0ZWRFbnVtRmllbGQYCSADKA4yHy5wcm90b2J1Zl91bml0dGVz",
-            "dDMuRm9yZWlnbkVudW0SQAoUUmVwZWF0ZWRNZXNzYWdlRmllbGQYCiADKAsy",
-            "Ii5wcm90b2J1Zl91bml0dGVzdDMuRm9yZWlnbk1lc3NhZ2UiyAEKElRlc3RG",
-            "aWVsZE9yZGVyaW5ncxIRCglteV9zdHJpbmcYCyABKAkSDgoGbXlfaW50GAEg",
-            "ASgDEhAKCG15X2Zsb2F0GGUgASgCElQKFXNpbmdsZV9uZXN0ZWRfbWVzc2Fn",
-            "ZRjIASABKAsyNC5wcm90b2J1Zl91bml0dGVzdDMuVGVzdEZpZWxkT3JkZXJp",
-            "bmdzLk5lc3RlZE1lc3NhZ2UaJwoNTmVzdGVkTWVzc2FnZRIKCgJvbxgCIAEo",
-            "AxIKCgJiYhgBIAEoBSJMChFTcGFyc2VFbnVtTWVzc2FnZRI3CgtzcGFyc2Vf",
-            "ZW51bRgBIAEoDjIiLnByb3RvYnVmX3VuaXR0ZXN0My5UZXN0U3BhcnNlRW51",
-            "bSIZCglPbmVTdHJpbmcSDAoEZGF0YRgBIAEoCSIaCgpNb3JlU3RyaW5nEgwK",
-            "BGRhdGEYASADKAkiGAoIT25lQnl0ZXMSDAoEZGF0YRgBIAEoDCIZCglNb3Jl",
-            "Qnl0ZXMSDAoEZGF0YRgBIAEoDCIcCgxJbnQzMk1lc3NhZ2USDAoEZGF0YRgB",
-            "IAEoBSIdCg1VaW50MzJNZXNzYWdlEgwKBGRhdGEYASABKA0iHAoMSW50NjRN",
-            "ZXNzYWdlEgwKBGRhdGEYASABKAMiHQoNVWludDY0TWVzc2FnZRIMCgRkYXRh",
-            "GAEgASgEIhsKC0Jvb2xNZXNzYWdlEgwKBGRhdGEYASABKAgiqwMKD1Rlc3RQ",
-            "YWNrZWRUeXBlcxIYCgxwYWNrZWRfaW50MzIYWiADKAVCAhABEhgKDHBhY2tl",
-            "ZF9pbnQ2NBhbIAMoA0ICEAESGQoNcGFja2VkX3VpbnQzMhhcIAMoDUICEAES",
-            "GQoNcGFja2VkX3VpbnQ2NBhdIAMoBEICEAESGQoNcGFja2VkX3NpbnQzMhhe",
-            "IAMoEUICEAESGQoNcGFja2VkX3NpbnQ2NBhfIAMoEkICEAESGgoOcGFja2Vk",
-            "X2ZpeGVkMzIYYCADKAdCAhABEhoKDnBhY2tlZF9maXhlZDY0GGEgAygGQgIQ",
-            "ARIbCg9wYWNrZWRfc2ZpeGVkMzIYYiADKA9CAhABEhsKD3BhY2tlZF9zZml4",
-            "ZWQ2NBhjIAMoEEICEAESGAoMcGFja2VkX2Zsb2F0GGQgAygCQgIQARIZCg1w",
-            "YWNrZWRfZG91YmxlGGUgAygBQgIQARIXCgtwYWNrZWRfYm9vbBhmIAMoCEIC",
-            "EAESOAoLcGFja2VkX2VudW0YZyADKA4yHy5wcm90b2J1Zl91bml0dGVzdDMu",
-            "Rm9yZWlnbkVudW1CAhABIskDChFUZXN0VW5wYWNrZWRUeXBlcxIaCg51bnBh",
-            "Y2tlZF9pbnQzMhhaIAMoBUICEAASGgoOdW5wYWNrZWRfaW50NjQYWyADKANC",
-            "AhAAEhsKD3VucGFja2VkX3VpbnQzMhhcIAMoDUICEAASGwoPdW5wYWNrZWRf",
-            "dWludDY0GF0gAygEQgIQABIbCg91bnBhY2tlZF9zaW50MzIYXiADKBFCAhAA",
-            "EhsKD3VucGFja2VkX3NpbnQ2NBhfIAMoEkICEAASHAoQdW5wYWNrZWRfZml4",
-            "ZWQzMhhgIAMoB0ICEAASHAoQdW5wYWNrZWRfZml4ZWQ2NBhhIAMoBkICEAAS",
-            "HQoRdW5wYWNrZWRfc2ZpeGVkMzIYYiADKA9CAhAAEh0KEXVucGFja2VkX3Nm",
-            "aXhlZDY0GGMgAygQQgIQABIaCg51bnBhY2tlZF9mbG9hdBhkIAMoAkICEAAS",
-            "GwoPdW5wYWNrZWRfZG91YmxlGGUgAygBQgIQABIZCg11bnBhY2tlZF9ib29s",
-            "GGYgAygIQgIQABI6Cg11bnBhY2tlZF9lbnVtGGcgAygOMh8ucHJvdG9idWZf",
-            "dW5pdHRlc3QzLkZvcmVpZ25FbnVtQgIQACLAAQojVGVzdFJlcGVhdGVkU2Nh",
-            "bGFyRGlmZmVyZW50VGFnU2l6ZXMSGAoQcmVwZWF0ZWRfZml4ZWQzMhgMIAMo",
-            "BxIWCg5yZXBlYXRlZF9pbnQzMhgNIAMoBRIZChByZXBlYXRlZF9maXhlZDY0",
-            "GP4PIAMoBhIXCg5yZXBlYXRlZF9pbnQ2NBj/DyADKAMSGAoOcmVwZWF0ZWRf",
-            "ZmxvYXQY/v8PIAMoAhIZCg9yZXBlYXRlZF91aW50NjQY//8PIAMoBCIoChtU",
-            "ZXN0Q29tbWVudEluamVjdGlvbk1lc3NhZ2USCQoBYRgBIAEoCSIMCgpGb29S",
-            "ZXF1ZXN0Ig0KC0Zvb1Jlc3BvbnNlIhIKEEZvb0NsaWVudE1lc3NhZ2UiEgoQ",
-            "Rm9vU2VydmVyTWVzc2FnZSIMCgpCYXJSZXF1ZXN0Ig0KC0JhclJlc3BvbnNl",
-            "IhIKEFRlc3RFbXB0eU1lc3NhZ2UicAoOQ29tbWVudE1lc3NhZ2USDAoEdGV4",
-            "dBgBIAEoCRorChROZXN0ZWRDb21tZW50TWVzc2FnZRITCgtuZXN0ZWRfdGV4",
-            "dBgBIAEoCSIjChFOZXN0ZWRDb21tZW50RW51bRIOCgpaRVJPX1ZBTFVFEAAq",
-            "WQoLRm9yZWlnbkVudW0SFwoTRk9SRUlHTl9VTlNQRUNJRklFRBAAEg8KC0ZP",
-            "UkVJR05fRk9PEAQSDwoLRk9SRUlHTl9CQVIQBRIPCgtGT1JFSUdOX0JBWhAG",
-            "KnUKFFRlc3RFbnVtV2l0aER1cFZhbHVlEigKJFRFU1RfRU5VTV9XSVRIX0RV",
-            "UF9WQUxVRV9VTlNQRUNJRklFRBAAEggKBEZPTzEQARIICgRCQVIxEAISBwoD",
-            "QkFaEAMSCAoERk9PMhABEggKBEJBUjIQAhoCEAEqnQEKDlRlc3RTcGFyc2VF",
-            "bnVtEiAKHFRFU1RfU1BBUlNFX0VOVU1fVU5TUEVDSUZJRUQQABIMCghTUEFS",
-            "U0VfQRB7Eg4KCFNQQVJTRV9CEKbnAxIPCghTUEFSU0VfQxCysYAGEhUKCFNQ",
-            "QVJTRV9EEPH//////////wESFQoIU1BBUlNFX0UQtN78////////ARIMCghT",
-            "UEFSU0VfRxACKh0KC0NvbW1lbnRFbnVtEg4KClpFUk9fVkFMVUUQADKdAQoL",
-            "VGVzdFNlcnZpY2USRgoDRm9vEh4ucHJvdG9idWZfdW5pdHRlc3QzLkZvb1Jl",
-            "cXVlc3QaHy5wcm90b2J1Zl91bml0dGVzdDMuRm9vUmVzcG9uc2USRgoDQmFy",
-            "Eh4ucHJvdG9idWZfdW5pdHRlc3QzLkJhclJlcXVlc3QaHy5wcm90b2J1Zl91",
-            "bml0dGVzdDMuQmFyUmVzcG9uc2VCLEINVW5pdHRlc3RQcm90b6oCGkdvb2ds",
-            "ZS5Qcm90b2J1Zi5UZXN0UHJvdG9zYgZwcm90bzM="));
-      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.TestProtos.UnittestImportProto3Reflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.TestProtos.ForeignEnum), typeof(global::Google.Protobuf.TestProtos.TestEnumWithDupValue), typeof(global::Google.Protobuf.TestProtos.TestSparseEnum), typeof(global::Google.Protobuf.TestProtos.CommentEnum), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestAllTypes), global::Google.Protobuf.TestProtos.TestAllTypes.Parser, new[]{ "SingleInt32", "SingleInt64", "SingleUint32", "SingleUint64", "SingleSint32", "SingleSint64", "SingleFixed32", "SingleFixed64", "SingleSfixed32", "SingleSfixed64", "SingleFloat", "SingleDouble", "SingleBool", "SingleString", "SingleBytes", "SingleNestedMessage", "SingleForeignMessage", "SingleImportMessage", "SingleNestedEnum", "SingleForeignEnum", "SingleImportEnum", "SinglePublicImportMessage", "RepeatedInt32", "RepeatedInt64", "RepeatedUint32", "RepeatedUint64", "RepeatedSint32", "RepeatedSint64", "RepeatedFixed32", "RepeatedFixed64", "RepeatedSfixed32", "RepeatedSfixed64", "RepeatedFloat", "RepeatedDouble", "RepeatedBool", "RepeatedString", "RepeatedBytes", "RepeatedNestedMessage", "RepeatedForeignMessage", "RepeatedImportMessage", "RepeatedNestedEnum", "RepeatedForeignEnum", "RepeatedImportEnum", "RepeatedPublicImportMessage" }, null, new[]{ typeof(global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage), global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage.Parser, new[]{ "Bb" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.NestedTestAllTypes), global::Google.Protobuf.TestProtos.NestedTestAllTypes.Parser, new[]{ "Child", "Payload", "RepeatedChild" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestDeprecatedFields), global::Google.Protobuf.TestProtos.TestDeprecatedFields.Parser, new[]{ "DeprecatedInt32" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.ForeignMessage), global::Google.Protobuf.TestProtos.ForeignMessage.Parser, new[]{ "C" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestReservedFields), global::Google.Protobuf.TestProtos.TestReservedFields.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestForeignNested), global::Google.Protobuf.TestProtos.TestForeignNested.Parser, new[]{ "ForeignNested" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestReallyLargeTagNumber), global::Google.Protobuf.TestProtos.TestReallyLargeTagNumber.Parser, new[]{ "A", "Bb" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestRecursiveMessage), global::Google.Protobuf.TestProtos.TestRecursiveMessage.Parser, new[]{ "A", "I" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestMutualRecursionA), global::Google.Protobuf.TestProtos.TestMutualRecursionA.Parser, new[]{ "Bb" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestMutualRecursionB), global::Google.Protobuf.TestProtos.TestMutualRecursionB.Parser, new[]{ "A", "OptionalInt32" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestEnumAllowAlias), global::Google.Protobuf.TestProtos.TestEnumAllowAlias.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestCamelCaseFieldNames), global::Google.Protobuf.TestProtos.TestCamelCaseFieldNames.Parser, new[]{ "PrimitiveField", "StringField", "EnumField", "MessageField", "RepeatedPrimitiveField", "RepeatedStringField", "RepeatedEnumField", "RepeatedMessageField" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestFieldOrderings), global::Google.Protobuf.TestProtos.TestFieldOrderings.Parser, new[]{ "MyString", "MyInt", "MyFloat", "SingleNestedMessage" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestFieldOrderings.Types.NestedMessage), global::Google.Protobuf.TestProtos.TestFieldOrderings.Types.NestedMessage.Parser, new[]{ "Oo", "Bb" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.SparseEnumMessage), global::Google.Protobuf.TestProtos.SparseEnumMessage.Parser, new[]{ "SparseEnum" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.OneString), global::Google.Protobuf.TestProtos.OneString.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.MoreString), global::Google.Protobuf.TestProtos.MoreString.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.OneBytes), global::Google.Protobuf.TestProtos.OneBytes.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.MoreBytes), global::Google.Protobuf.TestProtos.MoreBytes.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.Int32Message), global::Google.Protobuf.TestProtos.Int32Message.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.Uint32Message), global::Google.Protobuf.TestProtos.Uint32Message.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.Int64Message), global::Google.Protobuf.TestProtos.Int64Message.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.Uint64Message), global::Google.Protobuf.TestProtos.Uint64Message.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.BoolMessage), global::Google.Protobuf.TestProtos.BoolMessage.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestPackedTypes), global::Google.Protobuf.TestProtos.TestPackedTypes.Parser, new[]{ "PackedInt32", "PackedInt64", "PackedUint32", "PackedUint64", "PackedSint32", "PackedSint64", "PackedFixed32", "PackedFixed64", "PackedSfixed32", "PackedSfixed64", "PackedFloat", "PackedDouble", "PackedBool", "PackedEnum" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestUnpackedTypes), global::Google.Protobuf.TestProtos.TestUnpackedTypes.Parser, new[]{ "UnpackedInt32", "UnpackedInt64", "UnpackedUint32", "UnpackedUint64", "UnpackedSint32", "UnpackedSint64", "UnpackedFixed32", "UnpackedFixed64", "UnpackedSfixed32", "UnpackedSfixed64", "UnpackedFloat", "UnpackedDouble", "UnpackedBool", "UnpackedEnum" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestRepeatedScalarDifferentTagSizes), global::Google.Protobuf.TestProtos.TestRepeatedScalarDifferentTagSizes.Parser, new[]{ "RepeatedFixed32", "RepeatedInt32", "RepeatedFixed64", "RepeatedInt64", "RepeatedFloat", "RepeatedUint64" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestCommentInjectionMessage), global::Google.Protobuf.TestProtos.TestCommentInjectionMessage.Parser, new[]{ "A" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.FooRequest), global::Google.Protobuf.TestProtos.FooRequest.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.FooResponse), global::Google.Protobuf.TestProtos.FooResponse.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.FooClientMessage), global::Google.Protobuf.TestProtos.FooClientMessage.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.FooServerMessage), global::Google.Protobuf.TestProtos.FooServerMessage.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.BarRequest), global::Google.Protobuf.TestProtos.BarRequest.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.BarResponse), global::Google.Protobuf.TestProtos.BarResponse.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestEmptyMessage), global::Google.Protobuf.TestProtos.TestEmptyMessage.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.CommentMessage), global::Google.Protobuf.TestProtos.CommentMessage.Parser, new[]{ "Text" }, null, new[]{ typeof(global::Google.Protobuf.TestProtos.CommentMessage.Types.NestedCommentEnum) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.CommentMessage.Types.NestedCommentMessage), global::Google.Protobuf.TestProtos.CommentMessage.Types.NestedCommentMessage.Parser, new[]{ "NestedText" }, null, null, null)})
-          }));
-    }
-    #endregion
-
-  }
   #region Enums
   public enum ForeignEnum {
     ForeignUnspecified = 0,
@@ -250,14 +67,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class TestAllTypes : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestAllTypes> _parser = new pb::MessageParser<TestAllTypes>(() => new TestAllTypes());
     public static pb::MessageParser<TestAllTypes> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[0]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public TestAllTypes() {
     }
@@ -1395,14 +1204,6 @@ namespace Google.Protobuf.TestProtos {
         private static readonly pb::MessageParser<NestedMessage> _parser = new pb::MessageParser<NestedMessage>(() => new NestedMessage());
         public static pb::MessageParser<NestedMessage> Parser { get { return _parser; } }
 
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Protobuf.TestProtos.TestAllTypes.Descriptor.NestedTypes[0]; }
-        }
-
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
         public NestedMessage() {
         }
 
@@ -1502,14 +1303,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class NestedTestAllTypes : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<NestedTestAllTypes> _parser = new pb::MessageParser<NestedTestAllTypes>(() => new NestedTestAllTypes());
     public static pb::MessageParser<NestedTestAllTypes> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[1]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public NestedTestAllTypes() {
     }
@@ -1656,14 +1449,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<TestDeprecatedFields> _parser = new pb::MessageParser<TestDeprecatedFields>(() => new TestDeprecatedFields());
     public static pb::MessageParser<TestDeprecatedFields> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[2]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public TestDeprecatedFields() {
     }
 
@@ -1756,14 +1541,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<ForeignMessage> _parser = new pb::MessageParser<ForeignMessage>(() => new ForeignMessage());
     public static pb::MessageParser<ForeignMessage> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[3]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public ForeignMessage() {
     }
 
@@ -1851,14 +1628,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<TestReservedFields> _parser = new pb::MessageParser<TestReservedFields>(() => new TestReservedFields());
     public static pb::MessageParser<TestReservedFields> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[4]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public TestReservedFields() {
     }
 
@@ -1921,14 +1690,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class TestForeignNested : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestForeignNested> _parser = new pb::MessageParser<TestForeignNested>(() => new TestForeignNested());
     public static pb::MessageParser<TestForeignNested> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[5]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public TestForeignNested() {
     }
@@ -2025,14 +1786,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class TestReallyLargeTagNumber : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestReallyLargeTagNumber> _parser = new pb::MessageParser<TestReallyLargeTagNumber>(() => new TestReallyLargeTagNumber());
     public static pb::MessageParser<TestReallyLargeTagNumber> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[6]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public TestReallyLargeTagNumber() {
     }
@@ -2151,14 +1904,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class TestRecursiveMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestRecursiveMessage> _parser = new pb::MessageParser<TestRecursiveMessage>(() => new TestRecursiveMessage());
     public static pb::MessageParser<TestRecursiveMessage> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[7]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public TestRecursiveMessage() {
     }
@@ -2283,14 +2028,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<TestMutualRecursionA> _parser = new pb::MessageParser<TestMutualRecursionA>(() => new TestMutualRecursionA());
     public static pb::MessageParser<TestMutualRecursionA> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[8]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public TestMutualRecursionA() {
     }
 
@@ -2383,14 +2120,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class TestMutualRecursionB : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestMutualRecursionB> _parser = new pb::MessageParser<TestMutualRecursionB>(() => new TestMutualRecursionB());
     public static pb::MessageParser<TestMutualRecursionB> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[9]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public TestMutualRecursionB() {
     }
@@ -2512,14 +2241,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<TestEnumAllowAlias> _parser = new pb::MessageParser<TestEnumAllowAlias>(() => new TestEnumAllowAlias());
     public static pb::MessageParser<TestEnumAllowAlias> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[10]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public TestEnumAllowAlias() {
     }
 
@@ -2610,14 +2331,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class TestCamelCaseFieldNames : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestCamelCaseFieldNames> _parser = new pb::MessageParser<TestCamelCaseFieldNames>(() => new TestCamelCaseFieldNames());
     public static pb::MessageParser<TestCamelCaseFieldNames> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[11]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public TestCamelCaseFieldNames() {
     }
@@ -2875,14 +2588,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<TestFieldOrderings> _parser = new pb::MessageParser<TestFieldOrderings>(() => new TestFieldOrderings());
     public static pb::MessageParser<TestFieldOrderings> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[12]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public TestFieldOrderings() {
     }
 
@@ -3058,14 +2763,6 @@ namespace Google.Protobuf.TestProtos {
         private static readonly pb::MessageParser<NestedMessage> _parser = new pb::MessageParser<NestedMessage>(() => new NestedMessage());
         public static pb::MessageParser<NestedMessage> Parser { get { return _parser; } }
 
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Protobuf.TestProtos.TestFieldOrderings.Descriptor.NestedTypes[0]; }
-        }
-
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
         public NestedMessage() {
         }
 
@@ -3190,14 +2887,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<SparseEnumMessage> _parser = new pb::MessageParser<SparseEnumMessage>(() => new SparseEnumMessage());
     public static pb::MessageParser<SparseEnumMessage> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[13]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public SparseEnumMessage() {
     }
 
@@ -3288,14 +2977,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<OneString> _parser = new pb::MessageParser<OneString>(() => new OneString());
     public static pb::MessageParser<OneString> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[14]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public OneString() {
     }
 
@@ -3383,14 +3064,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<MoreString> _parser = new pb::MessageParser<MoreString>(() => new MoreString());
     public static pb::MessageParser<MoreString> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[15]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public MoreString() {
     }
 
@@ -3469,14 +3142,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class OneBytes : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<OneBytes> _parser = new pb::MessageParser<OneBytes>(() => new OneBytes());
     public static pb::MessageParser<OneBytes> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[16]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public OneBytes() {
     }
@@ -3564,14 +3229,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class MoreBytes : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<MoreBytes> _parser = new pb::MessageParser<MoreBytes>(() => new MoreBytes());
     public static pb::MessageParser<MoreBytes> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[17]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public MoreBytes() {
     }
@@ -3663,14 +3320,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<Int32Message> _parser = new pb::MessageParser<Int32Message>(() => new Int32Message());
     public static pb::MessageParser<Int32Message> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[18]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public Int32Message() {
     }
 
@@ -3757,14 +3406,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class Uint32Message : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<Uint32Message> _parser = new pb::MessageParser<Uint32Message>(() => new Uint32Message());
     public static pb::MessageParser<Uint32Message> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[19]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public Uint32Message() {
     }
@@ -3853,14 +3494,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<Int64Message> _parser = new pb::MessageParser<Int64Message>(() => new Int64Message());
     public static pb::MessageParser<Int64Message> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[20]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public Int64Message() {
     }
 
@@ -3947,14 +3580,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class Uint64Message : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<Uint64Message> _parser = new pb::MessageParser<Uint64Message>(() => new Uint64Message());
     public static pb::MessageParser<Uint64Message> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[21]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public Uint64Message() {
     }
@@ -4043,14 +3668,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<BoolMessage> _parser = new pb::MessageParser<BoolMessage>(() => new BoolMessage());
     public static pb::MessageParser<BoolMessage> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[22]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public BoolMessage() {
     }
 
@@ -4137,14 +3754,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class TestPackedTypes : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestPackedTypes> _parser = new pb::MessageParser<TestPackedTypes>(() => new TestPackedTypes());
     public static pb::MessageParser<TestPackedTypes> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[23]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public TestPackedTypes() {
     }
@@ -4490,14 +4099,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<TestUnpackedTypes> _parser = new pb::MessageParser<TestUnpackedTypes>(() => new TestUnpackedTypes());
     public static pb::MessageParser<TestUnpackedTypes> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[24]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public TestUnpackedTypes() {
     }
 
@@ -4838,14 +4439,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<TestRepeatedScalarDifferentTagSizes> _parser = new pb::MessageParser<TestRepeatedScalarDifferentTagSizes>(() => new TestRepeatedScalarDifferentTagSizes());
     public static pb::MessageParser<TestRepeatedScalarDifferentTagSizes> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[25]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public TestRepeatedScalarDifferentTagSizes() {
     }
 
@@ -5040,14 +4633,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<TestCommentInjectionMessage> _parser = new pb::MessageParser<TestCommentInjectionMessage>(() => new TestCommentInjectionMessage());
     public static pb::MessageParser<TestCommentInjectionMessage> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[26]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public TestCommentInjectionMessage() {
     }
 
@@ -5141,14 +4726,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<FooRequest> _parser = new pb::MessageParser<FooRequest>(() => new FooRequest());
     public static pb::MessageParser<FooRequest> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[27]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public FooRequest() {
     }
 
@@ -5208,14 +4785,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class FooResponse : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<FooResponse> _parser = new pb::MessageParser<FooResponse>(() => new FooResponse());
     public static pb::MessageParser<FooResponse> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[28]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public FooResponse() {
     }
@@ -5277,14 +4846,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<FooClientMessage> _parser = new pb::MessageParser<FooClientMessage>(() => new FooClientMessage());
     public static pb::MessageParser<FooClientMessage> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[29]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public FooClientMessage() {
     }
 
@@ -5344,14 +4905,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class FooServerMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<FooServerMessage> _parser = new pb::MessageParser<FooServerMessage>(() => new FooServerMessage());
     public static pb::MessageParser<FooServerMessage> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[30]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public FooServerMessage() {
     }
@@ -5413,14 +4966,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<BarRequest> _parser = new pb::MessageParser<BarRequest>(() => new BarRequest());
     public static pb::MessageParser<BarRequest> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[31]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public BarRequest() {
     }
 
@@ -5481,14 +5026,6 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::MessageParser<BarResponse> _parser = new pb::MessageParser<BarResponse>(() => new BarResponse());
     public static pb::MessageParser<BarResponse> Parser { get { return _parser; } }
 
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[32]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
     public BarResponse() {
     }
 
@@ -5548,14 +5085,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class TestEmptyMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<TestEmptyMessage> _parser = new pb::MessageParser<TestEmptyMessage>(() => new TestEmptyMessage());
     public static pb::MessageParser<TestEmptyMessage> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[33]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public TestEmptyMessage() {
     }
@@ -5619,14 +5148,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class CommentMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<CommentMessage> _parser = new pb::MessageParser<CommentMessage>(() => new CommentMessage());
     public static pb::MessageParser<CommentMessage> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[34]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public CommentMessage() {
     }
@@ -5731,14 +5252,6 @@ namespace Google.Protobuf.TestProtos {
       public sealed class NestedCommentMessage : pb::IMessage, pb::IDeepCloneable {
         private static readonly pb::MessageParser<NestedCommentMessage> _parser = new pb::MessageParser<NestedCommentMessage>(() => new NestedCommentMessage());
         public static pb::MessageParser<NestedCommentMessage> Parser { get { return _parser; } }
-
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Protobuf.TestProtos.CommentMessage.Descriptor.NestedTypes[0]; }
-        }
-
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
 
         public NestedCommentMessage() {
         }

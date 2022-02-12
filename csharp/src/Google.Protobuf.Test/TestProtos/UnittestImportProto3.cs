@@ -7,38 +7,9 @@
 
 using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
-using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace Google.Protobuf.TestProtos {
 
-  /// <summary>Holder for reflection information generated from unittest_import_proto3.proto</summary>
-  public static class UnittestImportProto3Reflection {
-
-    #region Descriptor
-    /// <summary>File descriptor for unittest_import_proto3.proto</summary>
-    public static pbr::FileDescriptor Descriptor {
-      get { return descriptor; }
-    }
-    private static pbr::FileDescriptor descriptor;
-
-    static UnittestImportProto3Reflection() {
-      byte[] descriptorData = global::System.Convert.FromBase64String(
-          string.Concat(
-            "Chx1bml0dGVzdF9pbXBvcnRfcHJvdG8zLnByb3RvEhhwcm90b2J1Zl91bml0",
-            "dGVzdF9pbXBvcnQaI3VuaXR0ZXN0X2ltcG9ydF9wdWJsaWNfcHJvdG8zLnBy",
-            "b3RvIhoKDUltcG9ydE1lc3NhZ2USCQoBZBgBIAEoBSpZCgpJbXBvcnRFbnVt",
-            "EhsKF0lNUE9SVF9FTlVNX1VOU1BFQ0lGSUVEEAASDgoKSU1QT1JUX0ZPTxAH",
-            "Eg4KCklNUE9SVF9CQVIQCBIOCgpJTVBPUlRfQkFaEAlCHaoCGkdvb2dsZS5Q",
-            "cm90b2J1Zi5UZXN0UHJvdG9zUABiBnByb3RvMw=="));
-      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.TestProtos.UnittestImportPublicProto3Reflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.TestProtos.ImportEnum), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.ImportMessage), global::Google.Protobuf.TestProtos.ImportMessage.Parser, new[]{ "D" }, null, null, null)
-          }));
-    }
-    #endregion
-
-  }
   #region Enums
   public enum ImportEnum {
     Unspecified = 0,
@@ -53,14 +24,6 @@ namespace Google.Protobuf.TestProtos {
   public sealed class ImportMessage : pb::IMessage, pb::IDeepCloneable {
     private static readonly pb::MessageParser<ImportMessage> _parser = new pb::MessageParser<ImportMessage>(() => new ImportMessage());
     public static pb::MessageParser<ImportMessage> Parser { get { return _parser; } }
-
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.TestProtos.UnittestImportProto3Reflection.Descriptor.MessageTypes[0]; }
-    }
-
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
 
     public ImportMessage() {
     }
