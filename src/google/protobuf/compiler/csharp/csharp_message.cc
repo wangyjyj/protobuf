@@ -436,7 +436,7 @@ void MessageGenerator::GenerateMergingMethods(io::Printer* printer) {
   printer->Outdent();
   printer->Print("}\n\n");
 
-  printer->Print("public void MergeFrom(pb::CodedInputStream input) {\n");
+  printer->Print("void pb::IMessage.MergeFrom(pb::CodedInputStream input) {\n");
   printer->Indent();
   printer->Print(
     "uint tag;\n"

@@ -87,7 +87,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {

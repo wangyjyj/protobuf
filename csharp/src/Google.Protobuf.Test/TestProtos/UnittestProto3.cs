@@ -1130,7 +1130,7 @@ namespace Google.Protobuf.TestProtos {
       repeatedPublicImportMessage_.Add(other.repeatedPublicImportMessage_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1440,7 +1440,7 @@ namespace Google.Protobuf.TestProtos {
           }
         }
 
-        public void MergeFrom(pb::CodedInputStream input) {
+        void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1592,7 +1592,7 @@ namespace Google.Protobuf.TestProtos {
       repeatedChild_.Add(other.repeatedChild_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1700,7 +1700,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1797,7 +1797,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1866,7 +1866,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1961,7 +1961,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2088,7 +2088,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2212,7 +2212,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2318,7 +2318,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2441,7 +2441,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2541,7 +2541,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2797,7 +2797,7 @@ namespace Google.Protobuf.TestProtos {
       repeatedMessageField_.Add(other.repeatedMessageField_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3002,7 +3002,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3140,7 +3140,7 @@ namespace Google.Protobuf.TestProtos {
           }
         }
 
-        public void MergeFrom(pb::CodedInputStream input) {
+        void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3242,7 +3242,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3338,7 +3338,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3428,7 +3428,7 @@ namespace Google.Protobuf.TestProtos {
       data_.Add(other.data_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3521,7 +3521,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3614,7 +3614,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3710,7 +3710,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3803,7 +3803,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3896,7 +3896,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3989,7 +3989,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4082,7 +4082,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4445,7 +4445,7 @@ namespace Google.Protobuf.TestProtos {
       packedEnum_.Add(other.packedEnum_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4878,7 +4878,7 @@ namespace Google.Protobuf.TestProtos {
       unpackedEnum_.Add(other.unpackedEnum_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5153,7 +5153,7 @@ namespace Google.Protobuf.TestProtos {
       repeatedUint64_.Add(other.repeatedUint64_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5275,7 +5275,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5347,7 +5347,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5412,7 +5412,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5477,7 +5477,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5542,7 +5542,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5607,7 +5607,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5672,7 +5672,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5737,7 +5737,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5832,7 +5832,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5942,7 +5942,7 @@ namespace Google.Protobuf.TestProtos {
           }
         }
 
-        public void MergeFrom(pb::CodedInputStream input) {
+        void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {

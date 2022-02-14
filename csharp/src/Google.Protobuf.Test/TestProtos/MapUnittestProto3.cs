@@ -432,7 +432,7 @@ namespace Google.Protobuf.TestProtos {
       mapInt32ForeignMessage_.Add(other.mapInt32ForeignMessage_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -592,7 +592,7 @@ namespace Google.Protobuf.TestProtos {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -685,7 +685,7 @@ namespace Google.Protobuf.TestProtos {
       mapInt32Message_.Add(other.mapInt32Message_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -799,7 +799,7 @@ namespace Google.Protobuf.TestProtos {
       map2_.Add(other.map2_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1187,7 +1187,7 @@ namespace Google.Protobuf.TestProtos {
       mapInt32ForeignMessage_.Add(other.mapInt32ForeignMessage_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1337,7 +1337,7 @@ namespace Google.Protobuf.TestProtos {
       type_.Add(other.type_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1440,7 +1440,7 @@ namespace Google.Protobuf.TestProtos {
       entry_.Add(other.entry_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {

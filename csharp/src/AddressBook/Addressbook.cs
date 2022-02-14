@@ -186,7 +186,7 @@ namespace Google.Protobuf.Examples.AddressBook {
       }
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -326,7 +326,7 @@ namespace Google.Protobuf.Examples.AddressBook {
           }
         }
 
-        public void MergeFrom(pb::CodedInputStream input) {
+        void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -428,7 +428,7 @@ namespace Google.Protobuf.Examples.AddressBook {
       people_.Add(other.people_);
     }
 
-    public void MergeFrom(pb::CodedInputStream input) {
+    void pb::IMessage.MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
