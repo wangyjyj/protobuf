@@ -260,6 +260,113 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("mapInt32Int32:{");
+      foreach(var kv in mapInt32Int32_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapInt64Int64:{");
+      foreach(var kv in mapInt64Int64_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapUint32Uint32:{");
+      foreach(var kv in mapUint32Uint32_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapUint64Uint64:{");
+      foreach(var kv in mapUint64Uint64_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapSint32Sint32:{");
+      foreach(var kv in mapSint32Sint32_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapSint64Sint64:{");
+      foreach(var kv in mapSint64Sint64_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapFixed32Fixed32:{");
+      foreach(var kv in mapFixed32Fixed32_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapFixed64Fixed64:{");
+      foreach(var kv in mapFixed64Fixed64_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapSfixed32Sfixed32:{");
+      foreach(var kv in mapSfixed32Sfixed32_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapSfixed64Sfixed64:{");
+      foreach(var kv in mapSfixed64Sfixed64_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapInt32Float:{");
+      foreach(var kv in mapInt32Float_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapInt32Double:{");
+      foreach(var kv in mapInt32Double_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapBoolBool:{");
+      foreach(var kv in mapBoolBool_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapStringString:{");
+      foreach(var kv in mapStringString_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapInt32Bytes:{");
+      foreach(var kv in mapInt32Bytes_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapInt32Enum:{");
+      foreach(var kv in mapInt32Enum_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapInt32ForeignMessage:{");
+      foreach(var kv in mapInt32ForeignMessage_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       mapInt32Int32_.WriteTo(output, _map_mapInt32Int32_codec);
       mapInt64Int64_.WriteTo(output, _map_mapInt64Int64_codec);
@@ -452,6 +559,12 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("testMap:").Append(testMap_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (testMap_ != null) {
         output.WriteRawTag(10);
@@ -542,6 +655,17 @@ namespace Google.Protobuf.TestProtos {
       int hash = 1;
       hash ^= MapInt32Message.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("mapInt32Message:{");
+      foreach(var kv in mapInt32Message_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -636,6 +760,23 @@ namespace Google.Protobuf.TestProtos {
       hash ^= Map1.GetHashCode();
       hash ^= Map2.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("map1:{");
+      foreach(var kv in map1_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("map2:{");
+      foreach(var kv in map2_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -892,6 +1033,101 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("mapInt32Int32:{");
+      foreach(var kv in mapInt32Int32_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapInt64Int64:{");
+      foreach(var kv in mapInt64Int64_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapUint32Uint32:{");
+      foreach(var kv in mapUint32Uint32_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapUint64Uint64:{");
+      foreach(var kv in mapUint64Uint64_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapSint32Sint32:{");
+      foreach(var kv in mapSint32Sint32_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapSint64Sint64:{");
+      foreach(var kv in mapSint64Sint64_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapFixed32Fixed32:{");
+      foreach(var kv in mapFixed32Fixed32_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapFixed64Fixed64:{");
+      foreach(var kv in mapFixed64Fixed64_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapSfixed32Sfixed32:{");
+      foreach(var kv in mapSfixed32Sfixed32_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapSfixed64Sfixed64:{");
+      foreach(var kv in mapSfixed64Sfixed64_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapInt32Float:{");
+      foreach(var kv in mapInt32Float_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapInt32Double:{");
+      foreach(var kv in mapInt32Double_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapBoolBool:{");
+      foreach(var kv in mapBoolBool_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapInt32Enum:{");
+      foreach(var kv in mapInt32Enum_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      sb.Append("mapInt32ForeignMessage:{");
+      foreach(var kv in mapInt32ForeignMessage_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       mapInt32Int32_.WriteTo(output, _map_mapInt32Int32_codec);
       mapInt64Int64_.WriteTo(output, _map_mapInt64Int64_codec);
@@ -1073,6 +1309,17 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("type:{");
+      foreach(var kv in type_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       type_.WriteTo(output, _map_type_codec);
     }
@@ -1163,6 +1410,17 @@ namespace Google.Protobuf.TestProtos {
       int hash = 1;
       hash ^= Entry.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("entry:{");
+      foreach(var kv in entry_)
+      {
+        sb.Append(kv.Key).Append(":").Append(kv.Value).Append(",");
+      }
+      sb.Append("} ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {

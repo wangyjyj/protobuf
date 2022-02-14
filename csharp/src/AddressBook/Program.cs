@@ -31,6 +31,7 @@
 #endregion
 
 using System;
+using System.Text;
 
 namespace Google.Protobuf.Examples.AddressBook
 {

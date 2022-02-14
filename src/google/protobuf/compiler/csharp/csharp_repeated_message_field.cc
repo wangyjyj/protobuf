@@ -135,6 +135,21 @@ void RepeatedMessageFieldGenerator::GenerateCloningCode(io::Printer* printer) {
     "$name$_ = (pbc::RepeatedField<$type_name$>) other.$name$_.Clone();\n");
 }
 
+void RepeatedMessageFieldGenerator::GenerateToStringCode(io::Printer* printer) {
+    printer->Print(variables_, "sb.Append(\"$name$: [\");\n");
+    printer->Print(variables_,
+        "foreach(var v in $name$_)\n");
+    printer->Print(variables_,
+        "{\n");
+    printer->Indent();
+    printer->Print(variables_,
+        "sb.Append(v).Append(\",\");\n");
+    printer->Outdent();
+    printer->Print(variables_,
+        "}\n");
+    printer->Print(variables_, "sb.Append(\"] \");\n");
+}
+
 void RepeatedMessageFieldGenerator::GenerateFreezingCode(io::Printer* printer) {
 }
 

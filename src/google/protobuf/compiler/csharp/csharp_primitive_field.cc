@@ -223,6 +223,11 @@ void PrimitiveFieldGenerator::GenerateCloningCode(io::Printer* printer) {
     "$name$_ = other.$name$_;\n");
 }
 
+void PrimitiveFieldGenerator::GenerateToStringCode(io::Printer* printer) {
+    printer->Print(variables_,
+        "sb.Append(\"$name$:\").Append($name$_).Append(\" \");\n");
+}
+
 void PrimitiveFieldGenerator::GenerateCodecCode(io::Printer* printer) {
   printer->Print(
     variables_,
@@ -302,6 +307,9 @@ void PrimitiveOneofFieldGenerator::GenerateParsingCode(io::Printer* printer) {
 void PrimitiveOneofFieldGenerator::GenerateCloningCode(io::Printer* printer) {
   printer->Print(variables_,
     "$property_name$ = other.$property_name$;\n");
+}
+
+void PrimitiveOneofFieldGenerator::GenerateToStringCode(io::Printer* printer) {
 }
 
 }  // namespace csharp

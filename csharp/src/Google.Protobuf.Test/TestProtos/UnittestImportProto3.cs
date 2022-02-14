@@ -67,6 +67,12 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("d:").Append(d_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (D != 0) {
         output.WriteRawTag(8);

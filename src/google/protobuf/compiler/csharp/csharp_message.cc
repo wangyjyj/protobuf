@@ -354,11 +354,25 @@ void MessageGenerator::GenerateFrameworkMethods(io::Printer* printer) {
     printer->Outdent();
     printer->Print("}\n\n");
 
-    // WriteGeneratedCodeAttributes(printer);
-    // printer->Print(
-    //     "public override string ToString() {\n"
-    //     "  return pb::JsonFormatter.ToDiagnosticString(this);\n"
-    //     "}\n\n");
+    WriteGeneratedCodeAttributes(printer);
+    vars["class_name"] = class_name();
+    printer->Print(
+        vars,
+        "public override string ToString() {\n");
+    printer->Indent();
+    printer->Print(
+        "var sb = new System.Text.StringBuilder();\n");
+    for (int i = 0; i < descriptor_->field_count(); i++) {
+        if (!descriptor_->field(i)->containing_oneof()) {
+            std::unique_ptr<FieldGeneratorBase> generator(
+                CreateFieldGeneratorInternal(descriptor_->field(i)));
+            generator->GenerateToStringCode(printer);
+        }
+    }
+    printer->Print(
+        "return sb.ToString();\n");
+    printer->Outdent();
+    printer->Print("}\n\n");
 }
 
 void MessageGenerator::GenerateMessageSerializationMethods(io::Printer* printer) {

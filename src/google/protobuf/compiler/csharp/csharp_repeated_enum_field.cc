@@ -118,6 +118,21 @@ void RepeatedEnumFieldGenerator::GenerateCloningCode(io::Printer* printer) {
     "$name$_ = (pbc::RepeatedField<$type_name$>) other.$name$_.Clone();\n");
 }
 
+void RepeatedEnumFieldGenerator::GenerateToStringCode(io::Printer* printer) {
+    printer->Print(variables_, "sb.Append(\"$name$: [\");\n");
+    printer->Print(variables_,
+        "foreach(var v in $name$_)\n");
+    printer->Print(variables_,
+        "{\n");
+    printer->Indent();
+    printer->Print(variables_,
+        "sb.Append(v).Append(\",\");\n");
+    printer->Outdent();
+    printer->Print(variables_,
+        "}\n");
+    printer->Print(variables_, "sb.Append(\"] \");\n");
+}
+
 void RepeatedEnumFieldGenerator::GenerateFreezingCode(io::Printer* printer) {
 }
 

@@ -659,6 +659,165 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("singleInt32:").Append(singleInt32_).Append(" ");
+      sb.Append("singleInt64:").Append(singleInt64_).Append(" ");
+      sb.Append("singleUint32:").Append(singleUint32_).Append(" ");
+      sb.Append("singleUint64:").Append(singleUint64_).Append(" ");
+      sb.Append("singleSint32:").Append(singleSint32_).Append(" ");
+      sb.Append("singleSint64:").Append(singleSint64_).Append(" ");
+      sb.Append("singleFixed32:").Append(singleFixed32_).Append(" ");
+      sb.Append("singleFixed64:").Append(singleFixed64_).Append(" ");
+      sb.Append("singleSfixed32:").Append(singleSfixed32_).Append(" ");
+      sb.Append("singleSfixed64:").Append(singleSfixed64_).Append(" ");
+      sb.Append("singleFloat:").Append(singleFloat_).Append(" ");
+      sb.Append("singleDouble:").Append(singleDouble_).Append(" ");
+      sb.Append("singleBool:").Append(singleBool_).Append(" ");
+      sb.Append("singleString:").Append(singleString_).Append(" ");
+      sb.Append("singleBytes:").Append(singleBytes_).Append(" ");
+      sb.Append("singleNestedMessage:").Append(singleNestedMessage_).Append(" ");
+      sb.Append("singleForeignMessage:").Append(singleForeignMessage_).Append(" ");
+      sb.Append("singleImportMessage:").Append(singleImportMessage_).Append(" ");
+      sb.Append("singleNestedEnum:").Append(singleNestedEnum_).Append(" ");
+      sb.Append("singleForeignEnum:").Append(singleForeignEnum_).Append(" ");
+      sb.Append("singleImportEnum:").Append(singleImportEnum_).Append(" ");
+      sb.Append("singlePublicImportMessage:").Append(singlePublicImportMessage_).Append(" ");
+      sb.Append("repeatedInt32: [");
+      foreach(var v in repeatedInt32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedInt64: [");
+      foreach(var v in repeatedInt64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedUint32: [");
+      foreach(var v in repeatedUint32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedUint64: [");
+      foreach(var v in repeatedUint64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedSint32: [");
+      foreach(var v in repeatedSint32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedSint64: [");
+      foreach(var v in repeatedSint64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedFixed32: [");
+      foreach(var v in repeatedFixed32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedFixed64: [");
+      foreach(var v in repeatedFixed64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedSfixed32: [");
+      foreach(var v in repeatedSfixed32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedSfixed64: [");
+      foreach(var v in repeatedSfixed64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedFloat: [");
+      foreach(var v in repeatedFloat_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedDouble: [");
+      foreach(var v in repeatedDouble_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedBool: [");
+      foreach(var v in repeatedBool_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedString: [");
+      foreach(var v in repeatedString_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedBytes: [");
+      foreach(var v in repeatedBytes_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedNestedMessage: [");
+      foreach(var v in repeatedNestedMessage_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedForeignMessage: [");
+      foreach(var v in repeatedForeignMessage_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedImportMessage: [");
+      foreach(var v in repeatedImportMessage_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedNestedEnum: [");
+      foreach(var v in repeatedNestedEnum_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedForeignEnum: [");
+      foreach(var v in repeatedForeignEnum_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedImportEnum: [");
+      foreach(var v in repeatedImportEnum_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedPublicImportMessage: [");
+      foreach(var v in repeatedPublicImportMessage_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (SingleInt32 != 0) {
         output.WriteRawTag(8);
@@ -1251,6 +1410,12 @@ namespace Google.Protobuf.TestProtos {
           return hash;
         }
 
+        public override string ToString() {
+          var sb = new System.Text.StringBuilder();
+          sb.Append("bb:").Append(bb_).Append(" ");
+          return sb.ToString();
+        }
+
         public void WriteTo(pb::CodedOutputStream output) {
           if (Bb != 0) {
             output.WriteRawTag(8);
@@ -1369,6 +1534,19 @@ namespace Google.Protobuf.TestProtos {
       if (payload_ != null) hash ^= Payload.GetHashCode();
       hash ^= repeatedChild_.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("child:").Append(child_).Append(" ");
+      sb.Append("payload:").Append(payload_).Append(" ");
+      sb.Append("repeatedChild: [");
+      foreach(var v in repeatedChild_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1492,6 +1670,12 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("deprecatedInt32:").Append(deprecatedInt32_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (DeprecatedInt32 != 0) {
         output.WriteRawTag(8);
@@ -1583,6 +1767,12 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("c:").Append(c_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (C != 0) {
         output.WriteRawTag(8);
@@ -1655,6 +1845,11 @@ namespace Google.Protobuf.TestProtos {
     public override int GetHashCode() {
       int hash = 1;
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1731,6 +1926,12 @@ namespace Google.Protobuf.TestProtos {
       int hash = 1;
       if (foreignNested_ != null) hash ^= ForeignNested.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("foreignNested:").Append(foreignNested_).Append(" ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1844,6 +2045,13 @@ namespace Google.Protobuf.TestProtos {
       if (A != 0) hash ^= A.GetHashCode();
       if (Bb != 0) hash ^= Bb.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("a:").Append(a_).Append(" ");
+      sb.Append("bb:").Append(bb_).Append(" ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1960,6 +2168,13 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("a:").Append(a_).Append(" ");
+      sb.Append("i:").Append(i_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (a_ != null) {
         output.WriteRawTag(10);
@@ -2070,6 +2285,12 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("bb:").Append(bb_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (bb_ != null) {
         output.WriteRawTag(10);
@@ -2174,6 +2395,13 @@ namespace Google.Protobuf.TestProtos {
       if (a_ != null) hash ^= A.GetHashCode();
       if (OptionalInt32 != 0) hash ^= OptionalInt32.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("a:").Append(a_).Append(" ");
+      sb.Append("optionalInt32:").Append(optionalInt32_).Append(" ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2281,6 +2509,12 @@ namespace Google.Protobuf.TestProtos {
       int hash = 1;
       if (Value != 0) hash ^= Value.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("value:").Append(value_).Append(" ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2459,6 +2693,39 @@ namespace Google.Protobuf.TestProtos {
       hash ^= repeatedEnumField_.GetHashCode();
       hash ^= repeatedMessageField_.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("primitiveField:").Append(primitiveField_).Append(" ");
+      sb.Append("stringField:").Append(stringField_).Append(" ");
+      sb.Append("enumField:").Append(enumField_).Append(" ");
+      sb.Append("messageField:").Append(messageField_).Append(" ");
+      sb.Append("repeatedPrimitiveField: [");
+      foreach(var v in repeatedPrimitiveField_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedStringField: [");
+      foreach(var v in repeatedStringField_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedEnumField: [");
+      foreach(var v in repeatedEnumField_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedMessageField: [");
+      foreach(var v in repeatedMessageField_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2669,6 +2936,15 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("myString:").Append(myString_).Append(" ");
+      sb.Append("myInt:").Append(myInt_).Append(" ");
+      sb.Append("myFloat:").Append(myFloat_).Append(" ");
+      sb.Append("singleNestedMessage:").Append(singleNestedMessage_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (MyInt != 0L) {
         output.WriteRawTag(8);
@@ -2823,6 +3099,13 @@ namespace Google.Protobuf.TestProtos {
           return hash;
         }
 
+        public override string ToString() {
+          var sb = new System.Text.StringBuilder();
+          sb.Append("oo:").Append(oo_).Append(" ");
+          sb.Append("bb:").Append(bb_).Append(" ");
+          return sb.ToString();
+        }
+
         public void WriteTo(pb::CodedOutputStream output) {
           if (Bb != 0) {
             output.WriteRawTag(8);
@@ -2929,6 +3212,12 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("sparseEnum:").Append(sparseEnum_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (SparseEnum != 0) {
         output.WriteRawTag(8);
@@ -3019,6 +3308,12 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("data:").Append(data_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data.Length != 0) {
         output.WriteRawTag(10);
@@ -3105,6 +3400,17 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("data: [");
+      foreach(var v in data_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       data_.WriteTo(output, _repeated_data_codec);
     }
@@ -3183,6 +3489,12 @@ namespace Google.Protobuf.TestProtos {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("data:").Append(data_).Append(" ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -3270,6 +3582,12 @@ namespace Google.Protobuf.TestProtos {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("data:").Append(data_).Append(" ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -3362,6 +3680,12 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("data:").Append(data_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data != 0) {
         output.WriteRawTag(8);
@@ -3447,6 +3771,12 @@ namespace Google.Protobuf.TestProtos {
       int hash = 1;
       if (Data != 0) hash ^= Data.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("data:").Append(data_).Append(" ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -3536,6 +3866,12 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("data:").Append(data_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data != 0L) {
         output.WriteRawTag(8);
@@ -3623,6 +3959,12 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("data:").Append(data_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data != 0UL) {
         output.WriteRawTag(8);
@@ -3708,6 +4050,12 @@ namespace Google.Protobuf.TestProtos {
       int hash = 1;
       if (Data != false) hash ^= Data.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("data:").Append(data_).Append(" ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -3950,6 +4298,95 @@ namespace Google.Protobuf.TestProtos {
       hash ^= packedBool_.GetHashCode();
       hash ^= packedEnum_.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("packedInt32: [");
+      foreach(var v in packedInt32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedInt64: [");
+      foreach(var v in packedInt64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedUint32: [");
+      foreach(var v in packedUint32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedUint64: [");
+      foreach(var v in packedUint64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedSint32: [");
+      foreach(var v in packedSint32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedSint64: [");
+      foreach(var v in packedSint64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedFixed32: [");
+      foreach(var v in packedFixed32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedFixed64: [");
+      foreach(var v in packedFixed64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedSfixed32: [");
+      foreach(var v in packedSfixed32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedSfixed64: [");
+      foreach(var v in packedSfixed64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedFloat: [");
+      foreach(var v in packedFloat_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedDouble: [");
+      foreach(var v in packedDouble_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedBool: [");
+      foreach(var v in packedBool_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("packedEnum: [");
+      foreach(var v in packedEnum_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -4296,6 +4733,95 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("unpackedInt32: [");
+      foreach(var v in unpackedInt32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedInt64: [");
+      foreach(var v in unpackedInt64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedUint32: [");
+      foreach(var v in unpackedUint32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedUint64: [");
+      foreach(var v in unpackedUint64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedSint32: [");
+      foreach(var v in unpackedSint32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedSint64: [");
+      foreach(var v in unpackedSint64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedFixed32: [");
+      foreach(var v in unpackedFixed32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedFixed64: [");
+      foreach(var v in unpackedFixed64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedSfixed32: [");
+      foreach(var v in unpackedSfixed32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedSfixed64: [");
+      foreach(var v in unpackedSfixed64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedFloat: [");
+      foreach(var v in unpackedFloat_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedDouble: [");
+      foreach(var v in unpackedDouble_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedBool: [");
+      foreach(var v in unpackedBool_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("unpackedEnum: [");
+      foreach(var v in unpackedEnum_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       unpackedInt32_.WriteTo(output, _repeated_unpackedInt32_codec);
       unpackedInt64_.WriteTo(output, _repeated_unpackedInt64_codec);
@@ -4554,6 +5080,47 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("repeatedFixed32: [");
+      foreach(var v in repeatedFixed32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedInt32: [");
+      foreach(var v in repeatedInt32_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedFixed64: [");
+      foreach(var v in repeatedFixed64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedInt64: [");
+      foreach(var v in repeatedInt64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedFloat: [");
+      foreach(var v in repeatedFloat_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("repeatedUint64: [");
+      foreach(var v in repeatedUint64_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       repeatedFixed32_.WriteTo(output, _repeated_repeatedFixed32_codec);
       repeatedInt32_.WriteTo(output, _repeated_repeatedInt32_codec);
@@ -4678,6 +5245,12 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("a:").Append(a_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (A.Length != 0) {
         output.WriteRawTag(10);
@@ -4755,6 +5328,11 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
     }
 
@@ -4813,6 +5391,11 @@ namespace Google.Protobuf.TestProtos {
     public override int GetHashCode() {
       int hash = 1;
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -4875,6 +5458,11 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
     }
 
@@ -4933,6 +5521,11 @@ namespace Google.Protobuf.TestProtos {
     public override int GetHashCode() {
       int hash = 1;
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -4995,6 +5588,11 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
     }
 
@@ -5055,6 +5653,11 @@ namespace Google.Protobuf.TestProtos {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
     }
 
@@ -5113,6 +5716,11 @@ namespace Google.Protobuf.TestProtos {
     public override int GetHashCode() {
       int hash = 1;
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -5192,6 +5800,12 @@ namespace Google.Protobuf.TestProtos {
       int hash = 1;
       if (Text.Length != 0) hash ^= Text.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("text:").Append(text_).Append(" ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -5296,6 +5910,12 @@ namespace Google.Protobuf.TestProtos {
           int hash = 1;
           if (NestedText.Length != 0) hash ^= NestedText.GetHashCode();
           return hash;
+        }
+
+        public override string ToString() {
+          var sb = new System.Text.StringBuilder();
+          sb.Append("nestedText:").Append(nestedText_).Append(" ");
+          return sb.ToString();
         }
 
         public void WriteTo(pb::CodedOutputStream output) {

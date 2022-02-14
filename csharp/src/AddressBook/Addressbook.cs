@@ -114,6 +114,21 @@ namespace Google.Protobuf.Examples.AddressBook {
       return hash;
     }
 
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("name:").Append(name_).Append(" ");
+      sb.Append("id:").Append(id_).Append(" ");
+      sb.Append("email:").Append(email_).Append(" ");
+      sb.Append("phones: [");
+      foreach(var v in phones_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      sb.Append("lastUpdated:").Append(lastUpdated_).Append(" ");
+      return sb.ToString();
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -270,6 +285,13 @@ namespace Google.Protobuf.Examples.AddressBook {
           return hash;
         }
 
+        public override string ToString() {
+          var sb = new System.Text.StringBuilder();
+          sb.Append("number:").Append(number_).Append(" ");
+          sb.Append("type:").Append(type_).Append(" ");
+          return sb.ToString();
+        }
+
         public void WriteTo(pb::CodedOutputStream output) {
           if (Number.Length != 0) {
             output.WriteRawTag(10);
@@ -376,6 +398,17 @@ namespace Google.Protobuf.Examples.AddressBook {
       int hash = 1;
       hash ^= people_.GetHashCode();
       return hash;
+    }
+
+    public override string ToString() {
+      var sb = new System.Text.StringBuilder();
+      sb.Append("people: [");
+      foreach(var v in people_)
+      {
+        sb.Append(v).Append(",");
+      }
+      sb.Append("] ");
+      return sb.ToString();
     }
 
     public void WriteTo(pb::CodedOutputStream output) {

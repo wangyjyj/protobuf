@@ -373,6 +373,9 @@ namespace Google.Protobuf
                 MapStringString = { { key2, value2 } }
             };
             Assert.AreEqual(expected, parsed);
+
+            var aaa = parsed.ToString();
+            Assert.True(true);
         }
 
         [Test]

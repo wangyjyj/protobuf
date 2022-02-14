@@ -138,6 +138,21 @@ void MapFieldGenerator::GenerateCloningCode(io::Printer* printer) {
     "$name$_ = (pbc::MapField<$key_type_name$, $value_type_name$>) other.$name$_.Clone();\n");
 }
 
+void MapFieldGenerator::GenerateToStringCode(io::Printer* printer) {
+    printer->Print(variables_, "sb.Append(\"$name$:{\");\n");
+    printer->Print(variables_,
+      "foreach(var kv in $name$_)\n");
+    printer->Print(variables_,
+      "{\n");
+    printer->Indent();
+    printer->Print(variables_,
+      "sb.Append(kv.Key).Append(\":\").Append(kv.Value).Append(\",\");\n");
+    printer->Outdent();
+    printer->Print(variables_,
+      "}\n");
+    printer->Print(variables_, "sb.Append(\"} \");\n");
+}
+
 void MapFieldGenerator::GenerateFreezingCode(io::Printer* printer) {
 }
 

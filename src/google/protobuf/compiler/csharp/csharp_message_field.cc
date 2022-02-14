@@ -194,6 +194,10 @@ void MessageFieldGenerator::GenerateCloningCode(io::Printer* printer) {
   printer->Print(variables_,
     "$name$_ = other.$has_property_check$ ? ($type_name$) other.$name$_.Clone() : null;\n");
 }
+void MessageFieldGenerator::GenerateToStringCode(io::Printer* printer) {
+  printer->Print(variables_,
+    "sb.Append(\"$name$:\").Append($name$_).Append(\" \");\n");
+}
 
 void MessageFieldGenerator::GenerateFreezingCode(io::Printer* printer) {
 }
@@ -291,6 +295,10 @@ void MessageOneofFieldGenerator::WriteToString(io::Printer* printer) {
 void MessageOneofFieldGenerator::GenerateCloningCode(io::Printer* printer) {
   printer->Print(variables_,
     "$property_name$ = ($type_name$) other.$property_name$.Clone();\n");
+}
+
+void MessageOneofFieldGenerator::GenerateToStringCode(io::Printer* printer) {
+
 }
 
 }  // namespace csharp
